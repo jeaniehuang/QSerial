@@ -61,11 +61,9 @@ app.commandLine.appendSwitch('openssl-legacy-provider', '');
 // Chromium 默认阻止从网络共享路径启动，添加以下开关可绕过此限制
 app.commandLine.appendSwitch('no-sandbox');
 app.commandLine.appendSwitch('disable-gpu-sandbox');
-// WSL2 环境下 GPU 初始化可能导致 exit code 3，先禁用 GPU 排查
-if (process.env.WSL_DISTRO_NAME) {
-  process.stderr.write('[diag] WSL detected, disabling GPU\n');
-  app.commandLine.appendSwitch('disable-gpu');
-}
+// 排查 exit code 3：统一禁用 GPU 硬件加速
+process.stderr.write('[diag] disabling GPU\n');
+app.commandLine.appendSwitch('disable-gpu');
 
 // 设置 AppUserModelID，使 Windows 任务栏可以固定图标
 if (process.platform === 'win32') {
@@ -234,6 +232,12 @@ async function initialize(): Promise<void> {
 
 // 应用就绪
 process.stderr.write('[diag] registering app.whenReady\n');
+setTimeout(() => {
+  process.stderr.write('[diag] 15s timeout - whenReady still not fired, process still alive\n');
+}, 15000).unref();
+app.on('before-quit', () => {
+  process.stderr.write('[diag] before-quit firing\n');
+});
 app.on('will-quit', () => {
   process.stderr.write('[diag] will-quit firing, exitCode=' + ((app as any).exitCode !== undefined ? (app as any).exitCode : 'undefined') + '\n');
 });
