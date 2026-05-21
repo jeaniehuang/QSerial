@@ -106,7 +106,7 @@ const MCP_TOOLS = [
         data: { type: 'string', description: '要发送的文本，如 "ls -la\\n"' },
         delay_ms: { type: 'integer', description: '发送前等待毫秒数，默认 0' },
         wait_before: { type: 'string', description: '发送前等待输出中出现此文本（子串匹配），超时 10s' },
-        response_timeout_ms: { type: 'integer', description: '等待回显最大毫秒数，默认 500。有新数据立即返回，不等到超时' },
+        response_timeout_ms: { type: 'integer', description: '等待回显最大毫秒数，默认 2000。有新数据立即返回，不等到超时。慢速嵌入式设备建议 3000-5000' },
       },
       required: ['data'],
     },
@@ -216,8 +216,9 @@ const MCP_TOOLS = [
         shellPrompt: { type: 'string', description: 'Shell 提示正则，默认 "[#$>]\\\\s"', default: '[#$>]\\s' },
         timeout: { type: 'number', description: '每步超时秒数，默认 30' },
         debug: { type: 'boolean', description: '为 true 时返回每步详细过程', default: true },
+        no_password: { type: 'boolean', description: '设为 true 跳过密码步骤（适用于无密码直接进 shell 的设备）', default: false },
       },
-      required: ['username', 'password'],
+      required: ['username'],
     },
   },
   {
@@ -663,6 +664,54 @@ async function waitPattern(
   }
 }
 
+async function waitForAnyPattern(
+  id: string,
+  patterns: { pattern: string; isRegex: boolean }[],
+  timeout: number,
+): Promise<{ matched: boolean; index: number; output: string }> {
+  const deadline = Date.now() + timeout * 1000;
+  let allOutput = '';
+  let wakeup: (() => void) | null = null;
+  let unsub: (() => void) | null = null;
+
+  const conn = ConnectionFactory.get(id);
+  if (conn) {
+    unsub = conn.onData(() => {
+      wakeup?.();
+    });
+  }
+
+  const cleanup = () => {
+    if (unsub) { unsub(); unsub = null; }
+  };
+
+  try {
+    while (Date.now() < deadline) {
+      const chunk = consumeBuffer(id).toString('utf-8');
+      if (chunk) {
+        allOutput += chunk;
+        for (let i = 0; i < patterns.length; i++) {
+          if (matchPattern(allOutput, patterns[i].pattern, patterns[i].isRegex)) {
+            cleanup();
+            return { matched: true, index: i, output: allOutput };
+          }
+        }
+      }
+      const remaining = deadline - Date.now();
+      if (remaining <= 0) break;
+      await Promise.race([
+        new Promise<void>(r => { wakeup = r; }),
+        sleep(Math.min(remaining, 200)),
+      ]);
+    }
+    cleanup();
+    return { matched: false, index: -1, output: allOutput };
+  } catch {
+    cleanup();
+    return { matched: false, index: -1, output: allOutput };
+  }
+}
+
 async function waitForData(id: string, timeoutMs: number): Promise<void> {
   let wakeup: (() => void) | null = null;
   let unsub: (() => void) | null = null;
@@ -832,7 +881,7 @@ async function executeTool(name: string, args: Record<string, unknown>): Promise
 
         conn.write(Buffer.from(data, 'utf-8'));
         // 等待回显数据，最长等待 response_timeout_ms（默认500ms），有新数据立即返回
-        const responseTimeout = (args.response_timeout_ms as number) || 500;
+        const responseTimeout = (args.response_timeout_ms as number) || 2000;
         await waitForData(id, responseTimeout);
         const output = consumeBuffer(id).toString('utf-8');
         const meta = `sent=${data.length}B, replied=${output.length}B, ts=${Date.now()}`;
@@ -1040,16 +1089,16 @@ async function executeTool(name: string, args: Record<string, unknown>): Promise
       case 'connection_login': {
         const id = resolveId(args);
         const username = args.username as string;
-        const password = args.password as string;
+        const password = (args.password as string) || '';
         if (!id) return '错误: 未提供连接 id';
         if (!username) return '错误: 未提供 username 参数';
-        if (!password) return '错误: 未提供 password 参数';
 
         const loginPrompt = (args.loginPrompt as string) || 'login[:\\s]|username[:\\s]';
         const passwordPrompt = (args.passwordPrompt as string) || '[Pp]assword[:\\s]';
         const shellPrompt = (args.shellPrompt as string) || '[#$>]\\s';
         const timeout = (args.timeout as number) || 30;
         const debug = args.debug !== false;
+        const noPassword = args.no_password === true;
         const conn = ConnectionFactory.get(id);
         if (!conn) return `错误: 找不到连接 ${id}`;
         if (conn.state !== ConnectionState.CONNECTED) {
@@ -1082,22 +1131,52 @@ async function executeTool(name: string, args: Record<string, unknown>): Promise
         await sleep(300);
         clearBuffer(id);
 
-        // 步骤 3: 等待密码提示
-        addStep(`[3/5] 等待密码提示 (regex: "${passwordPrompt}", timeout=${timeout}s)...`);
-        const passResult = await waitPattern(id, passwordPrompt, timeout, true);
-        if (!passResult.matched) {
+        // 步骤 3: 显式跳过密码（no_password=true）
+        if (noPassword) {
+          addStep(`[3/4] 跳过密码（no_password=true），等待 Shell 提示符 (regex: "${shellPrompt}", timeout=${timeout}s)...`);
+          const shellResult = await waitPattern(id, shellPrompt, timeout, true);
+          const output = consumeBuffer(id).toString('utf-8');
+          if (shellResult.matched) {
+            const state = analyzeState(output, conn.state);
+            addStep(`[完成] 登录成功（无密码），Shell 类型: ${state.shell_type || 'detected'}`);
+            return steps.join('\n') + `\n\n登录成功。\n${output.slice(-300)}`;
+          }
+          addStep(`[完成] 凭据已发送（Shell 提示未检测到，可能已登录）`);
+          return steps.join('\n') + `\n\n${output.slice(-500)}`;
+        }
+
+        // 步骤 3: 等待密码提示 OR Shell 提示（自动检测无密码设备）
+        addStep(`[3/5] 等待密码提示或 Shell 提示 (regex: "${passwordPrompt}" / "${shellPrompt}", timeout=${timeout}s)...`);
+        const postUserResult = await waitForAnyPattern(id, [
+          { pattern: passwordPrompt, isRegex: true },
+          { pattern: shellPrompt, isRegex: true },
+        ], timeout);
+
+        // 自动检测：Shell 提示先于密码提示 → 无密码设备
+        if (postUserResult.matched && postUserResult.index === 1) {
+          const remaining = consumeBuffer(id).toString('utf-8');
+          const output = postUserResult.output + remaining;
+          const state = analyzeState(output, conn.state);
+          addStep(`[跳过] 设备直接进入 Shell，未出现密码提示（无密码设备），输出 ${output.length}B`);
+          addStep(`[完成] 登录成功（无密码设备），Shell 类型: ${state.shell_type || 'detected'}`);
+          return steps.join('\n') + `\n\n登录成功（检测到无密码设备）。\n${output.slice(-300)}`;
+        }
+
+        if (!postUserResult.matched) {
           if (debug) {
             return [
               ...steps,
-              `[失败] 超时未匹配密码提示`,
-              `用户名已发送，但未检测到密码提示`,
-              `当前输出 (500B): ${passResult.output.slice(-500)}`,
-              `提示: 检查用户名是否正确，或使用 connection_read (consume=false) 查看终端`,
+              `[失败] 超时未匹配密码提示或 Shell 提示`,
+              `用户名已发送，但未检测到密码提示或 Shell 提示`,
+              `当前输出 (500B): ${postUserResult.output.slice(-500)}`,
+              `提示: 检查用户名是否正确；或使用 no_password=true 跳过密码步骤；或使用 connection_read (consume=false) 查看终端`,
             ].join('\n');
           }
-          return `错误: 超时未检测到密码提示 "${passwordPrompt}"。当前内容:\n${passResult.output.slice(-500)}`;
+          return `错误: 超时未检测到密码提示或 Shell 提示。当前内容:\n${postUserResult.output.slice(-500)}`;
         }
-        addStep(`[4/5] 检测到密码提示，发送密码 (输出 ${passResult.output.length}B)`);
+
+        // 检测到密码提示，继续正常流程
+        addStep(`[4/5] 检测到密码提示，发送密码 (输出 ${postUserResult.output.length}B)`);
 
         // 步骤 4: 发送密码
         conn.write(Buffer.from(password + '\n', 'utf-8'));

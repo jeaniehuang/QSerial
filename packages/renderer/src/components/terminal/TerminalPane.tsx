@@ -491,17 +491,22 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
     const { text, filterText: ft, caseSensitive } = searchStateRef.current;
     if (!text.trim()) return;
     const buffer = term.buffer.active;
-    const flags = caseSensitive ? 'g' : 'gi';
+    const flags = caseSensitive ? '' : 'i';
     const primaryRe = new RegExp(escapeRegex(text), flags);
     const hasFilter = ft.trim().length > 0;
     const filterRe = hasFilter ? new RegExp(escapeRegex(ft), flags) : null;
     const total = buffer.length;
     const start = searchPosRef.current;
 
+    // 从当前匹配位置的下一行开始，初始为 -1 时从 buffer 首行/末行开始
+    const startIdx = forward
+      ? (start >= 0 ? (start + 1) % total : 0)
+      : (start >= 0 ? ((start - 1) % total + total) % total : total - 1);
+
     for (let i = 0; i < total; i++) {
       const idx = forward
-        ? ((start + i) % total + total) % total
-        : ((start - i - 1) % total + total) % total;
+        ? (startIdx + i) % total
+        : ((startIdx - i) % total + total) % total;
       const line = buffer.getLine(idx);
       if (!line) continue;
       const lineText = line.translateToString();
@@ -518,22 +523,20 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
   }, []);
 
   const findNext = useCallback(() => {
-    try { searchAddonRef.current?.findNext(''); } catch { /* ignore */ }
     const state = searchStateRef.current;
     if (state.filterText.trim() || !searchAddonRef.current) {
       bufferSearch(true);
     } else {
-      searchAddonRef.current.findNext(state.text, { caseSensitive: state.caseSensitive, incremental: false });
+      searchAddonRef.current!.findNext(state.text, { caseSensitive: state.caseSensitive, incremental: false });
     }
   }, [bufferSearch]);
 
   const findPrevious = useCallback(() => {
-    try { searchAddonRef.current?.findNext(''); } catch { /* ignore */ }
     const state = searchStateRef.current;
     if (state.filterText.trim() || !searchAddonRef.current) {
       bufferSearch(false);
     } else {
-      searchAddonRef.current.findPrevious(state.text, { caseSensitive: state.caseSensitive, incremental: false });
+      searchAddonRef.current!.findPrevious(state.text, { caseSensitive: state.caseSensitive, incremental: false });
     }
   }, [bufferSearch]);
 
