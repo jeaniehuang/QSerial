@@ -1,5 +1,5 @@
-﻿/**
- * MCP AI 服务器对话框 — 28 个工具 + Resources + Prompts + Notifications + Sampling
+/**
+ * MCP AI 服务器对话框 — 28 个工具 + Resources + Prompts + Notifications + Sampling + 控制面板
  */
 
 import React, { useEffect, useState } from "react";
@@ -29,7 +29,7 @@ const ALL_TOOLS = [
   // Hardware (2)
   { name: "connection_set_dtr_rts", cat: "hw", desc: "Control DTR/RTS serial signals", inputs: "id, dtr?, rts?" },
   { name: "connection_set_break", cat: "hw", desc: "Send break signal to serial port", inputs: "id, duration_ms?" },
-  // Discover (2)
+  // Discover (4)
   { name: "serial_list", cat: "discover", desc: "List available serial ports on this machine", inputs: "(none)" },
   { name: "session_list", cat: "discover", desc: "List saved connection sessions with full config", inputs: "(none)" },
   { name: "session_save", cat: "discover", desc: "Save current connection as a session", inputs: "id, name" },
@@ -39,7 +39,7 @@ const ALL_TOOLS = [
   // File (2)
   { name: "connection_send_file", cat: "file", desc: "Send file via XMODEM/YMODEM protocol", inputs: "id, file_path, protocol?" },
   { name: "window_screenshot", cat: "file", desc: "Capture terminal window screenshot", inputs: "id?" },
-  // v0.3.x AI (3)
+  // AI (4)
   { name: "connection_probe", cat: "ai", desc: "Auto-detect device type (ESP32/STM32/RPi/Cisco/Arduino/BusyBox)", inputs: "id, timeout_ms?" },
   { name: "connection_watch", cat: "ai", desc: "Monitor connection for patterns, sends data_alert notifications", inputs: "id, rules[], duration_ms?" },
   { name: "connection_unwatch", cat: "ai", desc: "Stop a running watch", inputs: "watch_id" },
@@ -91,9 +91,45 @@ interface McpDialogProps { isOpen: boolean; onClose: () => void; }
 
 export const McpDialog: React.FC<McpDialogProps> = ({ isOpen, onClose }) => {
   const { t } = useTranslation();
-  const { running, config } = useMcpStore();
+  const {
+    config,
+    running,
+    starting,
+    stopping,
+    error,
+    connections,
+    updateConfig,
+    startServer,
+    stopServer,
+    loadStatus,
+  } = useMcpStore();
   const [selectedCat, setSelectedCat] = useState("conn");
   const [expandedParams, setExpandedParams] = useState<Set<string>>(new Set());
+  const [localPort, setLocalPort] = useState(config.port || 9800);
+  const [localListenAddress, setLocalListenAddress] = useState(config.listenAddress);
+  const [localAuthPassword, setLocalAuthPassword] = useState(config.authPassword);
+  const [selectedClient, setSelectedClient] = useState<"claude" | "codebuddy">("claude");
+  const [localIp, setLocalIp] = useState("127.0.0.1");
+
+  useEffect(() => {
+    setLocalPort(config.port || 9800);
+    setLocalListenAddress(config.listenAddress);
+    setLocalAuthPassword(config.authPassword);
+  }, [config]);
+
+  useEffect(() => {
+    if (isOpen) {
+      loadStatus();
+      window.qserial.getLocalIp().then(setLocalIp).catch(() => setLocalIp("127.0.0.1"));
+      const interval = setInterval(() => {
+        if (useMcpStore.getState().running) {
+          loadStatus();
+        }
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+    return;
+  }, [isOpen, loadStatus]);
 
   const toggleParams = (name: string) => {
     setExpandedParams((prev) => {
@@ -101,6 +137,33 @@ export const McpDialog: React.FC<McpDialogProps> = ({ isOpen, onClose }) => {
       next.has(name) ? next.delete(name) : next.add(name);
       return next;
     });
+  };
+
+  const handlePortChange = (value: string) => {
+    const port = parseInt(value, 10);
+    if (!isNaN(port) && port > 0 && port <= 65535) {
+      setLocalPort(port);
+      updateConfig({ port });
+    }
+  };
+
+  const handleListenAddressChange = (value: string) => {
+    setLocalListenAddress(value);
+    updateConfig({ listenAddress: value });
+  };
+
+  const handleAuthPasswordChange = (value: string) => {
+    setLocalAuthPassword(value);
+    updateConfig({ authPassword: value });
+  };
+
+  const handleStart = async () => {
+    updateConfig({ port: localPort, listenAddress: localListenAddress, authPassword: localAuthPassword });
+    await startServer();
+  };
+
+  const handleStop = async () => {
+    await stopServer();
   };
 
   if (!isOpen) return null;
@@ -119,16 +182,194 @@ export const McpDialog: React.FC<McpDialogProps> = ({ isOpen, onClose }) => {
               {config.listenAddress}:{config.port} · {ALL_TOOLS.length} 工具 · 7 资源 · 6 提示模板 · SSE 通知
             </p>
           </div>
-          <div className="flex items-center gap-3">
-            <span className={`w-2 h-2 rounded-full ${running ? "bg-green-500" : "bg-red-500"}`} />
-            <span className={`text-xs font-medium ${running ? "text-green-500" : "text-red-500"}`}>
-              {running ? "运行中" : "已停止"}
-            </span>
-          </div>
+          <button
+            onClick={onClose}
+            className="w-7 h-7 flex items-center justify-center rounded-md text-text-secondary hover:text-text transition-colors"
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M1 1l12 12M13 1L1 13"/>
+            </svg>
+          </button>
         </div>
 
         {/* Body - scrollable */}
         <div className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
+
+          {/* 控制面板 */}
+          <div className="bg-background/40 rounded-lg border border-border/50 p-4 space-y-3">
+            {/* 端口 */}
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-medium text-text-secondary mb-1">端口</label>
+                <input
+                  type="number"
+                  value={localPort}
+                  onChange={(e) => handlePortChange(e.target.value)}
+                  disabled={running}
+                  className="dialog-input"
+                  min={1024}
+                  max={65535}
+                />
+              </div>
+              {/* 监听地址 */}
+              <div>
+                <label className="block text-xs font-medium text-text-secondary mb-1">监听地址</label>
+                <select
+                  value={localListenAddress}
+                  onChange={(e) => handleListenAddressChange(e.target.value)}
+                  disabled={running}
+                  className="dialog-input"
+                >
+                  <option value="127.0.0.1">127.0.0.1 (仅本机)</option>
+                  <option value="0.0.0.0">0.0.0.0 (可远程访问)</option>
+                </select>
+              </div>
+            </div>
+            {/* 认证密码 */}
+            <div>
+              <label className="block text-xs font-medium text-text-secondary mb-1">
+                Bearer Token 认证 <span className="text-text-secondary/50 font-normal">(可选)</span>
+              </label>
+              <input
+                type="password"
+                value={localAuthPassword}
+                onChange={(e) => handleAuthPasswordChange(e.target.value)}
+                disabled={running}
+                placeholder="留空则不启用认证"
+                className="dialog-input"
+              />
+            </div>
+            {/* 状态 + 操作 */}
+            <div className="flex items-center justify-between pt-1">
+              <div className="flex items-center gap-2.5">
+                <span
+                  className={`w-[9px] h-[9px] rounded-full ${running ? "bg-green-500" : starting || stopping ? "bg-yellow-400 animate-pulse" : "bg-text-secondary/20"}`}
+                />
+                <span className="text-sm font-medium">
+                  {running
+                    ? `运行中 — ${config.listenAddress}:${config.port}${config.listenAddress === "0.0.0.0" ? " (可远程)" : " (仅本机)"}${config.authPassword ? " · 已认证" : ""}`
+                    : starting ? "启动中..." : stopping ? "停止中..." : "已停止"}
+                </span>
+              </div>
+              <div className="flex gap-2">
+                {running ? (
+                  <button
+                    onClick={handleStop}
+                    disabled={stopping}
+                    className="bg-error text-white hover:bg-error/80 rounded-md text-xs px-3.5 py-1.5 font-medium disabled:opacity-50 transition-colors"
+                  >
+                    {stopping ? "停止中..." : "停止"}
+                  </button>
+                ) : (
+                  <button
+                    onClick={handleStart}
+                    disabled={starting}
+                    className="dialog-btn dialog-btn-primary text-xs disabled:opacity-50"
+                    style={{ padding: "6px 14px" }}
+                  >
+                    {starting ? "启动中..." : "启动"}
+                  </button>
+                )}
+              </div>
+            </div>
+            {/* 错误信息 */}
+            {error && (
+              <div className="flex items-center gap-2 text-xs text-error bg-error/10 border-l-2 border-error px-3 py-2 rounded-r">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" className="flex-shrink-0">
+                  <path d="M7 0a7 7 0 100 14A7 7 0 007 0zm0 10.5a.75.75 0 110-1.5.75.75 0 010 1.5zM7.75 4v3.5a.75.75 0 01-1.5 0V4a.75.75 0 011.5 0z"/>
+                </svg>
+                {error}
+              </div>
+            )}
+          </div>
+
+          {/* 活跃连接列表 */}
+          {running && (
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <h4 className="text-xs font-semibold text-text-secondary uppercase tracking-wider">可用设备</h4>
+                <span className="text-xs text-text-secondary">{connections.length} 个连接</span>
+              </div>
+              <div className="border border-border/50 rounded-lg bg-background/50 max-h-36 overflow-y-auto">
+                {connections.length === 0 ? (
+                  <div className="text-sm text-text-secondary/50 p-3 text-center">
+                    暂无可用连接
+                    <p className="text-xs mt-1">创建终端连接后会显示在此处</p>
+                  </div>
+                ) : (
+                  <div className="divide-y divide-border/50">
+                    {connections.map((conn) => (
+                      <div key={conn.id} className="p-2.5 text-sm">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2 min-w-0">
+                            <span className="flex-shrink-0 w-2 h-2 rounded-full bg-green-500" />
+                            <span className="truncate">{conn.name || conn.id.slice(0, 8)}</span>
+                          </div>
+                          <div className="flex items-center gap-2 flex-shrink-0">
+                            <span className="text-xs text-text-secondary">{conn.type}</span>
+                            <span className={`text-xs ${conn.state === "connected" ? "text-green-400" : "text-yellow-400"}`}>
+                              {conn.state}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* MCP 配置示例 */}
+          {running && (
+            <div className="space-y-3">
+              <h4 className="text-xs font-semibold text-text-secondary uppercase tracking-wider">MCP 配置</h4>
+              <div className="border border-border/50 rounded-lg overflow-hidden">
+                <div className="flex bg-background/50 border-b border-border/50">
+                  {(["claude", "codebuddy"] as const).map((client) => (
+                    <button
+                      key={client}
+                      onClick={() => setSelectedClient(client)}
+                      className={`flex-1 text-xs py-2 px-3 transition-colors ${
+                        selectedClient === client
+                          ? "bg-surface text-primary font-medium border-b-2 border-primary -mb-[1px]"
+                          : "text-text-secondary hover:text-text hover:bg-hover/50"
+                      }`}
+                    >
+                      {client === "claude" ? "Claude Code" : "CodeBuddy"}
+                    </button>
+                  ))}
+                </div>
+                <div className="p-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs text-text-secondary">.mcp.json</span>
+                    <button
+                      onClick={() => {
+                        const tokenSuffix = config.authPassword ? `?token=${config.authPassword}` : "";
+                        const headersBlock = config.authPassword ? `,\n      "headers": {\n        "Authorization": "Bearer ${config.authPassword}"\n      }` : "";
+                        const cfg = selectedClient === "claude"
+                          ? `{"mcpServers":{"qserial":{"type":"streamable-http","url":"http://${localIp}:${config.port}/mcp"${headersBlock}}}}`
+                          : `{"mcpServers":{"qserial":{"type":"sse","url":"http://${localIp}:${config.port}/sse${tokenSuffix}"}}}`;
+                        navigator.clipboard.writeText(cfg).catch(() => {});
+                      }}
+                      className="text-xs text-primary hover:text-primary/80 transition-colors"
+                    >
+                      复制
+                    </button>
+                  </div>
+                  <pre className="text-[11px] font-mono text-text bg-background/60 rounded p-3 overflow-x-auto whitespace-pre-wrap">
+                    {selectedClient === "claude"
+                      ? `{"mcpServers":{"qserial":{"type":"streamable-http","url":"http://${localIp}:${config.port}/mcp"${config.authPassword ? `,\n      "headers":{"Authorization":"Bearer ${config.authPassword}"}` : ""}}}}`
+                      : `{"mcpServers":{"qserial":{"type":"sse","url":"http://${localIp}:${config.port}/sse${config.authPassword ? `?token=${config.authPassword}` : ""}"}}}`
+                    }
+                  </pre>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* 分隔线 */}
+          <div className="border-t border-border/50" />
 
           {/* Tools */}
           <div>
