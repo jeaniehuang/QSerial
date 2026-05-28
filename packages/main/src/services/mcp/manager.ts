@@ -797,7 +797,13 @@ async function executeTool(name: string, args: Record<string, unknown>): Promise
         }
         const sessionId = args.sessionId as string | undefined;
         const name = args.name as string;
-        const type = args.type as string;
+        const connId = (args.id || args.connectionId) as string | undefined;
+        let type = args.type as string | undefined;
+        // Auto-detect type from connection ID if provided
+        if (connId && !type) {
+          const conn = ConnectionFactory.get(connId);
+          if (conn) { type = conn.type; }
+        }
         if (!name) return '错误: 未提供 name 参数';
         if (!type) return '错误: 未提供 type 参数';
         if (!['serial', 'ssh', 'telnet', 'pty'].includes(type)) {
