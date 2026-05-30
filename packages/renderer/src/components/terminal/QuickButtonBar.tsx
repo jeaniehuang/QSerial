@@ -382,21 +382,28 @@ export const QuickButtonBar: React.FC<QuickButtonBarProps> = ({ direction: direc
 
   
 
-  const playMacro = async (macro: any) => {
+  const playMacro = (macro: any) => {
     if (!connectionId || !isConnected) return;
     console.log('[Macro] Playing', macro.name, 'with', macro.steps.length, 'steps');
     setPlayingMacroId(macro.id);
-    try {
-      for (let i = 0; i < macro.steps.length; i++) {
-        const step = macro.steps[i];
-        const d = step.delay > 0 ? step.delay : 5;
-        await new Promise(r => setTimeout(r, d));
-        console.log('[Macro] Step', i+1, '/', macro.steps.length, 'delay='+d+'ms', 'data='+JSON.stringify(step.data));
-        await window.qserial.connection.write(connectionId, step.data);
-      }
-    } catch (e) { console.error('[Macro] Playback error:', e); }
-    setPlayingMacroId(null);
-    console.log('[Macro] Playback complete');
+    // 批量发送: 合并所有步骤为一个字符串，单次 IPC
+    let cumulative = 0;
+    const parts: string[] = [];
+    for (let i = 0; i < macro.steps.length; i++) {
+      const step = macro.steps[i];
+      const d = step.delay > 0 ? step.delay : 5;
+      cumulative += d;
+      console.log('[Macro] Step', i+1, '/', macro.steps.length, 'delay='+d+'ms', 'data='+JSON.stringify(step.data));
+      parts.push(step.data);
+    }
+    const batch = parts.join('');
+    console.log('[Macro] Batch sending', batch.length, 'bytes, total delay', cumulative, 'ms');
+    setTimeout(() => {
+      window.qserial.connection.write(connectionId, batch).then(() => {
+        console.log('[Macro] Playback complete');
+        setPlayingMacroId(null);
+      }).catch((e: any) => console.error('[Macro] Playback error:', e));
+    }, cumulative > 0 ? cumulative : 5);
   };
 
   const handleContextMenu = (e: React.MouseEvent, type: 'button' | 'group', groupId: string, buttonId?: string, buttonIndex?: number, groupIndex?: number) => {
