@@ -380,14 +380,19 @@ export const QuickButtonBar: React.FC<QuickButtonBarProps> = ({ direction: direc
 
   const playMacro = async (macro: any) => {
     if (!connectionId || !isConnected) return;
+    console.log('[Macro] Playing', macro.name, 'with', macro.steps.length, 'steps');
     setPlayingMacroId(macro.id);
     try {
-      for (const step of macro.steps) {
-        if (step.delay > 0) await new Promise(r => setTimeout(r, step.delay));
+      for (let i = 0; i < macro.steps.length; i++) {
+        const step = macro.steps[i];
+        const d = step.delay > 0 ? step.delay : 50;
+        await new Promise(r => setTimeout(r, d));
+        console.log('[Macro] Step', i+1, '/', macro.steps.length, 'delay='+d+'ms', 'data='+JSON.stringify(step.data));
         await window.qserial.connection.write(connectionId, step.data);
       }
-    } catch (e) { console.error('Macro playback error:', e); }
+    } catch (e) { console.error('[Macro] Playback error:', e); }
     setPlayingMacroId(null);
+    console.log('[Macro] Playback complete');
   };
 
   const handleContextMenu = (e: React.MouseEvent, type: 'button' | 'group', groupId: string, buttonId?: string, buttonIndex?: number, groupIndex?: number) => {
