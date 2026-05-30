@@ -393,12 +393,11 @@ export const QuickButtonBar: React.FC<QuickButtonBarProps> = ({ direction: direc
     for (let i = 0; i < macro.steps.length; i++) {
       const step = macro.steps[i];
       let d = step.delay > 0 ? step.delay : 5;
-      // 首步通常为等待提示符时间，压缩到 100ms
-      if (i === 0 && d > 100) d = 100;
-      // 后续步骤上限 200ms
-      if (d > 200) { capped += d - 200; d = 200; }
+      // 首步压缩到 10ms，后续上限 50ms，总计 200ms
+      if (i === 0 && d > 10) d = 10;
+      if (d > 50) { capped += d - 50; d = 50; }
       cumulative += d;
-      if (cumulative > 1000) { capped += cumulative - 1000; cumulative = 1000; }
+      if (cumulative > 200) { capped += cumulative - 200; cumulative = 200; }
       console.log('[Macro] Step', i+1, '/', macro.steps.length, 'original='+step.delay+'ms', 'capped='+d+'ms', 'data='+JSON.stringify(step.data));
       parts.push(step.data);
     }
