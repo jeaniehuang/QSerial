@@ -1,4 +1,4 @@
-/**
+﻿/**
  * QSerial Main Process Entry
  * 启动优化：窗口立即显示，重模块延迟加载
  */
@@ -291,23 +291,23 @@ async function initBackgroundServices(): Promise<void> {
     const { initNfsManager } = await import('./services/nfs/manager.js');
     initNfsManager();
     console.log('NFS manager initialized');
-
-    // MCP 自动启动（如果已启用）
-    const mcpConfig = ConfigManager.get('mcp');
-    if (mcpConfig?.enabled) {
-      try {
-        const { startMcpServer } = await import('./services/mcp/manager.js');
-        const port = mcpConfig.port || 9800;
-        const listenAddress = mcpConfig.listenAddress || '127.0.0.1';
-        const authPassword = mcpConfig.authPassword || '';
-        await startMcpServer(port, listenAddress, authPassword);
-        ConfigManager.set('mcp', { enabled: true, port, listenAddress, authPassword });
-        console.log('MCP server auto-started on port', port);
-      } catch (err) {
-        console.error('MCP auto-start failed:', err);
-      }
+    // MCP 延迟启动（窗口显示2秒后再启动，避免阻塞UI）
+    const mcpConfig2 = ConfigManager.get("mcp");
+    if (mcpConfig2?.enabled) {
+      const port2 = mcpConfig2.port || 9800;
+      const listenAddress2 = mcpConfig2.listenAddress || "127.0.0.1";
+      const authPassword2 = mcpConfig2.authPassword || "";
+      setTimeout(async () => {
+        try {
+          const { startMcpServer } = await import("./services/mcp/manager.js");
+          await startMcpServer(port2, listenAddress2, authPassword2);
+          ConfigManager.set("mcp", { enabled: true, port: port2, listenAddress: listenAddress2, authPassword: authPassword2 });
+          console.log("MCP server started on port", port2, "(delayed)");
+        } catch (err2) {
+          console.error("MCP auto-start failed:", err2);
+        }
+      }, 2000);
     }
-
     console.log('Background services initialized');
   } catch (err) {
     crashLog('[FATAL] init failed: ' + (err instanceof Error ? err.message : String(err)) + '\n' + (err instanceof Error ? err.stack || '' : ''));

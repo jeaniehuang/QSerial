@@ -114,7 +114,7 @@ export const DEFAULT_CONFIG: AppConfig = {
     theme: 'dracula',
     uiFontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     autoUpdate: true,
-    checkUpdateOnStartup: true,
+    checkUpdateOnStartup: false,
     minimizeToTray: false,
     closeToTray: false,
   },
@@ -162,7 +162,7 @@ export const DEFAULT_CONFIG: AppConfig = {
 
 
 	  mcp: {
-	    enabled: true,
+	    enabled: false,
 	    port: 9800,
 	    listenAddress: '127.0.0.1',
 	    authPassword: '',
