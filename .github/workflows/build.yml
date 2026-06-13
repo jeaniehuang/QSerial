@@ -10,6 +10,11 @@ on:
         description: 'Build version (optional)'
         required: false
 
+
+permissions:
+  contents: write   # 创建 Release 需要
+  packages: write   # 上传 artifact 需要
+
 jobs:
   # ==========================================
   # Windows 构建（推荐，原生编译原生模块）
