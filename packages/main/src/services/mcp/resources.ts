@@ -2,6 +2,8 @@
  * MCP Resources definitions and read handlers
  */
 
+import * as fs from 'fs';
+import * as path from 'path';
 import { ConnectionFactory } from '../connection/factory.js';
 import { SerialConnection } from '../connection/serial.js';
 
@@ -18,6 +20,10 @@ export const MCP_RESOURCES = [
   { uri: 'qserial://screenshot/latest', name: 'Latest Screenshot', description: 'Latest terminal window screenshot', mimeType: 'image/svg+xml' },
   { uri: 'qserial://notifications/pending', name: 'Pending Notifications', description: 'Poll pending MCP notifications', mimeType: 'application/json' },
   { uri: 'qserial://connections/{id}', name: 'Connection Detail', description: 'Detailed info for a specific connection', mimeType: 'application/json' },
+  { uri: 'qserial://device/esp32-at', name: 'ESP32 AT Commands', description: 'ESP32/ESP8266 AT command set reference', mimeType: 'text/markdown' },
+  { uri: 'qserial://device/uboot', name: 'U-Boot Commands', description: 'U-Boot bootloader command reference', mimeType: 'text/markdown' },
+  { uri: 'qserial://device/cisco-ios', name: 'Cisco IOS Commands', description: 'Cisco IOS CLI quick reference', mimeType: 'text/markdown' },
+  { uri: 'qserial://device/openwrt', name: 'OpenWrt CLI', description: 'OpenWrt command-line reference', mimeType: 'text/markdown' },
 ];
 
 export async function readResource(uri: string): Promise<{ contents: Array<{ uri: string; mimeType: string; text?: string }> } | null> {
@@ -53,6 +59,26 @@ export async function readResource(uri: string): Promise<{ contents: Array<{ uri
     case 'qserial://notifications/pending': {
       const { drainNotifications } = await import('./notifications.js');
       return { contents: [{ uri, mimeType: 'application/json', text: JSON.stringify(drainNotifications(), null, 2) }] };
+    }
+    case 'qserial://device/esp32-at':
+    case 'qserial://device/uboot':
+    case 'qserial://device/cisco-ios':
+    case 'qserial://device/openwrt': {
+      const deviceMap: Record<string, string> = {
+        'qserial://device/esp32-at': 'esp32-at.md',
+        'qserial://device/uboot': 'uboot.md',
+        'qserial://device/cisco-ios': 'cisco-ios.md',
+        'qserial://device/openwrt': 'openwrt.md',
+      };
+      const fileName = deviceMap[uri];
+      const kbDir = path.resolve(__dirname, '../../../../plugins/device-knowledge');
+      const filePath = path.join(kbDir, fileName);
+      try {
+        const text = fs.readFileSync(filePath, 'utf-8');
+        return { contents: [{ uri, mimeType: 'text/markdown', text }] };
+      } catch {
+        return null;
+      }
     }
     default: {
       const m = uri.match(/^qserial:\/\/connections\/(.+)$/);
