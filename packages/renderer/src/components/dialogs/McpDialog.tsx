@@ -120,14 +120,18 @@ interface ClientTemplate {
 }
 
 const CLIENT_TEMPLATES: ClientTemplate[] = [
-  { id: "codebuddy", name: "CodeBuddy", description: "腾讯 AI 编程", configFile: "IDE 设置面板", type: "sse", configKey: "mcpServers" },
-  { id: "claude-code", name: "Claude Code", description: "Anthropic CLI", configFile: ".mcp.json 或 ~/.claude.json", type: "streamable-http", configKey: "mcpServers" },
-  { id: "claude-desktop", name: "Claude Desktop", description: "Anthropic 桌面版", configFile: "claude_desktop_config.json", type: "streamable-http", configKey: "mcpServers" },
+  // ✅ Verified - SSE transport, token in URL query
+  { id: "codebuddy", name: "CodeBuddy", description: "Tencent AI coding", configFile: "IDE MCP settings", type: "sse", configKey: "mcpServers" },
+  // ✅ Verified - streamable-http, Bearer auth in headers
+  { id: "claude-code", name: "Claude Code", description: "Anthropic CLI", configFile: ".mcp.json", type: "streamable-http", configKey: "mcpServers" },
+  // ✅ Verified - streamable-http, same format as Claude Code
+  { id: "claude-desktop", name: "Claude Desktop", description: "Anthropic desktop", configFile: "claude_desktop_config.json", type: "streamable-http", configKey: "mcpServers" },
+  // ⚠️ Inferred - standard MCP format, streamable-http
   { id: "codex", name: "Codex", description: "OpenAI Codex CLI", configFile: ".codex/mcp.json", type: "streamable-http", configKey: "mcpServers" },
-  { id: "gemini", name: "Gemini", description: "Google Gemini CLI", configFile: ".gemini/mcp.json", type: "streamable-http", configKey: "mcpServers" },
-  { id: "opencode", name: "OpenCode", description: "OpenCode CLI", configFile: ".opencode/mcp.json", type: "streamable-http", configKey: "mcpServers" },
-  { id: "openclaw", name: "OpenClaw", description: "OpenClaw CLI", configFile: ".openclaw/mcp.json", type: "streamable-http", configKey: "mcpServers" },
-  { id: "hermes", name: "Hermes", description: "Hermes CLI", configFile: ".hermes/mcp.json", type: "streamable-http", configKey: "mcpServers" },
+  // ✅ Verified - SSE + stdio only, config at ~/.gemini/settings.json
+  { id: "gemini", name: "Gemini CLI", description: "Google Gemini CLI", configFile: "~/.gemini/settings.json", type: "sse", configKey: "mcpServers" },
+  // ✅ Verified - SSE + stdio only, archived -> now Crush by Charm
+  { id: "opencode", name: "OpenCode", description: "OpenCode CLI (archived)", configFile: ".opencode.json", type: "sse", configKey: "mcpServers" },
 ];
 
 function generateClientConfig(client: ClientTemplate, ip: string, port: number, authPassword: string, pretty: boolean = false): string {
