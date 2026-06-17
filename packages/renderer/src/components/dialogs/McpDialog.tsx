@@ -131,16 +131,21 @@ const CLIENT_TEMPLATES: ClientTemplate[] = [
   { id: "generic", name: "通用", description: "标准 MCP 规范", configFile: "遵照 MCP 协议", type: "streamable-http", configKey: "mcpServers" },
 ];
 
-function generateClientConfig(client: ClientTemplate, ip: string, port: number, authPassword: string): string {
+function generateClientConfig(client: ClientTemplate, ip: string, port: number, authPassword: string, pretty: boolean = false): string {
   const baseUrl = `http://${ip}:${port}`;
-  const headersBlock = authPassword ? `,\n      "headers": {\n        "Authorization": "Bearer ${authPassword}"\n      }` : "";
+  const indent = pretty ? 2 : 0;
 
+  const serverConfig: Record<string, unknown> = { type: client.type === "sse" ? "sse" : "streamable-http" };
   if (client.type === "sse") {
-    const tokenSuffix = authPassword ? `?token=${authPassword}` : "";
-    return `{"${client.configKey}":{"qserial":{"type":"sse","url":"${baseUrl}/sse${tokenSuffix}"}}}`;
+    serverConfig.type = "sse";
+    serverConfig.url = baseUrl + "/sse" + (authPassword ? "?token=" + authPassword : "");
+  } else {
+    serverConfig.url = baseUrl + "/mcp";
+    if (authPassword) { serverConfig.headers = { Authorization: "Bearer " + authPassword }; }
   }
-
-  return `{"${client.configKey}":{"qserial":{"type":"streamable-http","url":"${baseUrl}/mcp"${headersBlock}}}}`;
+  const obj: Record<string, unknown> = {};
+  obj[client.configKey] = { qserial: serverConfig };
+  return JSON.stringify(obj, null, indent);
 }
 
 interface McpDialogProps { isOpen: boolean; onClose: () => void; }
@@ -463,7 +468,7 @@ export const McpDialog: React.FC<McpDialogProps> = ({ isOpen, onClose }) => {
                     {(() => {
                       const client = CLIENT_TEMPLATES.find(c => c.id === selectedClient) || CLIENT_TEMPLATES[0];
                       const token = config.authPassword || activeToken || '';
-                      return generateClientConfig(client, localIp, config.port, token);
+                      return generateClientConfig(client, localIp, config.port, token, true);
                     })()}
                   </pre>
                 </div>
