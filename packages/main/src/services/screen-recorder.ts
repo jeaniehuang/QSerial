@@ -24,7 +24,7 @@ async function getFfmpegPath(): Promise<string> {
   }
 
   try {
-    const m: any = await import('ffmpeg-static');
+    const m = await import('ffmpeg-static') as { default?: string };
     ffmpegPath = String(m.default || m);
   } catch {
     ffmpegPath = 'ffmpeg';

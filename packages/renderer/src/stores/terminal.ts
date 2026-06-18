@@ -7,7 +7,7 @@ import { immer } from 'zustand/middleware/immer';
 import { ConnectionType, ConnectionState } from '@qserial/shared';
 import { useSftpStore } from './sftp';
 
-interface Session {
+export interface Session {
   id: string;
   name: string;
   connectionId: string;

@@ -355,6 +355,13 @@ app.on('before-quit', async () => {
 
 // 监控 GPU 进程和子进程崩溃
 
-app.on('child-process-gone' as any, (_event: any, details: any) => {
+interface ChildProcessGoneDetails {
+  type?: string;
+  reason?: string;
+  exitCode?: number;
+  serviceName?: string;
+  name?: string;
+}
+app.on('child-process-gone' as keyof Electron.AppEvents, (_event: Electron.Event, details: ChildProcessGoneDetails) => {
   crashLog(`[CRASH] Child process gone: ${JSON.stringify(details)}`);
 });

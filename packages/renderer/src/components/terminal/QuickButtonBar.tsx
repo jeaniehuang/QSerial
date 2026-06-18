@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTerminalStore } from '@/stores/terminal';
 import { useQuickButtonsStore, type QuickButton, type ButtonGroup, type ButtonBarDirection, PRESET_COLORS } from '@/stores/quickButtons';
-import { useTerminalMacroStore } from '@/stores/terminalMacro';
+import { useTerminalMacroStore, type SavedMacro } from '@/stores/terminalMacro';
 import { ConnectionState } from '@qserial/shared';
 
 interface ButtonDialogProps {
@@ -384,7 +384,7 @@ export const QuickButtonBar: React.FC<QuickButtonBarProps> = ({ direction: direc
 
   
 
-  const playMacro = (macro: any) => {
+  const playMacro = (macro: SavedMacro) => {
     if (!connectionId || !isConnected) return;
     console.log('[Macro] Playing', macro.name, 'with', macro.steps.length, 'steps');
     setPlayingMacroId(macro.id);
@@ -409,7 +409,7 @@ export const QuickButtonBar: React.FC<QuickButtonBarProps> = ({ direction: direc
       window.qserial.connection.write(connectionId, batch).then(() => {
         console.log('[Macro] Playback complete');
         setPlayingMacroId(null);
-      }).catch((e: any) => console.error('[Macro] Playback error:', e));
+      }).catch((e: unknown) => console.error('[Macro] Playback error:', e));
     }, cumulative > 0 ? cumulative : 5);
   };
 

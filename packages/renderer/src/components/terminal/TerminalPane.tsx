@@ -17,6 +17,18 @@ import 'xterm/css/xterm.css';
 import { ConnectionShareDialog } from '../dialogs/ConnectionShareDialog';
 import { globalError } from '../common/ErrorToast';
 
+// xterm.js 5.x 内部 API 类型（非公共 API，用于兼容性 patch）
+interface XTermCore {
+  viewport?: {
+    syncScrollArea: (...args: unknown[]) => unknown;
+    _refresh?: (e: boolean) => unknown;
+    _innerRefresh?: (...args: unknown[]) => unknown;
+  };
+  _renderService?: {
+    dimensions?: unknown;
+  };
+}
+
 interface TerminalPaneProps {
   sessionId: string;
   connectionId: string;
@@ -181,7 +193,7 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
         // syncScrollArea 内部还会 _refresh → rAF(_innerRefresh) 异步链路。
         // 必须用 mountCountRef 而非 disposedRef（后者会被新 mount 重置为 false）
         try {
-          const core = (xterm as any)._core;
+          const core = (xterm as unknown as { _core?: XTermCore })._core;
           if (core?.viewport) {
             const capturedMountId = mountId;
             // 方案1：patch RenderService.dimensions getter — 从根源消除异常
@@ -212,7 +224,7 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
             const origSync = vp.syncScrollArea.bind(vp);
             const origRefresh = vp._refresh?.bind(vp);
             const origInnerRefresh = vp._innerRefresh?.bind(vp);
-            vp.syncScrollArea = function (...args: any[]) {
+            vp.syncScrollArea = function (...args: unknown[]) {
               if (mountCountRef.current !== capturedMountId) return;
               try { return origSync(...args); } catch { /* dimensions 未就绪/已 dispose */ }
             };
@@ -223,7 +235,7 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
               };
             }
             if (origInnerRefresh) {
-              vp._innerRefresh = function (...args: any[]) {
+              vp._innerRefresh = function (...args: unknown[]) {
                 if (mountCountRef.current !== capturedMountId) return;
                 try { return origInnerRefresh(...args); } catch { /* dimensions 未就绪/已 dispose */ }
               };
@@ -307,7 +319,7 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
           console.log('[TerminalPane] Queried state:', state, 'mountId:', mountId);
 
           // 更新 session 状态
-          updateSessionState(sessionId, state as any);
+          updateSessionState(sessionId, state as ConnectionState);
 
           if (state === 'connected') {
             const session = useTerminalStore.getState().sessions[sessionId];
@@ -402,8 +414,7 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
       (state: string) => {
         if (disposedRef.current) return;
         console.log('[TerminalPane] State changed:', state, 'sessionId:', sessionId.slice(0, 8), 'mountId:', mountId);
-        updateSessionState(sessionId, state as any);
-
+        updateSessionState(sessionId, state as ConnectionState);
         if (state === 'connected') {
           const currentSession = useTerminalStore.getState().sessions[sessionId];
           if (currentSession?.connectionType === ConnectionType.SERIAL) {

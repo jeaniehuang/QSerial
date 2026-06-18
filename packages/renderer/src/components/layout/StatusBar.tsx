@@ -89,8 +89,8 @@ export const StatusBar: React.FC = () => {
             <span className="w-px h-3.5 bg-border flex-shrink-0" />
             <span className="text-text-secondary flex-shrink-0 font-mono">
               {activeSession.connectionType === 'ssh' || activeSession.connectionType === 'telnet'
-                ? (activeSession as any).host || ''
-                : (activeSession as any).port || ''}
+                ? (activeSession as { host?: string }).host || ''
+                : (activeSession as { serialPath?: string }).serialPath || ''}
             </span>
             <span className="text-text-secondary/60 flex-shrink-0 font-mono">
               {activeSession.connectionType === 'ssh' ? ':22' :

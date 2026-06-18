@@ -19,10 +19,21 @@ import {
 // ESM 环境下需要 createRequire 来使用 require/require.resolve
 const nodeRequire = createRequire(import.meta.url);
 
+// ftp-srv 无官方类型声明，定义最小接口
+interface FtpLoginData {
+  connection?: { ip?: string; id?: string };
+  username?: string;
+  password?: string;
+}
+interface FtpServerInstance {
+  on(event: string, handler: (...args: unknown[]) => void): void;
+  listen(): Promise<void>;
+  close(): Promise<void>;
+}
+
 // ftp-srv 依赖链较深（yargs/bunyan/glob 等），打包到 asar 中无法正确解析
 // 因此通过 extraResources 打平安装，运行时动态加载
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-let FtpSrv: any = null;
+let FtpSrv: (new (config: Record<string, unknown>) => FtpServerInstance) | null = null;
 
 /**
  * 获取 ftp-srv 入口文件的加载路径
@@ -81,10 +92,10 @@ function loadFtpSrv(): void {
     const ftpSrvEntryPath = getFtpSrvEntryPath();
     // 在 ftp-srv 所在目录创建 require，确保 ftp-srv 内部的相对 require 能正确解析
     const localRequire = createRequire(ftpSrvEntryPath);
-    const mod = localRequire(ftpSrvEntryPath);
+    const mod = localRequire(ftpSrvEntryPath) as Record<string, unknown>;
     // ftp-srv 导出: module.exports = FtpSrv (构造函数)
     // 同时有 module.exports.FtpSrv = FtpSrv
-    FtpSrv = typeof mod === 'function' ? mod : mod.FtpSrv || mod.default;
+    FtpSrv = (typeof mod === 'function' ? mod : mod.FtpSrv || mod.default) as (new (config: Record<string, unknown>) => FtpServerInstance) | null;
     if (typeof FtpSrv !== 'function') {
       throw new Error(`模块导出类型异常: ${typeof mod}, keys: ${Object.keys(mod).join(',')}`);
     }
@@ -104,8 +115,7 @@ function loadFtpSrv(): void {
 }
 
 let mainWindow: BrowserWindow | null = null;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-let server: any = null;
+let server: FtpServerInstance | null = null;
 let serverRunning = false;
 let startingPromise: Promise<void> | null = null;
 let currentStatus: FtpServerStatus = {
@@ -186,12 +196,14 @@ export async function startFtpServer(port: number, rootDir: string, username: st
     });
 
     // 处理登录
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    server.on('login', (data: any, resolve: any, reject: any) => {
+    server.on('login', (data: unknown, resolve: unknown, reject: unknown) => {
       try {
-        const connection = data?.connection;
-        const user = data?.username;
-        const pass = data?.password;
+        const loginData = data as FtpLoginData;
+        const connection = loginData?.connection;
+        const user = loginData?.username;
+        const pass = loginData?.password;
+        const resolveFn = resolve as (opts: { root: string }) => void;
+        const rejectFn = reject as (err: Error) => void;
 
         // 记录客户端连接
         const clientIp = connection?.ip || 'unknown';
@@ -209,20 +221,20 @@ export async function startFtpServer(port: number, rootDir: string, username: st
         // 验证用户名密码
         if (username !== 'anonymous') {
           if (user !== username) {
-            reject(new Error('用户名错误'));
+            rejectFn(new Error('用户名错误'));
             return;
           }
           if (!password || pass !== password) {
-            reject(new Error('密码错误'));
+            rejectFn(new Error('密码错误'));
             return;
           }
         }
 
         // 设置根目录
-        resolve({ root: rootDir });
+        resolveFn({ root: rootDir });
       } catch (err) {
         console.error('[FTP] Login handler error:', err);
-        reject(new Error('内部错误'));
+        rejectFn(new Error('内部错误'));
       }
     });
 

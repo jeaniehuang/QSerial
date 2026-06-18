@@ -4,7 +4,7 @@
 
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useTerminalStore } from '@/stores/terminal';
+import { useTerminalStore, type Session } from '@/stores/terminal';
 import { useSavedSessionsStore, type SavedSession } from '@/stores/sessions';
 import { useSidebarButtonsStore, type SidebarButtonType } from '@/stores/sidebarButtons';
 import { useConfigStore } from '@/stores/config';
@@ -123,7 +123,7 @@ export const Sidebar: React.FC = () => {
     return sessionId;
   };
 
-  const findActiveSession = (type: ConnectionType, match: (s: any) => boolean): string | null => {
+  const findActiveSession = (type: ConnectionType, match: (s: Session) => boolean): string | null => {
     for (const [id, s] of Object.entries(sessions)) {
       if (s.connectionType === type && (s.connectionState === ConnectionState.CONNECTED || s.connectionState === ConnectionState.CONNECTING) && match(s)) return id;
     }
@@ -257,10 +257,10 @@ export const Sidebar: React.FC = () => {
     }
   };
 
-  const handleSerialUpdate = (opts: any) => { if (editingSession && opts.saveConfig && opts.configName) updateSession(editingSession.id, { name: opts.configName, serialConfig: { path: opts.path, baudRate: opts.baudRate, dataBits: opts.dataBits, stopBits: opts.stopBits, parity: opts.parity } }); handleSerialConnect(opts); setEditingSession(null); };
-  const handleSshUpdate = (opts: any) => { if (editingSession && opts.saveConfig && opts.configName) updateSession(editingSession.id, { name: opts.configName, sshConfig: { host: opts.host, port: opts.port, username: opts.username, password: opts.password } }); handleSshConnect(opts); setEditingSession(null); };
-  const handleTelnetUpdate = (opts: any) => { if (editingSession && opts.saveConfig && opts.configName) updateSession(editingSession.id, { name: opts.configName, telnetConfig: { host: opts.host, port: opts.port } }); handleTelnetConnect(opts); setEditingSession(null); };
-  const handlePtyUpdate = (opts: any) => { if (editingSession && opts.saveConfig && opts.configName) updateSession(editingSession.id, { name: opts.configName, ptyConfig: { shell: opts.shell, cwd: opts.cwd } }); handlePtyConnect(opts); setEditingSession(null); };
+  const handleSerialUpdate = (opts: { path: string; baudRate: number; dataBits: 5|6|7|8; stopBits: 1|2; parity: 'none'|'even'|'odd'|'mark'|'space'; saveConfig?: boolean; configName?: string }) => { if (editingSession && opts.saveConfig && opts.configName) updateSession(editingSession.id, { name: opts.configName, serialConfig: { path: opts.path, baudRate: opts.baudRate, dataBits: opts.dataBits, stopBits: opts.stopBits, parity: opts.parity } }); handleSerialConnect(opts); setEditingSession(null); };
+  const handleSshUpdate = (opts: { host: string; port: number; username: string; password?: string; privateKey?: string; passphrase?: string; saveConfig?: boolean; configName?: string }) => { if (editingSession && opts.saveConfig && opts.configName) updateSession(editingSession.id, { name: opts.configName, sshConfig: { host: opts.host, port: opts.port, username: opts.username, password: opts.password } }); handleSshConnect(opts); setEditingSession(null); };
+  const handleTelnetUpdate = (opts: { host: string; port: number; saveConfig?: boolean; configName?: string }) => { if (editingSession && opts.saveConfig && opts.configName) updateSession(editingSession.id, { name: opts.configName, telnetConfig: { host: opts.host, port: opts.port } }); handleTelnetConnect(opts); setEditingSession(null); };
+  const handlePtyUpdate = (opts: PtyConnectOptions & { saveConfig?: boolean; configName?: string }) => { if (editingSession && opts.saveConfig && opts.configName) updateSession(editingSession.id, { name: opts.configName, ptyConfig: { shell: opts.shell, cwd: opts.cwd } }); handlePtyConnect(opts); setEditingSession(null); };
 
   // 按钮配置 - 每种连接类型配专属色
   const typeColors: Record<string, string> = {

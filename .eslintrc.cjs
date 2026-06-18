@@ -22,11 +22,17 @@ module.exports = {
     ],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-non-null-assertion': 'warn',
     'no-console': ['warn', { allow: ['warn', 'error'] }],
   },
   overrides: [
+    {
+      files: ['**/__tests__/**/*.ts', '**/__tests__/**/*.tsx'],
+      rules: {
+        '@typescript-eslint/no-explicit-any': 'off',
+      },
+    },
     {
       files: ['**/*.tsx'],
       env: {

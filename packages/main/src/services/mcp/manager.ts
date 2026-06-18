@@ -736,7 +736,7 @@ function createRpcHandler(): (_req: http.IncomingMessage, res: http.ServerRespon
         try {
           const text = await executeTool(params.name, params.arguments || {});
           res.writeHead(200, { 'Content-Type': 'application/json' });
-          const sDrain = drainSampling(); const resp: any = { jsonrpc: '2.0', id: reqId, result: { content: [{ type: 'text', text }], isError: false } }; if (sDrain) resp.sampling = sDrain; res.end(JSON.stringify(resp));
+          const sDrain = drainSampling(); const resp: Record<string, unknown> = { jsonrpc: '2.0', id: reqId, result: { content: [{ type: 'text', text }], isError: false } }; if (sDrain) resp.sampling = sDrain; res.end(JSON.stringify(resp));
         } catch (e) {
           const error = e as Error;
           res.writeHead(200, { 'Content-Type': 'application/json' });

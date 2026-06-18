@@ -157,11 +157,14 @@ export const useTftpStore = create<TftpState & TftpActions>()(
     {
       name: 'qserial-tftp',
       partialize: (state) => ({ config: state.config }),
-      merge: (persisted: any, current: any) => ({
-        ...current,
-        ...persisted,
-        config: { ...current.config, ...persisted?.config },
-      }),
+      merge: (persisted: unknown, current: TftpState & TftpActions) => {
+        const p = (persisted as Partial<TftpState>) || {};
+        return {
+          ...current,
+          ...p,
+          config: { ...current.config, ...(p.config || {}) },
+        };
+      },
     }
   )
 );

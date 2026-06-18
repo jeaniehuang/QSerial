@@ -100,9 +100,9 @@ export const appHandlers: Record<string, ToolHandler> = {
       const raw = await ctx.mainWindow.webContents.executeJavaScript(
         "JSON.parse(localStorage.getItem('qserial-terminal-macros') || '{}')?.state?.savedMacros || []"
       );
-      const list = (raw || []).map((m: any) => ({ name: m.name, id: m.id, steps: m.steps?.length || 0, created: new Date(m.createdAt).toISOString() }));
+      const list = (raw || []).map((m: { name?: string; id?: string; steps?: unknown[]; createdAt?: string }) => ({ name: m.name, id: m.id, steps: m.steps?.length || 0, created: new Date(m.createdAt ?? 0).toISOString() }));
       return formatOk({ macros: list, total: list.length });
-    } catch (e: any) { return formatError('INTERNAL', e.message); }
+    } catch (e: unknown) { return formatError('INTERNAL', (e as Error).message || String(e)); }
   },
 
   'app.macro.run': async (args, ctx) => {
@@ -114,7 +114,7 @@ export const appHandlers: Record<string, ToolHandler> = {
       const raw = await ctx.mainWindow.webContents.executeJavaScript(
         "JSON.parse(localStorage.getItem('qserial-terminal-macros') || '{}')?.state?.savedMacros || []"
       );
-      const macro = (raw || []).find((m: any) => m.name === macroName);
+      const macro = (raw || []).find((m: { name?: string }) => m.name === macroName);
       if (!macro) return formatError('NOT_FOUND', 'Macro not found: ' + macroName);
       const conn = connId ? ConnectionFactory.get(connId) : null;
       if (!conn) return formatError('NOT_FOUND', 'Connection not found');
@@ -147,7 +147,8 @@ export const appHandlers: Record<string, ToolHandler> = {
       };
 
       // ??????
-      const execSteps = async (steps: any[], parentVars?: Record<string, string>): Promise<void> => {
+      type MacroStep = { type?: string; data?: string; delay?: number; ms?: number; pattern?: string; timeout?: number; count?: number; steps?: MacroStep[]; condition?: string; elseSteps?: MacroStep[]; variable?: string; value?: string };
+      const execSteps = async (steps: MacroStep[], parentVars?: Record<string, string>): Promise<void> => {
         const scopeVars = parentVars || vars;
         for (const raw of steps) {
           // ??????? {data, delay} ??
@@ -221,7 +222,7 @@ export const appHandlers: Record<string, ToolHandler> = {
         variables: vars,
         commands: results
       });
-    } catch (e: any) { return formatError('INTERNAL', e.message); }
+    } catch (e: unknown) { return formatError('INTERNAL', (e as Error).message || String(e)); }
   },
 
   'app.record.start': async (args, ctx) => {

@@ -3,8 +3,7 @@
  * Structured errors, output cleaning, history tracking, AT parsing
  */
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type AnyRecord = Record<string, any>;
+type AtField = Record<string, string>;
 
 /** Strip ANSI escape sequences from terminal output */
 export function stripAnsi(text: string): string {
@@ -77,15 +76,15 @@ export function appendHistory(id: string, dir: 'send' | 'recv', data: string): v
 }
 
 /** Parse AT command response (e.g., +CMD: value / OK / ERROR) */
-export function parseAtResponse(output: string): { result: string; fields: AnyRecord[] } {
-  const fields: AnyRecord[] = [];
+export function parseAtResponse(output: string): { result: string; fields: AtField[] } {
+  const fields: AtField[] = [];
   let result = 'unknown';
   for (const line of output.split('\n')) {
     const trimmed = line.trim();
     if (trimmed === 'OK') { result = 'OK'; continue; }
     if (trimmed === 'ERROR') { result = 'ERROR'; continue; }
     const m = trimmed.match(/^\+(\w+):\s*(.*)/);
-    if (m) { const obj: AnyRecord = {}; obj[m[1]] = m[2]; fields.push(obj); }
+    if (m) { const obj: AtField = {}; obj[m[1]] = m[2]; fields.push(obj); }
   }
   return { result, fields };
 }

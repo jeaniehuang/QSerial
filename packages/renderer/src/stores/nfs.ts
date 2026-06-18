@@ -184,11 +184,14 @@ export const useNfsStore = create<NfsState & NfsActions>()(
     {
       name: 'qserial-nfs',
       partialize: (state) => ({ config: state.config }),
-      merge: (persisted: any, current: any) => ({
-        ...current,
-        ...persisted,
-        config: { ...current.config, ...persisted?.config },
-      }),
+      merge: (persisted: unknown, current: NfsState & NfsActions) => {
+        const p = (persisted as Partial<NfsState>) || {};
+        return {
+          ...current,
+          ...p,
+          config: { ...current.config, ...(p.config || {}) },
+        };
+      },
     }
   )
 );

@@ -58,7 +58,7 @@ export const useThemeStore = create<ThemeState>()(
       onRehydrateStorage: () => (state) => {
         if (state) {
           // 根据保存的主题 ID 恢复主题
-          const savedThemeId = (state as any).currentThemeId;
+          const savedThemeId = (state as { currentThemeId?: string }).currentThemeId;
           if (savedThemeId) {
             const theme = state.themes.find((t) => t.id === savedThemeId);
             if (theme) {

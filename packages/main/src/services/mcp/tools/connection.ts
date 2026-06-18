@@ -46,7 +46,7 @@ export const connectionHandlers: Record<string, ToolHandler> = {
     const id = crypto.randomUUID();
     const name = (args.name as string) || `${ctype.toUpperCase()} ${((args.host || args.path) as string) || ''}`;
 
-    const options: any = {
+    const options: Record<string, unknown> = {
       id,
       name,
       type: ctype,
@@ -81,7 +81,7 @@ export const connectionHandlers: Record<string, ToolHandler> = {
     }
 
     try {
-      const conn = await ConnectionFactory.create(options);
+      const conn = await ConnectionFactory.create(options as unknown as import('@qserial/shared').ConnectionOptions);
       await conn.open();
       ctx.ensureBuffer(id);
       sendMCPNotification('connection/connected', { id, type: ctype, name });

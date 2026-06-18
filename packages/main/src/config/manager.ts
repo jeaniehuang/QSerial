@@ -10,9 +10,6 @@ import { EventEmitter } from 'events';
 
 type ConfigChangeCallback = (key: string, value: unknown) => void;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type AnyRecord = Record<string, any>;
-
 class ConfigManagerImpl {
   private config: AppConfig;
   private configPath: string;
@@ -41,8 +38,8 @@ class ConfigManagerImpl {
 
     if (loaded) {
       this.config = this.mergeConfig(
-        DEFAULT_CONFIG as unknown as AnyRecord,
-        loaded as AnyRecord
+        DEFAULT_CONFIG as unknown as Record<string, unknown>,
+        loaded as Record<string, unknown>
       ) as AppConfig;
       // 成功加载后立即更新备份
       try {
@@ -70,7 +67,7 @@ class ConfigManagerImpl {
   /**
    * 深度合并配置
    */
-  private mergeConfig(defaults: AnyRecord, user: AnyRecord): AnyRecord {
+  private mergeConfig(defaults: Record<string, unknown>, user: Record<string, unknown>): Record<string, unknown> {
     const result = { ...defaults };
 
     for (const key in user) {
@@ -132,8 +129,7 @@ class ConfigManagerImpl {
   get<T = unknown>(key: string): T | undefined;
   get(key: string): unknown {
     const keys = key.split('.');
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let value: any = this.config;
+    let value: Record<string, unknown> = this.config as unknown as Record<string, unknown>;
 
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
@@ -153,8 +149,7 @@ class ConfigManagerImpl {
   set(key: string, value: unknown): void;
   set(key: string, value: unknown): void {
     const keys = key.split('.');
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let obj: any = this.config;
+    let obj: Record<string, unknown> = this.config as unknown as Record<string, unknown>;
 
     for (let i = 0; i < keys.length - 1; i++) {
       const k = keys[i];
@@ -174,8 +169,7 @@ class ConfigManagerImpl {
    */
   delete(key: string): void {
     const keys = key.split('.');
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let obj: any = this.config;
+    let obj: Record<string, unknown> = this.config as unknown as Record<string, unknown>;
 
     for (let i = 0; i < keys.length - 1; i++) {
       obj = obj[keys[i]];

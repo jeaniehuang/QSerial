@@ -363,11 +363,11 @@ export const connAdvancedHandlers: Record<string, ToolHandler> = {
     if (!watchId) return formatError('MISSING_PARAM', 'missing id');
     const watchConn = ConnectionFactory.get(watchId);
     if (!watchConn) return formatError('CONN_NOT_FOUND', 'connection not found');
-    const rules = (args.rules as any[]) || [];
+    const rules = (args.rules as Array<Record<string, unknown>>) || [];
     if (!Array.isArray(rules) || rules.length === 0) return formatError('MISSING_PARAM', 'missing rules');
     const duration = (args.duration_ms as number) || 60000;
     const wid = 'watch_' + crypto.randomUUID().slice(0, 8);
-    const compiled = rules.map((r: any) => ({ pattern: r.pattern as string, isRegex: r.regex !== false, level: (r.level as string) || 'warning' }));
+    const compiled = rules.map((r: Record<string, unknown>) => ({ pattern: r.pattern as string, isRegex: r.regex !== false, level: (r.level as string) || 'warning' }));
     let stopped = false;
     ctx.watches.set(wid, () => { stopped = true; });
     (async () => {
@@ -409,7 +409,7 @@ export const connAdvancedHandlers: Record<string, ToolHandler> = {
       if (!results2) return formatError('NOT_FOUND', 'no results');
       return formatOk({ watch_id: wid2, total: results2.length, alerts: results2 });
     }
-    const allResults: Record<string, any> = {}; let grandTotal = 0;
+    const allResults: Record<string, unknown> = {}; let grandTotal = 0;
     ctx.watchResults.forEach((v, k) => { allResults[k] = { total: v.length, alerts: v.map(a => ({ ts: new Date(a.ts).toISOString(), pattern: a.pattern, level: a.level, context: a.context })) }; grandTotal += v.length; });
     return formatOk({ watches_count: ctx.watchResults.size, total_alerts: grandTotal, watches: allResults });
   },
@@ -442,7 +442,7 @@ export const connAdvancedHandlers: Record<string, ToolHandler> = {
   },
 
   'conn.record.list': async () => {
-    const list: Array<Record<string, any>> = [];
+    const list: Array<Record<string, unknown>> = [];
     ctx.recordings.forEach((v) => {
       list.push({ recording_id: v.id, connection_id: v.connectionId, started: new Date(v.startedAt).toISOString(), elapsed_ms: Date.now() - v.startedAt, frames_count: v.frames.length });
     });

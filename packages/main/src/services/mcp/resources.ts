@@ -27,8 +27,7 @@ export const MCP_RESOURCES = [
 ];
 
 export async function readResource(uri: string): Promise<{ contents: Array<{ uri: string; mimeType: string; text?: string }> } | null> {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const opts = (c: { options?: any }) => c.options || {};
+  const opts = (c: { options?: Record<string, unknown> }) => c.options || {};
 
   switch (uri) {
     case 'qserial://connections/active': {
