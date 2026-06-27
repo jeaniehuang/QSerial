@@ -40,7 +40,7 @@ class ConfigManagerImpl {
       this.config = this.mergeConfig(
         DEFAULT_CONFIG as unknown as Record<string, unknown>,
         loaded as Record<string, unknown>
-      ) as AppConfig;
+      ) as unknown as AppConfig;
       // 成功加载后立即更新备份
       try {
         const dir = path.dirname(bakPath);
@@ -83,7 +83,7 @@ class ConfigManagerImpl {
           !Array.isArray(defaultValue) &&
           defaultValue !== null
         ) {
-          result[key] = this.mergeConfig(defaultValue, userValue);
+          result[key] = this.mergeConfig(defaultValue as unknown as Record<string, unknown>, userValue as unknown as Record<string, unknown>);
         } else {
           result[key] = userValue;
         }
@@ -133,7 +133,7 @@ class ConfigManagerImpl {
 
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
-        value = value[k];
+        value = value[k] as Record<string, unknown>;
       } else {
         return undefined;
       }
@@ -156,7 +156,7 @@ class ConfigManagerImpl {
       if (!(k in obj)) {
         obj[k] = {};
       }
-      obj = obj[k];
+      obj = obj[k] as Record<string, unknown>;
     }
 
     obj[keys[keys.length - 1]] = value;
@@ -172,7 +172,7 @@ class ConfigManagerImpl {
     let obj: Record<string, unknown> = this.config as unknown as Record<string, unknown>;
 
     for (let i = 0; i < keys.length - 1; i++) {
-      obj = obj[keys[i]];
+      obj = obj[keys[i]] as Record<string, unknown>;
       if (!obj) return;
     }
 

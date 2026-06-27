@@ -362,6 +362,6 @@ interface ChildProcessGoneDetails {
   serviceName?: string;
   name?: string;
 }
-app.on('child-process-gone' as keyof Electron.AppEvents, (_event: Electron.Event, details: ChildProcessGoneDetails) => {
+app.on('child-process-gone', (_event: Electron.Event, details: ChildProcessGoneDetails) => {
   crashLog(`[CRASH] Child process gone: ${JSON.stringify(details)}`);
 });
