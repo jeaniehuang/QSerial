@@ -1,0 +1,7447 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "ef48e8645099968e93c25f63f3b985debb67e4bf",
+  "generatedAt": "2026-06-27T06:37:53.500Z",
+  "files": {
+    ".env.example": {
+      "filePath": ".env.example",
+      "contentHash": "0cc346e4f5cfeb0eb52819f730f657d53e540a2243a5daf435274eb6c2528a5f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    ".gitattributes": {
+      "filePath": ".gitattributes",
+      "contentHash": "cc5e185e1ed834763d2ecfeaa9fc03a92d6e838fb3407bcde9d4e9b7aa34bfee",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/build.yml": {
+      "filePath": ".github/workflows/build.yml",
+      "contentHash": "9a3162b952a4ff9669ba627b9ae875980fbd2effb12884ab7a5cd78818cdf525",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 164,
+      "hasStructuralAnalysis": true
+    },
+    ".github/workflows/ci.yml": {
+      "filePath": ".github/workflows/ci.yml",
+      "contentHash": "e3ccd91a358e92e4aa22c86e5fc249cd54dcf66af2d7a5006f4d8d0e7e847f62",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 64,
+      "hasStructuralAnalysis": true
+    },
+    ".github/workflows/hardware-ci.yml": {
+      "filePath": ".github/workflows/hardware-ci.yml",
+      "contentHash": "c345da878c3e5e165e047fe9d27faa726bda1c18ace41394d6695077faf2d91b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    ".mcp.json": {
+      "filePath": ".mcp.json",
+      "contentHash": "3ab0801093412813418df796a9ec8ee4271c8ff62348a4413521a17c4ff3393b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    ".npmrc": {
+      "filePath": ".npmrc",
+      "contentHash": "8d89cba138731e50f0436be3033876c5b61b0e2a01dd09efa59207147004670e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": false
+    },
+    ".obsidian/app.json": {
+      "filePath": ".obsidian/app.json",
+      "contentHash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    ".obsidian/appearance.json": {
+      "filePath": ".obsidian/appearance.json",
+      "contentHash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    ".obsidian/core-plugins.json": {
+      "filePath": ".obsidian/core-plugins.json",
+      "contentHash": "f29fe628b655d9fb9e96918ed9eebf1f464e1380fe820f48967170bc4e5e0c7a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    ".obsidian/graph.json": {
+      "filePath": ".obsidian/graph.json",
+      "contentHash": "8abbe808076aace512065ca86d9065006b41a19a0c14557d7d24916780d69f83",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
+      "hasStructuralAnalysis": true
+    },
+    ".obsidian/workspace.json": {
+      "filePath": ".obsidian/workspace.json",
+      "contentHash": "7abab67b3bae5bfa6087fd0e2b8219bfa45a57069a44f638ce8c9dad819445cd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 192,
+      "hasStructuralAnalysis": true
+    },
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "f67a385023a1d56b4d72d98ebeec6039e153b5fd6aaa8a204ccdf9b244ed9b62",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": false
+    },
+    ".understand-anything/config.json": {
+      "filePath": ".understand-anything/config.json",
+      "contentHash": "c4a81b476be169d02009b0f55951562958b700b6d831e2b5754648ac73552ec9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "AGENTS.md": {
+      "filePath": "AGENTS.md",
+      "contentHash": "f9eeadb97f3bb1bad10a5266daaa48ebf0b9b3795254c60541435dd9a38bccac",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 73,
+      "hasStructuralAnalysis": true
+    },
+    "build-exe.bat": {
+      "filePath": "build-exe.bat",
+      "contentHash": "44a2326e837adb319ae81982094a372ff1c22dc84171aeb4b99635c2651afb3b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 228,
+      "hasStructuralAnalysis": false
+    },
+    "build-win.sh": {
+      "filePath": "build-win.sh",
+      "contentHash": "c5b974f7f443cc57c1ec407a96d800342751f48ee33cd46d4bc18b4655231965",
+      "functions": [
+        {
+          "name": "check_command",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 162,
+      "hasStructuralAnalysis": true
+    },
+    "ci/sample-test.json": {
+      "filePath": "ci/sample-test.json",
+      "contentHash": "762e41ec37bb5ead43b3834699e96b3f59e9c45a4b090d325e448c34c806cb18",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "dev.sh": {
+      "filePath": "dev.sh",
+      "contentHash": "31d73f5e88c191a302885cc5e744c6f74d1e7c2802a65a730db3cee1c05678b4",
+      "functions": [
+        {
+          "name": "err_exit",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "check_node_modules",
+          "params": [],
+          "exported": false,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 167,
+      "hasStructuralAnalysis": true
+    },
+    "electron-builder.config.cjs": {
+      "filePath": "electron-builder.config.cjs",
+      "contentHash": "71438c0c93384d807893068fc308176ca8e0788feac72decdf98f5194eafabe3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 119,
+      "hasStructuralAnalysis": true
+    },
+    "node-compile-cache/v23.6.0-x64-73907098-0/29f018e1": {
+      "filePath": "node-compile-cache/v23.6.0-x64-73907098-0/29f018e1",
+      "contentHash": "e0d8887bb0ae2e2a7d35f97922e19e936d37b78963c0f35ff43a9e1517bac9d4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4281,
+      "hasStructuralAnalysis": false
+    },
+    "node.napi.node": {
+      "filePath": "node.napi.node",
+      "contentHash": "5244d5c6737ed93af7c5e7039bb8049f5e58779ac10995ac401e3bc81a90a87f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 604,
+      "hasStructuralAnalysis": false
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "85ce4c46c696aea0002180b10abdf7c10e608e88d20c78facf8ca0086b4261d5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/__tests__/cli/reporter.test.ts": {
+      "filePath": "packages/main/__tests__/cli/reporter.test.ts",
+      "contentHash": "28be18da8afd4f18179c8a470e0dc5ef549dacec69fb80964bb07ca382467d9f",
+      "functions": [
+        {
+          "name": "makeResult",
+          "params": [
+            "overrides"
+          ],
+          "returnType": "TestResult",
+          "exported": false,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect"
+          ]
+        },
+        {
+          "source": "../../src/cli/reporter.js",
+          "specifiers": [
+            "toJUnitXml",
+            "toJsonReport"
+          ]
+        },
+        {
+          "source": "../../src/cli/test-runner.js",
+          "specifiers": [
+            "TestResult"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 210,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/__tests__/connection/factory.test.ts": {
+      "filePath": "packages/main/__tests__/connection/factory.test.ts",
+      "contentHash": "1d5de8edbdeb76144dd29fcf5f84ce902923d57a2069a79307c26fc271fd5c43",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach",
+            "vi"
+          ]
+        },
+        {
+          "source": "../../src/services/connection/factory.ts",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType",
+            "ConnectionState",
+            "IConnection"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 300,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/__tests__/mcp/tools.test.ts": {
+      "filePath": "packages/main/__tests__/mcp/tools.test.ts",
+      "contentHash": "96913802ff566efce546474391b23459343bfae398b5258f751c4b30c59ab96c",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect",
+            "vi",
+            "beforeEach"
+          ]
+        },
+        {
+          "source": "../../src/services/connection/factory.ts",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 135,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/package.json": {
+      "filePath": "packages/main/package.json",
+      "contentHash": "30a5daafd41ebcaf14811924c27553308ebeed92ab75018fc9960b93ba92353e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/cli/index.ts": {
+      "filePath": "packages/main/src/cli/index.ts",
+      "contentHash": "df5183b38c6b17511f474cca63b498b137c69d9f400c63e5557c09a17554e6a0",
+      "functions": [
+        {
+          "name": "parseArgs",
+          "params": [],
+          "returnType": "CliArgs",
+          "exported": false,
+          "lineCount": 30
+        },
+        {
+          "name": "printHelp",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 32
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "Promise<void>",
+          "exported": false,
+          "lineCount": 63
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "./test-runner.js",
+          "specifiers": [
+            "runTestCase",
+            "TestCase",
+            "TestResult"
+          ]
+        },
+        {
+          "source": "./reporter.js",
+          "specifiers": [
+            "toJUnitXml",
+            "toJsonReport"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 152,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/cli/reporter.ts": {
+      "filePath": "packages/main/src/cli/reporter.ts",
+      "contentHash": "cd9b6adf8e5d5f6f2eeed533be6fca622fc289f13ad9a35708f5c244aba83859",
+      "functions": [
+        {
+          "name": "escapeXml",
+          "params": [
+            "s"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "toJUnitXml",
+          "params": [
+            "results"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 39
+        },
+        {
+          "name": "toJsonReport",
+          "params": [
+            "results"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./test-runner.js",
+          "specifiers": [
+            "TestResult"
+          ]
+        }
+      ],
+      "exports": [
+        "toJUnitXml",
+        "toJsonReport"
+      ],
+      "totalLines": 74,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/cli/test-runner.ts": {
+      "filePath": "packages/main/src/cli/test-runner.ts",
+      "contentHash": "64b57d7bfe6c2c8ce8f847a76ee42851288d3e669e14156444481a68f98680fa",
+      "functions": [
+        {
+          "name": "sleep",
+          "params": [
+            "ms"
+          ],
+          "returnType": "Promise<void>",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "runTestCase",
+          "params": [
+            "tc"
+          ],
+          "returnType": "Promise<TestResult>",
+          "exported": true,
+          "lineCount": 86
+        },
+        {
+          "name": "runStep",
+          "params": [
+            "conn",
+            "step",
+            "existingOutput",
+            "stepNum"
+          ],
+          "returnType": "Promise<StepResult>",
+          "exported": false,
+          "lineCount": 43
+        },
+        {
+          "name": "buildResult",
+          "params": [
+            "name",
+            "steps",
+            "t0",
+            "passed",
+            "error"
+          ],
+          "returnType": "TestResult",
+          "exported": false,
+          "lineCount": 13
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../services/connection/serial.js",
+          "specifiers": [
+            "SerialConnection"
+          ]
+        },
+        {
+          "source": "../services/connection/ssh.js",
+          "specifiers": [
+            "SshConnection"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "SerialConnectionOptions",
+            "SshConnectionOptions"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionState",
+            "ConnectionType"
+          ]
+        }
+      ],
+      "exports": [
+        "runTestCase"
+      ],
+      "totalLines": 207,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/config/index.ts": {
+      "filePath": "packages/main/src/config/index.ts",
+      "contentHash": "b644fe9a836f6528e74f70b68614500cf58baad62c59354aba52452d782ebf81",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "ConfigManager"
+      ],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/config/manager.ts": {
+      "filePath": "packages/main/src/config/manager.ts",
+      "contentHash": "417041f9b96f417b9b718c1807374fbe7e56a9c1e5a25dd23ef68309c28c4326",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ConfigManagerImpl",
+          "methods": [
+            "constructor",
+            "initialize",
+            "tryLoad",
+            "mergeConfig",
+            "save",
+            "get",
+            "set",
+            "delete",
+            "getAll",
+            "reset",
+            "onChange"
+          ],
+          "properties": [
+            "config",
+            "configPath",
+            "eventEmitter",
+            "initialized"
+          ],
+          "exported": false,
+          "lineCount": 193
+        }
+      ],
+      "imports": [
+        {
+          "source": "electron",
+          "specifiers": [
+            "app"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "AppConfig",
+            "DEFAULT_CONFIG"
+          ]
+        },
+        {
+          "source": "events",
+          "specifiers": [
+            "EventEmitter"
+          ]
+        }
+      ],
+      "exports": [
+        "ConfigManager"
+      ],
+      "totalLines": 208,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/index.ts": {
+      "filePath": "packages/main/src/index.ts",
+      "contentHash": "117b9748e2cb748fe73149519512fc062990b4b3e8a637a9c1227211014c8487",
+      "functions": [
+        {
+          "name": "crashLog",
+          "params": [
+            "msg"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "createWindow",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 104
+        },
+        {
+          "name": "initBackgroundServices",
+          "params": [],
+          "returnType": "Promise<void>",
+          "exported": false,
+          "lineCount": 41
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "electron",
+          "specifiers": [
+            "app",
+            "BrowserWindow",
+            "nativeImage",
+            "Menu",
+            "session"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "url",
+          "specifiers": [
+            "fileURLToPath"
+          ]
+        },
+        {
+          "source": "./config/manager.js",
+          "specifiers": [
+            "ConfigManager"
+          ]
+        },
+        {
+          "source": "./services/connection/native-patch.js",
+          "specifiers": [
+            "ensureNativePatch"
+          ]
+        },
+        {
+          "source": "./services/connection/pty-patch.js",
+          "specifiers": [
+            "ensurePtyPatch"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 368,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/ipc/handlers.ts": {
+      "filePath": "packages/main/src/ipc/handlers.ts",
+      "contentHash": "5ef8a58fa4e1fe8b5d9232769e939ef774d44596d0d3936508c0b839b894a0d6",
+      "functions": [
+        {
+          "name": "getSerialConnection",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "getConnectionServerConnection",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "safeSend",
+          "params": [
+            "channel",
+            "data"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "setupIpcHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 30
+        },
+        {
+          "name": "setupMainWindowRefs",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "setupConnectionHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 105
+        },
+        {
+          "name": "setupConfigHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "setupWindowHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "setupAppHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "setupTftpHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 20
+        },
+        {
+          "name": "setupDialogHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "setupNfsHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 25
+        },
+        {
+          "name": "setupFtpHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 25
+        },
+        {
+          "name": "setupLogHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 58
+        },
+        {
+          "name": "setupNetworkHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "setupConnectionServerHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 73
+        },
+        {
+          "name": "setupMcpHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 28
+        },
+        {
+          "name": "setupSftpHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 74
+        },
+        {
+          "name": "setupFileHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "electron",
+          "specifiers": [
+            "app",
+            "ipcMain",
+            "BrowserWindow"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "IPC_CHANNELS"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "IConnection"
+          ]
+        },
+        {
+          "source": "../services/connection/factory.js",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        },
+        {
+          "source": "../config/manager.js",
+          "specifiers": [
+            "ConfigManager"
+          ]
+        },
+        {
+          "source": "../utils/network.js",
+          "specifiers": [
+            "getLocalIp"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "bufferToBase64"
+          ]
+        },
+        {
+          "source": "../native-dialog.js",
+          "specifiers": [
+            "pickFolder",
+            "pickFile",
+            "pickSaveFile"
+          ]
+        },
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        }
+      ],
+      "exports": [
+        "setupIpcHandlers"
+      ],
+      "totalLines": 587,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/ipc/index.ts": {
+      "filePath": "packages/main/src/ipc/index.ts",
+      "contentHash": "29eb3ef43cfa9ca73dd8c7737ec4f1983b4a6f667417ce5cdf2b8a230c5ca323",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "setupIpcHandlers"
+      ],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/native-dialog.ts": {
+      "filePath": "packages/main/src/native-dialog.ts",
+      "contentHash": "e7ada311caed1e9756b78ea899df0e9d2ee5df70bfb625bf23e6e729fcd265b7",
+      "functions": [
+        {
+          "name": "pickFolder",
+          "params": [
+            "title"
+          ],
+          "returnType": "Promise<string | null>",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "pickFile",
+          "params": [
+            "title",
+            "filters"
+          ],
+          "returnType": "Promise<string | null>",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "pickSaveFile",
+          "params": [
+            "title",
+            "defaultName",
+            "filters"
+          ],
+          "returnType": "Promise<string | null>",
+          "exported": true,
+          "lineCount": 25
+        },
+        {
+          "name": "runPowerShell",
+          "params": [
+            "script"
+          ],
+          "returnType": "Promise<string | null>",
+          "exported": false,
+          "lineCount": 50
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "child_process",
+          "specifiers": [
+            "spawn"
+          ]
+        },
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "electron",
+          "specifiers": [
+            "app"
+          ]
+        }
+      ],
+      "exports": [
+        "pickFolder",
+        "pickFile",
+        "pickSaveFile"
+      ],
+      "totalLines": 144,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/preload.ts": {
+      "filePath": "packages/main/src/preload.ts",
+      "contentHash": "662d52e7e4b07fda0da119ec72c267c155c1e60a4f42e31af3a0c2a1ac61fbdd",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "electron",
+          "specifiers": [
+            "contextBridge",
+            "ipcRenderer"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "IPC_CHANNELS"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 245,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/connection/connectionServer.ts": {
+      "filePath": "packages/main/src/services/connection/connectionServer.ts",
+      "contentHash": "eaf33030059c8d1b257d53c47cd57198c57a92bf1562e72e07905fbc1c113842",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ConnectionServerConnection",
+          "methods": [
+            "state",
+            "constructor",
+            "open",
+            "_resolveSourceConnection",
+            "cleanupOnError",
+            "_unsubscribeSharedConnection",
+            "_setupSharedConnection",
+            "startTcpServer",
+            "_processWriteQueue",
+            "_clearSourceCheckTimer",
+            "close",
+            "destroy",
+            "write",
+            "writeHex",
+            "set",
+            "resize",
+            "onData",
+            "onStateChange",
+            "onError",
+            "onClose",
+            "getStatus",
+            "_setState",
+            "_notifyError",
+            "_notifyClientsConnectionDown",
+            "_notifyClientsConnectionRestored"
+          ],
+          "properties": [
+            "id",
+            "type",
+            "options",
+            "_state",
+            "tcpServer",
+            "clients",
+            "dataCallbacks",
+            "stateCallbacks",
+            "errorCallbacks",
+            "closeCallbacks",
+            "sharedConnection",
+            "ownsSharedConnection",
+            "dataUnsubscriber",
+            "stateUnsubscriber",
+            "closeUnsubscriber",
+            "errorUnsubscriber",
+            "sourceCheckTimer",
+            "sourceConnectionDown",
+            "writeQueue",
+            "isWriting"
+          ],
+          "exported": true,
+          "lineCount": 441
+        }
+      ],
+      "imports": [
+        {
+          "source": "node:net",
+          "specifiers": [
+            "* as net"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType",
+            "ConnectionState",
+            "ConnectionServerOptions"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "IConnection"
+          ]
+        },
+        {
+          "source": "./factory.js",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        },
+        {
+          "source": "./telnet-utils.js",
+          "specifiers": [
+            "AUTH_TIMEOUT",
+            "sendTelnetNegotiation",
+            "processTelnetData",
+            "processPasswordAuth",
+            "OPT_TTYPE",
+            "OPT_NAWS"
+          ]
+        },
+        {
+          "source": "./telnet-utils.js",
+          "specifiers": [
+            "TelnetClientState"
+          ]
+        }
+      ],
+      "exports": [
+        "ConnectionServerConnection"
+      ],
+      "totalLines": 477,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/connection/factory.ts": {
+      "filePath": "packages/main/src/services/connection/factory.ts",
+      "contentHash": "5a566295b223f50426a0e101babd995b91027f2bc6c6cbf806bd7262309bba02",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ConnectionFactoryImpl",
+          "methods": [
+            "initialize",
+            "create",
+            "get",
+            "getAll",
+            "destroy",
+            "destroyAll",
+            "onCreate",
+            "onDestroy"
+          ],
+          "properties": [
+            "instances",
+            "eventEmitter"
+          ],
+          "exported": false,
+          "lineCount": 95
+        }
+      ],
+      "imports": [
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "IConnection",
+            "ConnectionOptions"
+          ]
+        },
+        {
+          "source": "events",
+          "specifiers": [
+            "EventEmitter"
+          ]
+        }
+      ],
+      "exports": [
+        "ConnectionFactory"
+      ],
+      "totalLines": 109,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/connection/index.ts": {
+      "filePath": "packages/main/src/services/connection/index.ts",
+      "contentHash": "25db01f656e9f3bf9d1c23df645f54ec106f19eec7111e232c6e8b379a0ebfec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "ConnectionFactory",
+        "PtyConnection",
+        "SerialConnection",
+        "SshConnection"
+      ],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/connection/native-patch.ts": {
+      "filePath": "packages/main/src/services/connection/native-patch.ts",
+      "contentHash": "0e0f961eec623d31b7312c95af7a70b15af6c64776a23360a47605463928019a",
+      "functions": [
+        {
+          "name": "getTempDir",
+          "params": [],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "copyNativeModule",
+          "params": [
+            "srcFile"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 38
+        },
+        {
+          "name": "isFromAppBundle",
+          "params": [
+            "p"
+          ],
+          "returnType": "boolean",
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "ensureNativePatch",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 40
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "electron",
+          "specifiers": [
+            "app"
+          ]
+        }
+      ],
+      "exports": [
+        "ensureNativePatch"
+      ],
+      "totalLines": 116,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/connection/pty-patch.ts": {
+      "filePath": "packages/main/src/services/connection/pty-patch.ts",
+      "contentHash": "618e7b529a54763226cb2e9ba46f06f72f6c801689efca676dabe010314cd495",
+      "functions": [
+        {
+          "name": "getTempDir",
+          "params": [],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "isAsarPath",
+          "params": [
+            "p"
+          ],
+          "returnType": "boolean",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "asarToUnpacked",
+          "params": [
+            "p"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "copyToTemp",
+          "params": [
+            "src",
+            "destName"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 16
+        },
+        {
+          "name": "copyDirToTemp",
+          "params": [
+            "srcDir",
+            "destName"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "ensurePtyPatch",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 102
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "module",
+          "specifiers": [
+            "createRequire"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "electron",
+          "specifiers": [
+            "app"
+          ]
+        }
+      ],
+      "exports": [
+        "ensurePtyPatch"
+      ],
+      "totalLines": 162,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/connection/pty.ts": {
+      "filePath": "packages/main/src/services/connection/pty.ts",
+      "contentHash": "0421efed596d7e80701f1e1892e95594e4f354f08217300aad617a1fd33f97db",
+      "functions": [
+        {
+          "name": "resolveShellPath",
+          "params": [
+            "shell"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 88
+        }
+      ],
+      "classes": [
+        {
+          "name": "PtyConnection",
+          "methods": [
+            "constructor",
+            "state",
+            "open",
+            "close",
+            "destroy",
+            "write",
+            "writeHex",
+            "set",
+            "resize",
+            "onData",
+            "onStateChange",
+            "onError",
+            "onClose",
+            "emitStateChange",
+            "handleReconnect",
+            "cancelReconnect",
+            "getDefaultShell"
+          ],
+          "properties": [
+            "ptyProcess",
+            "eventEmitter",
+            "_state",
+            "reconnectTimer",
+            "reconnectCount",
+            "isClosing",
+            "id",
+            "type",
+            "options"
+          ],
+          "exported": true,
+          "lineCount": 173
+        }
+      ],
+      "imports": [
+        {
+          "source": "node-pty",
+          "specifiers": [
+            "* as pty"
+          ]
+        },
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "child_process",
+          "specifiers": [
+            "execSync"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType",
+            "ConnectionState",
+            "IConnection",
+            "PtyConnectionOptions"
+          ]
+        },
+        {
+          "source": "events",
+          "specifiers": [
+            "EventEmitter"
+          ]
+        }
+      ],
+      "exports": [
+        "PtyConnection"
+      ],
+      "totalLines": 285,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/connection/serial.ts": {
+      "filePath": "packages/main/src/services/connection/serial.ts",
+      "contentHash": "1ba1a45e220db9a366e8abddcfa14aaa135065e5e0180abfa77fedeb9cf9e4bc",
+      "functions": [],
+      "classes": [
+        {
+          "name": "SerialConnection",
+          "methods": [
+            "constructor",
+            "state",
+            "open",
+            "openWithShared",
+            "close",
+            "destroy",
+            "write",
+            "writeHex",
+            "set",
+            "resize",
+            "onData",
+            "onStateChange",
+            "onError",
+            "onClose",
+            "emitStateChange",
+            "handleReconnect",
+            "cancelReconnect",
+            "listPorts"
+          ],
+          "properties": [
+            "port",
+            "eventEmitter",
+            "_state",
+            "reconnectTimer",
+            "reconnectCount",
+            "isClosing",
+            "sharedConnection",
+            "dataUnsubscriber",
+            "id",
+            "type",
+            "options"
+          ],
+          "exported": true,
+          "lineCount": 288
+        }
+      ],
+      "imports": [
+        {
+          "source": "serialport",
+          "specifiers": [
+            "SerialPort"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType",
+            "ConnectionState",
+            "IConnection",
+            "SerialConnectionOptions",
+            "SerialPortInfo"
+          ]
+        },
+        {
+          "source": "events",
+          "specifiers": [
+            "EventEmitter"
+          ]
+        }
+      ],
+      "exports": [
+        "SerialConnection"
+      ],
+      "totalLines": 303,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/connection/ssh.ts": {
+      "filePath": "packages/main/src/services/connection/ssh.ts",
+      "contentHash": "b5e287438dc3fc18983a133a08ce3016f616022cbf71e8c80da6ed9bb5006bbc",
+      "functions": [
+        {
+          "name": "getDefaultPrivateKeys",
+          "params": [],
+          "returnType": "Buffer[]",
+          "exported": false,
+          "lineCount": 17
+        }
+      ],
+      "classes": [
+        {
+          "name": "SshConnection",
+          "methods": [
+            "constructor",
+            "state",
+            "open",
+            "tryConnect",
+            "close",
+            "destroy",
+            "write",
+            "writeHex",
+            "set",
+            "resize",
+            "onData",
+            "onStateChange",
+            "onError",
+            "onClose",
+            "emitStateChange",
+            "handleReconnect",
+            "cancelReconnect"
+          ],
+          "properties": [
+            "client",
+            "stream",
+            "eventEmitter",
+            "_state",
+            "reconnectTimer",
+            "reconnectCount",
+            "isClosing",
+            "id",
+            "type",
+            "options"
+          ],
+          "exported": true,
+          "lineCount": 379
+        }
+      ],
+      "imports": [
+        {
+          "source": "ssh2",
+          "specifiers": [
+            "Client",
+            "ClientChannel"
+          ]
+        },
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "* as os"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType",
+            "ConnectionState",
+            "IConnection",
+            "SshConnectionOptions"
+          ]
+        },
+        {
+          "source": "events",
+          "specifiers": [
+            "EventEmitter"
+          ]
+        }
+      ],
+      "exports": [
+        "SshConnection"
+      ],
+      "totalLines": 504,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/connection/telnet-utils.ts": {
+      "filePath": "packages/main/src/services/connection/telnet-utils.ts",
+      "contentHash": "2fe54cd095e220b2e73080f66e0c9734368f05badcd531d42a23089327540878",
+      "functions": [
+        {
+          "name": "findIACSE",
+          "params": [
+            "data",
+            "offset"
+          ],
+          "returnType": "number",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "sendTelnetNegotiation",
+          "params": [
+            "socket"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "handleTelnetCommand",
+          "params": [
+            "socket",
+            "cmd",
+            "opt"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "handleNawsSubnegotiation",
+          "params": [
+            "clientInfo",
+            "subData"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "processTelnetData",
+          "params": [
+            "data",
+            "clientInfo",
+            "onSubnegotiation",
+            "isReentry"
+          ],
+          "returnType": "Buffer",
+          "exported": true,
+          "lineCount": 75
+        },
+        {
+          "name": "processPasswordAuth",
+          "params": [
+            "userData",
+            "clientInfo",
+            "socket",
+            "accessPassword",
+            "onRemoveClient"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 56
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:net",
+          "specifiers": [
+            "* as net"
+          ]
+        }
+      ],
+      "exports": [
+        "IAC",
+        "WILL",
+        "WONT",
+        "DO",
+        "DONT",
+        "SB",
+        "SE",
+        "NOP",
+        "OPT_ECHO",
+        "OPT_SUPPRESS_GA",
+        "OPT_NAWS",
+        "OPT_TTYPE",
+        "OPT_LINEMODE",
+        "AUTH_TIMEOUT",
+        "findIACSE",
+        "sendTelnetNegotiation",
+        "handleTelnetCommand",
+        "handleNawsSubnegotiation",
+        "processTelnetData",
+        "processPasswordAuth"
+      ],
+      "totalLines": 230,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/connection/telnet.ts": {
+      "filePath": "packages/main/src/services/connection/telnet.ts",
+      "contentHash": "1b16d90e1e9d3344e8840b98f4e222f15d95868dabd7a5949dbb2129035dd46a",
+      "functions": [],
+      "classes": [
+        {
+          "name": "TelnetConnection",
+          "methods": [
+            "constructor",
+            "state",
+            "open",
+            "handleTelnetCommands",
+            "close",
+            "destroy",
+            "write",
+            "writeHex",
+            "set",
+            "resize",
+            "onData",
+            "onStateChange",
+            "onError",
+            "onClose",
+            "emitStateChange",
+            "handleReconnect",
+            "cancelReconnect"
+          ],
+          "properties": [
+            "socket",
+            "eventEmitter",
+            "_state",
+            "reconnectTimer",
+            "reconnectCount",
+            "isClosing",
+            "id",
+            "type",
+            "options"
+          ],
+          "exported": true,
+          "lineCount": 245
+        }
+      ],
+      "imports": [
+        {
+          "source": "net",
+          "specifiers": [
+            "* as net"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType",
+            "ConnectionState",
+            "IConnection",
+            "TelnetConnectionOptions"
+          ]
+        },
+        {
+          "source": "events",
+          "specifiers": [
+            "EventEmitter"
+          ]
+        }
+      ],
+      "exports": [
+        "TelnetConnection"
+      ],
+      "totalLines": 266,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/ftp/manager.ts": {
+      "filePath": "packages/main/src/services/ftp/manager.ts",
+      "contentHash": "0c7c5686dc283da54d278123ebfcd50a371ca1b0e63c96a93acd93dd3254679d",
+      "functions": [
+        {
+          "name": "getFtpSrvEntryPath",
+          "params": [],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 26
+        },
+        {
+          "name": "loadFtpSrv",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 45
+        },
+        {
+          "name": "setFtpMainWindow",
+          "params": [
+            "window"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "sendStatusEvent",
+          "params": [
+            "event"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "sendClientEvent",
+          "params": [
+            "event"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "startFtpServer",
+          "params": [
+            "port",
+            "rootDir",
+            "username",
+            "password"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 130
+        },
+        {
+          "name": "stopFtpServer",
+          "params": [],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "getFtpStatus",
+          "params": [],
+          "returnType": "FtpServerStatus",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "getFtpClients",
+          "params": [],
+          "returnType": "FtpClientInfo[]",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "destroyFtpManager",
+          "params": [],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "electron",
+          "specifiers": [
+            "BrowserWindow"
+          ]
+        },
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "../../utils/network.js",
+          "specifiers": [
+            "getLocalIp"
+          ]
+        },
+        {
+          "source": "module",
+          "specifiers": [
+            "createRequire"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "IPC_CHANNELS",
+            "FtpServerStatus",
+            "FtpStatusEvent",
+            "FtpClientInfo",
+            "FtpClientEvent"
+          ]
+        }
+      ],
+      "exports": [
+        "setFtpMainWindow",
+        "startFtpServer",
+        "stopFtpServer",
+        "getFtpStatus",
+        "getFtpClients",
+        "destroyFtpManager"
+      ],
+      "totalLines": 337,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/ai-helpers.ts": {
+      "filePath": "packages/main/src/services/mcp/ai-helpers.ts",
+      "contentHash": "dcde62fd142e8e870d7cde331123b7151da3d0a4af427c42daa1c0e526d1ec2c",
+      "functions": [
+        {
+          "name": "stripAnsi",
+          "params": [
+            "text"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "extractPrompt",
+          "params": [
+            "output"
+          ],
+          "returnType": "string | null",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "stripEcho",
+          "params": [
+            "output",
+            "command"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "stripPrompt",
+          "params": [
+            "output",
+            "prompt"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "formatOk",
+          "params": [
+            "data"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "formatError",
+          "params": [
+            "code",
+            "detail"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "appendHistory",
+          "params": [
+            "id",
+            "dir",
+            "data"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "parseAtResponse",
+          "params": [
+            "output"
+          ],
+          "returnType": "{ result: string; fields: AtField[] }",
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "stripAnsi",
+        "extractPrompt",
+        "stripEcho",
+        "stripPrompt",
+        "formatOk",
+        "formatError",
+        "historyLog",
+        "appendHistory",
+        "parseAtResponse"
+      ],
+      "totalLines": 91,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/context.ts": {
+      "filePath": "packages/main/src/services/mcp/context.ts",
+      "contentHash": "57b2997a51ee021bf483d9b7916b01bb0e1104d6edf74ce3186ab3c15a8e958d",
+      "functions": [
+        {
+          "name": "setMainWindowRef",
+          "params": [
+            "window"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "setAuthPassword",
+          "params": [
+            "password"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "setCorsOrigins",
+          "params": [
+            "origins"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "ensureBuffer",
+          "params": [
+            "id"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "getBuffer",
+          "params": [
+            "id"
+          ],
+          "returnType": "Buffer",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "consumeBuffer",
+          "params": [
+            "id"
+          ],
+          "returnType": "Buffer",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "consumeBytes",
+          "params": [
+            "id",
+            "n"
+          ],
+          "returnType": "Buffer",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "peekBuffer",
+          "params": [
+            "id",
+            "maxBytes"
+          ],
+          "returnType": "Buffer",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "clearBuffer",
+          "params": [
+            "id"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "removeBuffer",
+          "params": [
+            "id"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "acquireWriteLock",
+          "params": [
+            "id"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "releaseWriteLock",
+          "params": [
+            "id"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "bufferSize",
+          "params": [
+            "id"
+          ],
+          "returnType": "number",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "resolveId",
+          "params": [
+            "args"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "sleep",
+          "params": [
+            "ms"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "matchPattern",
+          "params": [
+            "text",
+            "pattern",
+            "isRegex"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "waitPattern",
+          "params": [
+            "id",
+            "pattern",
+            "timeout",
+            "isRegex"
+          ],
+          "returnType": "Promise<{ matched: boolean; output: string }>",
+          "exported": true,
+          "lineCount": 43
+        },
+        {
+          "name": "waitForAnyPattern",
+          "params": [
+            "id",
+            "patterns",
+            "timeout"
+          ],
+          "returnType": "Promise<{ matched: boolean; index: number; output: string }>",
+          "exported": true,
+          "lineCount": 47
+        },
+        {
+          "name": "waitForData",
+          "params": [
+            "id",
+            "timeoutMs"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "analyzeState",
+          "params": [
+            "output",
+            "connectionState"
+          ],
+          "returnType": "TerminalState",
+          "exported": true,
+          "lineCount": 51
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "electron",
+          "specifiers": [
+            "BrowserWindow"
+          ]
+        },
+        {
+          "source": "../connection/factory.js",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        }
+      ],
+      "exports": [
+        "mainWindow",
+        "mcpAuthPassword",
+        "mcpCorsOrigins",
+        "sharePool",
+        "watches",
+        "watchResults",
+        "recordings",
+        "buffers",
+        "bufferSubscriptions",
+        "setMainWindowRef",
+        "setAuthPassword",
+        "setCorsOrigins",
+        "ensureBuffer",
+        "getBuffer",
+        "consumeBuffer",
+        "consumeBytes",
+        "peekBuffer",
+        "clearBuffer",
+        "removeBuffer",
+        "acquireWriteLock",
+        "releaseWriteLock",
+        "bufferSize",
+        "resolveId",
+        "sleep",
+        "matchPattern",
+        "waitPattern",
+        "waitForAnyPattern",
+        "waitForData",
+        "analyzeState"
+      ],
+      "totalLines": 318,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/index.ts": {
+      "filePath": "packages/main/src/services/mcp/index.ts",
+      "contentHash": "84f655ec6f6ccee77244a8ce886868a0bafd6edf3dab847ff83bd46161b076e5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "startMcpServer",
+        "stopMcpServer",
+        "getMcpStatus",
+        "setMcpMainWindow",
+        "destroyMcpManager",
+        "sendMCPNotification",
+        "sseClients",
+        "MCP_RESOURCES",
+        "readResource",
+        "setResourcesWindow",
+        "drainSampling",
+        "resolveSampling",
+        "requestSampling",
+        "MCP_PROMPTS",
+        "getPrompt",
+        "loadPlugins",
+        "getPluginResources",
+        "readPluginResource",
+        "getPluginPrompts",
+        "getPluginPrompt"
+      ],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/manager.ts": {
+      "filePath": "packages/main/src/services/mcp/manager.ts",
+      "contentHash": "ece031e261e6fca06f41f9c501e30c6dc2eee6ab4f354370fdcb798bc71a42d8",
+      "functions": [
+        {
+          "name": "executeTool",
+          "params": [
+            "name",
+            "args"
+          ],
+          "returnType": "Promise<string>",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "setMcpMainWindow",
+          "params": [
+            "window"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "checkAuth",
+          "params": [
+            "req",
+            "res"
+          ],
+          "returnType": "boolean",
+          "exported": false,
+          "lineCount": 26
+        },
+        {
+          "name": "createRpcHandler",
+          "params": [],
+          "returnType": "(_req: http.IncomingMessage, res: http.ServerResponse, body: string) => Promise<void>",
+          "exported": false,
+          "lineCount": 70
+        },
+        {
+          "name": "startMcpServer",
+          "params": [
+            "port",
+            "listenAddress",
+            "authPassword",
+            "corsOrigins"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 88
+        },
+        {
+          "name": "stopMcpServer",
+          "params": [],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "getMcpStatus",
+          "params": [],
+          "returnType": "McpServerStatus",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "sendStatus",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "destroyMcpManager",
+          "params": [],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:http",
+          "specifiers": [
+            "* as http"
+          ]
+        },
+        {
+          "source": "node:crypto",
+          "specifiers": [
+            "* as crypto"
+          ]
+        },
+        {
+          "source": "@modelcontextprotocol/sdk/server/sse.js",
+          "specifiers": [
+            "SSEServerTransport"
+          ]
+        },
+        {
+          "source": "electron",
+          "specifiers": [
+            "BrowserWindow"
+          ]
+        },
+        {
+          "source": "../connection/factory.js",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "IPC_CHANNELS"
+          ]
+        },
+        {
+          "source": "./resources.js",
+          "specifiers": [
+            "MCP_RESOURCES",
+            "readResource",
+            "setResourcesWindow"
+          ]
+        },
+        {
+          "source": "./notifications.js",
+          "specifiers": [
+            "sseClients"
+          ]
+        },
+        {
+          "source": "./sampling.js",
+          "specifiers": [
+            "drainSampling",
+            "resolveSampling"
+          ]
+        },
+        {
+          "source": "./prompts.js",
+          "specifiers": [
+            "MCP_PROMPTS",
+            "getPrompt"
+          ]
+        },
+        {
+          "source": "./plugin-loader.js",
+          "specifiers": [
+            "loadPlugins",
+            "getPluginResources",
+            "readPluginResource",
+            "getPluginPrompts",
+            "getPluginPrompt"
+          ]
+        },
+        {
+          "source": "./context.js",
+          "specifiers": [
+            "* as ctx"
+          ]
+        },
+        {
+          "source": "./types.js",
+          "specifiers": [
+            "ToolContext"
+          ]
+        },
+        {
+          "source": "./tools/device.js",
+          "specifiers": [
+            "deviceHandlers"
+          ]
+        },
+        {
+          "source": "./tools/session.js",
+          "specifiers": [
+            "sessionHandlers"
+          ]
+        },
+        {
+          "source": "./tools/connection.js",
+          "specifiers": [
+            "connectionHandlers"
+          ]
+        },
+        {
+          "source": "./tools/connection-io.js",
+          "specifiers": [
+            "connIOHandlers"
+          ]
+        },
+        {
+          "source": "./tools/connection-advanced.js",
+          "specifiers": [
+            "connAdvancedHandlers"
+          ]
+        },
+        {
+          "source": "./tools/sftp.js",
+          "specifiers": [
+            "sftpHandlers"
+          ]
+        },
+        {
+          "source": "./tools/app.js",
+          "specifiers": [
+            "appHandlers"
+          ]
+        }
+      ],
+      "exports": [
+        "setMcpMainWindow",
+        "startMcpServer",
+        "stopMcpServer",
+        "getMcpStatus",
+        "destroyMcpManager"
+      ],
+      "totalLines": 948,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/notifications.ts": {
+      "filePath": "packages/main/src/services/mcp/notifications.ts",
+      "contentHash": "370fd247f805d8922ae9de417153c1367788d0358161b4494d567f9d16c93482",
+      "functions": [
+        {
+          "name": "sendMCPNotification",
+          "params": [
+            "method",
+            "params"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "drainNotifications",
+          "params": [],
+          "returnType": "Array<{ method: string; params: Record<string, unknown> }>",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:http",
+          "specifiers": [
+            "* as http"
+          ]
+        }
+      ],
+      "exports": [
+        "sseClients",
+        "sendMCPNotification",
+        "drainNotifications"
+      ],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/plugin-loader.ts": {
+      "filePath": "packages/main/src/services/mcp/plugin-loader.ts",
+      "contentHash": "92beda0e8f10b522d0482e673de396b6b2e17d96704981e85d643b35ac191122",
+      "functions": [
+        {
+          "name": "getPluginPaths",
+          "params": [],
+          "returnType": "string[]",
+          "exported": false,
+          "lineCount": 18
+        },
+        {
+          "name": "loadPlugins",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 52
+        },
+        {
+          "name": "getLoadedPlugins",
+          "params": [],
+          "returnType": "LoadedPlugin[]",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "getPluginResources",
+          "params": [],
+          "returnType": "Array<{ uri: string; name: string; description: string; mimeType: string }>",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "readPluginResource",
+          "params": [
+            "uri"
+          ],
+          "returnType": "{ mimeType: string; text: string } | null",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "getPluginPrompts",
+          "params": [],
+          "returnType": "Array<{\r\n  name: string;\r\n  description: string;\r\n  arguments?: Array<{ name: string; description: string; required?: boolean }>;\r\n}>",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "getPluginPrompt",
+          "params": [
+            "name"
+          ],
+          "returnType": "string | null",
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "electron",
+          "specifiers": [
+            "app"
+          ]
+        }
+      ],
+      "exports": [
+        "loadPlugins",
+        "getLoadedPlugins",
+        "getPluginResources",
+        "readPluginResource",
+        "getPluginPrompts",
+        "getPluginPrompt"
+      ],
+      "totalLines": 188,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/prompts.ts": {
+      "filePath": "packages/main/src/services/mcp/prompts.ts",
+      "contentHash": "e8af997e7bb1317532b022d38595ce4bedc7aae6140a505a3a93e74b19ce09b2",
+      "functions": [
+        {
+          "name": "getPrompt",
+          "params": [
+            "name",
+            "args"
+          ],
+          "returnType": "{\r\n  messages: Array<{ role: string; content: { type: string; text: string } }>;\r\n} | null",
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "MCP_PROMPTS",
+        "getPrompt"
+      ],
+      "totalLines": 207,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/resources.ts": {
+      "filePath": "packages/main/src/services/mcp/resources.ts",
+      "contentHash": "ff5dc1282d51755fdb4d2cf8eb299a038dddb82ceab1d9d2ee51e7e62dd44924",
+      "functions": [
+        {
+          "name": "setResourcesWindow",
+          "params": [
+            "window"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "readResource",
+          "params": [
+            "uri"
+          ],
+          "returnType": "Promise<{ contents: Array<{ uri: string; mimeType: string; text?: string }> } | null>",
+          "exported": true,
+          "lineCount": 67
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "../connection/factory.js",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        },
+        {
+          "source": "../connection/serial.js",
+          "specifiers": [
+            "SerialConnection"
+          ]
+        }
+      ],
+      "exports": [
+        "setResourcesWindow",
+        "MCP_RESOURCES",
+        "readResource"
+      ],
+      "totalLines": 96,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/sampling.ts": {
+      "filePath": "packages/main/src/services/mcp/sampling.ts",
+      "contentHash": "057c17da2525b450823dc0888e050c938bbea6f2328383939cc1a2731a413339",
+      "functions": [
+        {
+          "name": "requestSampling",
+          "params": [
+            "prompt",
+            "context",
+            "options",
+            "timeoutMs"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "drainSampling",
+          "params": [],
+          "returnType": "Array<{\r\n  id: string;\r\n  prompt: string;\r\n  context: string;\r\n  options: string[];\r\n}> | null",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "resolveSampling",
+          "params": [
+            "id",
+            "choice"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "hasPendingSampling",
+          "params": [],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:crypto",
+          "specifiers": [
+            "* as crypto"
+          ]
+        }
+      ],
+      "exports": [
+        "requestSampling",
+        "drainSampling",
+        "resolveSampling",
+        "hasPendingSampling"
+      ],
+      "totalLines": 70,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/tools/app.ts": {
+      "filePath": "packages/main/src/services/mcp/tools/app.ts",
+      "contentHash": "1001424f4a7395c7c24d35f5016c9b2207478b9374cf92ac6746aecaa9332a5f",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "../ai-helpers.js",
+          "specifiers": [
+            "formatOk",
+            "formatError"
+          ]
+        },
+        {
+          "source": "../../connection/factory.js",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "ToolHandler"
+          ]
+        },
+        {
+          "source": "../../screen-recorder.js",
+          "specifiers": [
+            "startRecording",
+            "stopRecording",
+            "listRecordings"
+          ]
+        }
+      ],
+      "exports": [
+        "appHandlers"
+      ],
+      "totalLines": 265,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/tools/connection-advanced.ts": {
+      "filePath": "packages/main/src/services/mcp/tools/connection-advanced.ts",
+      "contentHash": "29f7260448b5b0893260b18a2e63934c8cad98733b9188b944e6038ca6894ef4",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:crypto",
+          "specifiers": [
+            "* as crypto"
+          ]
+        },
+        {
+          "source": "../../connection/factory.js",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        },
+        {
+          "source": "../../connection/connectionServer.js",
+          "specifiers": [
+            "ConnectionServerConnection"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionState",
+            "ConnectionType",
+            "IPC_CHANNELS"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionServerOptions"
+          ]
+        },
+        {
+          "source": "../notifications.js",
+          "specifiers": [
+            "sendMCPNotification"
+          ]
+        },
+        {
+          "source": "../ai-helpers.js",
+          "specifiers": [
+            "formatOk",
+            "formatError",
+            "appendHistory",
+            "historyLog"
+          ]
+        },
+        {
+          "source": "../sampling.js",
+          "specifiers": [
+            "requestSampling"
+          ]
+        },
+        {
+          "source": "../context.js",
+          "specifiers": [
+            "* as ctx"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "ToolHandler"
+          ]
+        }
+      ],
+      "exports": [
+        "connAdvancedHandlers"
+      ],
+      "totalLines": 464,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/tools/connection-io.ts": {
+      "filePath": "packages/main/src/services/mcp/tools/connection-io.ts",
+      "contentHash": "c1a0f79f3993aaad15f81cefedcbab02f70fc4fc5256bfe69815f13a3e5f2b77",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "../../connection/factory.js",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionState",
+            "ConnectionType"
+          ]
+        },
+        {
+          "source": "../ai-helpers.js",
+          "specifiers": [
+            "formatOk",
+            "formatError",
+            "appendHistory",
+            "historyLog",
+            "extractPrompt",
+            "stripEcho",
+            "stripPrompt",
+            "parseAtResponse"
+          ]
+        },
+        {
+          "source": "../xmodem.js",
+          "specifiers": [
+            "xmodemSend"
+          ]
+        },
+        {
+          "source": "../context.js",
+          "specifiers": [
+            "* as ctx"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "ToolHandler"
+          ]
+        }
+      ],
+      "exports": [
+        "connIOHandlers"
+      ],
+      "totalLines": 396,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/tools/connection.ts": {
+      "filePath": "packages/main/src/services/mcp/tools/connection.ts",
+      "contentHash": "6f73c1f1cfdee4bee91cd46128cf9832b6eb5383d82809f04b790d4f75ee5dac",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:crypto",
+          "specifiers": [
+            "* as crypto"
+          ]
+        },
+        {
+          "source": "../../connection/factory.js",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionState",
+            "IPC_CHANNELS",
+            "bufferToBase64"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionOptions"
+          ]
+        },
+        {
+          "source": "../notifications.js",
+          "specifiers": [
+            "sendMCPNotification"
+          ]
+        },
+        {
+          "source": "../context.js",
+          "specifiers": [
+            "* as ctx"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "ToolHandler"
+          ]
+        }
+      ],
+      "exports": [
+        "connectionHandlers"
+      ],
+      "totalLines": 193,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/tools/device.ts": {
+      "filePath": "packages/main/src/services/mcp/tools/device.ts",
+      "contentHash": "36853fa09245b5d6017deb52df30735c6617afb8f49c920878da4d0e29a005bb",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../../connection/serial.js",
+          "specifiers": [
+            "SerialConnection"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "ToolHandler"
+          ]
+        }
+      ],
+      "exports": [
+        "deviceHandlers"
+      ],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/tools/session.ts": {
+      "filePath": "packages/main/src/services/mcp/tools/session.ts",
+      "contentHash": "5cde40d73d1344532b1de45367cc8f3c8f8570939ba79764a97465aa56f8b42b",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../notifications.js",
+          "specifiers": [
+            "sendMCPNotification"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "ToolHandler"
+          ]
+        }
+      ],
+      "exports": [
+        "sessionHandlers"
+      ],
+      "totalLines": 162,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/tools/sftp.ts": {
+      "filePath": "packages/main/src/services/mcp/tools/sftp.ts",
+      "contentHash": "6566a45bf7aa10341046f66c9fc8a3da136429aabfb25798d41db005cccd6a73",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../ai-helpers.js",
+          "specifiers": [
+            "formatOk",
+            "formatError"
+          ]
+        },
+        {
+          "source": "../../sftp/manager.js",
+          "specifiers": [
+            "createSftp",
+            "destroySftp",
+            "listDirectory",
+            "downloadFile",
+            "uploadFile",
+            "sftpMkdir",
+            "sftpRm",
+            "sftpStat"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "ToolHandler"
+          ]
+        }
+      ],
+      "exports": [
+        "sftpHandlers"
+      ],
+      "totalLines": 102,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/types.ts": {
+      "filePath": "packages/main/src/services/mcp/types.ts",
+      "contentHash": "f0cb4fd2966e6b3e6777471ce432ed71c468e35e238e3a141b8b576459d63ac2",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "electron",
+          "specifiers": [
+            "BrowserWindow"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/mcp/xmodem.ts": {
+      "filePath": "packages/main/src/services/mcp/xmodem.ts",
+      "contentHash": "61cd14e0871c9d5d7aad5fca08485cb2dcd3e5ab8337ecde50e4ba6e33177117",
+      "functions": [
+        {
+          "name": "crc16",
+          "params": [
+            "data"
+          ],
+          "returnType": "number",
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "buildPacket",
+          "params": [
+            "blockNum",
+            "data",
+            "blockSize"
+          ],
+          "returnType": "Buffer",
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "byteName",
+          "params": [
+            "b"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "xmodemSend",
+          "params": [
+            "write",
+            "readByte",
+            "fileData",
+            "protocol",
+            "opts"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 81
+        },
+        {
+          "name": "sendPacketWithRetry",
+          "params": [
+            "write",
+            "readByte",
+            "packet",
+            "timeout",
+            "maxRetries",
+            "label"
+          ],
+          "returnType": "Promise<void>",
+          "exported": false,
+          "lineCount": 27
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "xmodemSend"
+      ],
+      "totalLines": 177,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/nfs/manager.ts": {
+      "filePath": "packages/main/src/services/nfs/manager.ts",
+      "contentHash": "ba42c5b1557fa5e2121c2795df25a380d576e036e716dbdddbb6ba7fe5e4fbf9",
+      "functions": [
+        {
+          "name": "setNfsMainWindow",
+          "params": [
+            "window"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "sendStatusEvent",
+          "params": [
+            "event"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "sendClientEvent",
+          "params": [
+            "event"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "run",
+          "params": [
+            "cmd"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "sudo",
+          "params": [
+            "args"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "getNfsTempDir",
+          "params": [],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "findWinnfsdPath",
+          "params": [],
+          "returnType": "string | null",
+          "exported": false,
+          "lineCount": 30
+        },
+        {
+          "name": "copyWinnfsdToTemp",
+          "params": [
+            "srcPath"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "startWinnfsd",
+          "params": [
+            "exportDir",
+            "_allowedClients",
+            "options"
+          ],
+          "returnType": "Promise<void>",
+          "exported": false,
+          "lineCount": 170
+        },
+        {
+          "name": "killWinnfsd",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "writeExports",
+          "params": [
+            "content"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "restoreExports",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "startLinuxNfs",
+          "params": [
+            "exportDir",
+            "allowedClients",
+            "options"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 72
+        },
+        {
+          "name": "stopLinuxNfs",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 25
+        },
+        {
+          "name": "startNfsServer",
+          "params": [
+            "exportDir",
+            "allowedClients",
+            "options"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 74
+        },
+        {
+          "name": "stopNfsServer",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "getNfsStatus",
+          "params": [],
+          "returnType": "NfsServerStatus",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "getMountHint",
+          "params": [],
+          "returnType": "{ localIp: string; exportDir: string; mountCmd: string } | null",
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "getNfsClients",
+          "params": [],
+          "returnType": "NfsClientEvent[]",
+          "exported": true,
+          "lineCount": 48
+        },
+        {
+          "name": "startClientMonitor",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 33
+        },
+        {
+          "name": "stopClientMonitor",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "initNfsManager",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "destroyNfsManager",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "electron",
+          "specifiers": [
+            "BrowserWindow",
+            "app"
+          ]
+        },
+        {
+          "source": "child_process",
+          "specifiers": [
+            "execSync",
+            "execFileSync",
+            "spawnSync",
+            "spawn",
+            "ChildProcess"
+          ]
+        },
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "net",
+          "specifiers": [
+            "* as net"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "../../utils/network.js",
+          "specifiers": [
+            "getLocalIp"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "IPC_CHANNELS",
+            "NfsServerStatus",
+            "NfsStatusEvent",
+            "NfsClientEvent"
+          ]
+        }
+      ],
+      "exports": [
+        "setNfsMainWindow",
+        "startNfsServer",
+        "stopNfsServer",
+        "getNfsStatus",
+        "getMountHint",
+        "getNfsClients",
+        "initNfsManager",
+        "destroyNfsManager"
+      ],
+      "totalLines": 746,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/screen-recorder.ts": {
+      "filePath": "packages/main/src/services/screen-recorder.ts",
+      "contentHash": "692e3ae2cefdc6de4d30751258da5b4ff844b2c64064257991f47b1426a58a74",
+      "functions": [
+        {
+          "name": "getFfmpegPath",
+          "params": [],
+          "returnType": "Promise<string>",
+          "exported": false,
+          "lineCount": 20
+        },
+        {
+          "name": "createTempDir",
+          "params": [],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "startRecording",
+          "params": [
+            "window",
+            "fps",
+            "format"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 32
+        },
+        {
+          "name": "stopRecording",
+          "params": [
+            "id",
+            "outputPath"
+          ],
+          "returnType": "Promise<{ id: string; duration_ms: number; frames: number; fps: number; format: string; file: string; size: number }>",
+          "exported": true,
+          "lineCount": 82
+        },
+        {
+          "name": "listRecordings",
+          "params": [],
+          "returnType": "Array<{ id: string; startedAt: number; elapsed_ms: number; fps: number; frames: number }>",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "stopAllRecordings",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "electron",
+          "specifiers": [
+            "BrowserWindow"
+          ]
+        },
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "node:os",
+          "specifiers": [
+            "* as os"
+          ]
+        },
+        {
+          "source": "node:child_process",
+          "specifiers": [
+            "spawn"
+          ]
+        }
+      ],
+      "exports": [
+        "startRecording",
+        "stopRecording",
+        "listRecordings",
+        "stopAllRecordings"
+      ],
+      "totalLines": 183,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/sftp/manager.ts": {
+      "filePath": "packages/main/src/services/sftp/manager.ts",
+      "contentHash": "7ec57e88322f06581e2514d64e1afaa9ffafbcbfdf43e216a04c81553e3a4594",
+      "functions": [
+        {
+          "name": "withTimeout",
+          "params": [
+            "promise",
+            "operation"
+          ],
+          "returnType": "Promise<T>",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "setSftpMainWindow",
+          "params": [
+            "window"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "sendProgressEvent",
+          "params": [
+            "event"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "getSshClient",
+          "params": [
+            "connectionId"
+          ],
+          "returnType": "Client | null",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "createStandaloneSftp",
+          "params": [
+            "options"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 36
+        },
+        {
+          "name": "createSftp",
+          "params": [
+            "connectionId"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 46
+        },
+        {
+          "name": "destroySftp",
+          "params": [
+            "sftpId"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "getSftp",
+          "params": [
+            "sftpId"
+          ],
+          "returnType": "unknown",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "listDirectory",
+          "params": [
+            "sftpId",
+            "remotePath"
+          ],
+          "returnType": "Promise<SftpFileInfo[]>",
+          "exported": true,
+          "lineCount": 61
+        },
+        {
+          "name": "modeToString",
+          "params": [
+            "mode"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "downloadFile",
+          "params": [
+            "sftpId",
+            "remotePath",
+            "localPath"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 45
+        },
+        {
+          "name": "uploadFile",
+          "params": [
+            "sftpId",
+            "localPath",
+            "remotePath"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 38
+        },
+        {
+          "name": "mkdir",
+          "params": [
+            "sftpId",
+            "remotePath"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "rmdir",
+          "params": [
+            "sftpId",
+            "remotePath"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "rm",
+          "params": [
+            "sftpId",
+            "remotePath"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "rename",
+          "params": [
+            "sftpId",
+            "oldPath",
+            "newPath"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "stat",
+          "params": [
+            "sftpId",
+            "remotePath"
+          ],
+          "returnType": "Promise<SftpFileStat>",
+          "exported": true,
+          "lineCount": 34
+        },
+        {
+          "name": "readlink",
+          "params": [
+            "sftpId",
+            "remotePath"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "symlink",
+          "params": [
+            "sftpId",
+            "target",
+            "remotePath"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "realpath",
+          "params": [
+            "sftpId",
+            "remotePath"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "setupSftpHandlers",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 79
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "ssh2",
+          "specifiers": [
+            "Client"
+          ]
+        },
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "* as os"
+          ]
+        },
+        {
+          "source": "electron",
+          "specifiers": [
+            "BrowserWindow",
+            "ipcMain"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "IPC_CHANNELS",
+            "SftpFileInfo",
+            "SftpFileStat",
+            "SftpProgressEvent"
+          ]
+        },
+        {
+          "source": "../connection/factory.js",
+          "specifiers": [
+            "ConnectionFactory"
+          ]
+        },
+        {
+          "source": "../connection/ssh.js",
+          "specifiers": [
+            "SshConnection"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType"
+          ]
+        },
+        {
+          "source": "../../native-dialog.js",
+          "specifiers": [
+            "pickFolder",
+            "pickFile"
+          ]
+        }
+      ],
+      "exports": [
+        "setSftpMainWindow",
+        "createStandaloneSftp",
+        "createSftp",
+        "destroySftp",
+        "listDirectory",
+        "downloadFile",
+        "uploadFile",
+        "mkdir",
+        "rmdir",
+        "rm",
+        "rename",
+        "stat",
+        "readlink",
+        "symlink",
+        "realpath",
+        "setupSftpHandlers"
+      ],
+      "totalLines": 607,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/services/tftp/manager.ts": {
+      "filePath": "packages/main/src/services/tftp/manager.ts",
+      "contentHash": "0bc5ca5f76bc6af51811d9199262c04e016dca897ecb36ca47744d7c0abb8ec4",
+      "functions": [
+        {
+          "name": "setTftpMainWindow",
+          "params": [
+            "window"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "sendStatusEvent",
+          "params": [
+            "event"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "sendTransferEvent",
+          "params": [
+            "event"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "startTftpServer",
+          "params": [
+            "port",
+            "rootDir"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 192
+        },
+        {
+          "name": "stopTftpServer",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "getTftpStatus",
+          "params": [],
+          "returnType": "TftpServerStatus",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "destroyTftpManager",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "tftp",
+          "specifiers": [
+            "tftp"
+          ]
+        },
+        {
+          "source": "electron",
+          "specifiers": [
+            "BrowserWindow"
+          ]
+        },
+        {
+          "source": "fs",
+          "specifiers": [
+            "* as fs"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "* as path"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "IPC_CHANNELS",
+            "TftpServerStatus",
+            "TftpStatusEvent",
+            "TftpTransferEvent",
+            "TftpTransferDirection"
+          ]
+        }
+      ],
+      "exports": [
+        "setTftpMainWindow",
+        "startTftpServer",
+        "stopTftpServer",
+        "getTftpStatus",
+        "destroyTftpManager"
+      ],
+      "totalLines": 291,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/types/tftp.d.ts": {
+      "filePath": "packages/main/src/types/tftp.d.ts",
+      "contentHash": "c6da5367d6f676117f83f07971ce5666b8a3e84821263c1883c42cc96d5ccaa9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 65,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/src/utils/network.ts": {
+      "filePath": "packages/main/src/utils/network.ts",
+      "contentHash": "b27551a1eb34d720a6e84f8319053e039b494e973038d96d3b667158c873fb8b",
+      "functions": [
+        {
+          "name": "isVirtualInterface",
+          "params": [
+            "name"
+          ],
+          "returnType": "boolean",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "getLocalIp",
+          "params": [],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 39
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:os",
+          "specifiers": [
+            "* as os"
+          ]
+        }
+      ],
+      "exports": [
+        "getLocalIp"
+      ],
+      "totalLines": 57,
+      "hasStructuralAnalysis": true
+    },
+    "packages/main/tsconfig.json": {
+      "filePath": "packages/main/tsconfig.json",
+      "contentHash": "e47b8ef4e45d239e6118092f9e3080005a2a1143a1da067ce99b503d3376c2c1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/__tests__/setup.ts": {
+      "filePath": "packages/renderer/__tests__/setup.ts",
+      "contentHash": "fbf9a3c67d2cf9a9248d74205f53cc98d7a3cfcbf9823e6ba28814fd5fce85b0",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vitest",
+          "specifiers": [
+            "vi"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 168,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/__tests__/stores/config.test.ts": {
+      "filePath": "packages/renderer/__tests__/stores/config.test.ts",
+      "contentHash": "82c3b0a77f8998daad2924ee0b90886d9a8fc3e2a138dab4dee63c9dd8f8ae92",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../setup",
+          "specifiers": []
+        },
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach"
+          ]
+        },
+        {
+          "source": "../../src/stores/config",
+          "specifiers": [
+            "useConfigStore"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "DEFAULT_CONFIG"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 91,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/__tests__/stores/sessions.test.ts": {
+      "filePath": "packages/renderer/__tests__/stores/sessions.test.ts",
+      "contentHash": "7616e821f5b7a93fd4c751ef63ff3ff0cc83776c127890f021be24449426fcec",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../setup",
+          "specifiers": []
+        },
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach"
+          ]
+        },
+        {
+          "source": "../../src/stores/sessions",
+          "specifiers": [
+            "useSavedSessionsStore",
+            "SavedSession"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 146,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/__tests__/stores/terminal.test.ts": {
+      "filePath": "packages/renderer/__tests__/stores/terminal.test.ts",
+      "contentHash": "02048c36564e454d258a3c7bb25f38c621a1c7d4a0b104229877d76dc40e3a91",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../setup",
+          "specifiers": []
+        },
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach"
+          ]
+        },
+        {
+          "source": "../../src/stores/terminal",
+          "specifiers": [
+            "useTerminalStore"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType",
+            "ConnectionState"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 101,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/__tests__/stores/theme.test.ts": {
+      "filePath": "packages/renderer/__tests__/stores/theme.test.ts",
+      "contentHash": "3228967c1421252b0297df809285ed6036d49313a55a61ca963ee1a9465c1155",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../setup",
+          "specifiers": []
+        },
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach"
+          ]
+        },
+        {
+          "source": "../../src/stores/theme",
+          "specifiers": [
+            "useThemeStore"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/index.html": {
+      "filePath": "packages/renderer/index.html",
+      "contentHash": "a3a386827de9fb679745c7fba73c009685b612704c8f651c7e74a92fcc3bb176",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": false
+    },
+    "packages/renderer/package.json": {
+      "filePath": "packages/renderer/package.json",
+      "contentHash": "b99e793b722d7b8f703d666db0728122fc9390e3409448cceeb08115771f4bac",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/postcss.config.js": {
+      "filePath": "packages/renderer/postcss.config.js",
+      "contentHash": "98e8d8a143f16216f4b50a2520024f6254987049b2e199026742a96e16ba411e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/App.tsx": {
+      "filePath": "packages/renderer/src/App.tsx",
+      "contentHash": "5280d13da165bb26db03f74c68853e17029dd298c64600636b35281731deed00",
+      "functions": [
+        {
+          "name": "App",
+          "params": [],
+          "exported": true,
+          "lineCount": 119
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "./components/layout/Layout",
+          "specifiers": [
+            "Layout"
+          ]
+        },
+        {
+          "source": "./stores/config",
+          "specifiers": [
+            "useConfigStore"
+          ]
+        },
+        {
+          "source": "./stores/theme",
+          "specifiers": [
+            "useThemeStore"
+          ]
+        },
+        {
+          "source": "./stores/tftp",
+          "specifiers": [
+            "useTftpStore"
+          ]
+        },
+        {
+          "source": "./stores/nfs",
+          "specifiers": [
+            "useNfsStore"
+          ]
+        },
+        {
+          "source": "./stores/ftp",
+          "specifiers": [
+            "useFtpStore"
+          ]
+        },
+        {
+          "source": "./stores/nfs",
+          "specifiers": [
+            "initNfsListeners"
+          ]
+        },
+        {
+          "source": "./stores/ftp",
+          "specifiers": [
+            "initFtpListeners"
+          ]
+        },
+        {
+          "source": "./stores/mcp",
+          "specifiers": [
+            "initMcpListeners"
+          ]
+        },
+        {
+          "source": "./stores/mcp",
+          "specifiers": [
+            "useMcpStore"
+          ]
+        },
+        {
+          "source": "./i18n",
+          "specifiers": [
+            "i18n"
+          ]
+        }
+      ],
+      "exports": [
+        "App"
+      ],
+      "totalLines": 137,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/common/ContextMenu.tsx": {
+      "filePath": "packages/renderer/src/components/common/ContextMenu.tsx",
+      "contentHash": "7dc122d3d4f70c714c4a3f0997cb52fd839f714eacf0b47f8c0347cb4e93b12f",
+      "functions": [
+        {
+          "name": "ContextMenu",
+          "params": [
+            "{ x, y, items, onClose }"
+          ],
+          "exported": true,
+          "lineCount": 64
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useRef"
+          ]
+        }
+      ],
+      "exports": [
+        "ContextMenu"
+      ],
+      "totalLines": 85,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/common/ErrorToast.tsx": {
+      "filePath": "packages/renderer/src/components/common/ErrorToast.tsx",
+      "contentHash": "b08f1fb66b3624621c84d3e7eb0c1a6cbc8642e7499c0238b9a0bee774b845f4",
+      "functions": [
+        {
+          "name": "useGlobalError",
+          "params": [],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "ErrorToast",
+          "params": [
+            "{ message, onDismiss }"
+          ],
+          "exported": true,
+          "lineCount": 28
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect",
+            "useCallback"
+          ]
+        }
+      ],
+      "exports": [
+        "globalError",
+        "useGlobalError",
+        "ErrorToast"
+      ],
+      "totalLines": 64,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/common/QIcon.tsx": {
+      "filePath": "packages/renderer/src/components/common/QIcon.tsx",
+      "contentHash": "2701ce19e29c6560b6de4fd3c4541f6918c93ed1910a353fa8fecd7b11b99ba5",
+      "functions": [
+        {
+          "name": "QIcon",
+          "params": [
+            "{ size = 14, className = '' }"
+          ],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        }
+      ],
+      "exports": [
+        "QIcon"
+      ],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/dialogs/ConnectionShareDialog.tsx": {
+      "filePath": "packages/renderer/src/components/dialogs/ConnectionShareDialog.tsx",
+      "contentHash": "37856349128eaad3a29c3f3b9be7c8e6e0f1a3a5b254202e4091ba1afd595fe2",
+      "functions": [
+        {
+          "name": "ConnectionShareDialog",
+          "params": [
+            "{\r\n  isOpen,\r\n  onClose,\r\n  defaultSessionId,\r\n}"
+          ],
+          "exported": true,
+          "lineCount": 428
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "@/stores/terminal",
+          "specifiers": [
+            "useTerminalStore"
+          ]
+        },
+        {
+          "source": "@/stores/config",
+          "specifiers": [
+            "useConfigStore"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType",
+            "ConnectionState"
+          ]
+        }
+      ],
+      "exports": [
+        "ConnectionShareDialog"
+      ],
+      "totalLines": 472,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/dialogs/FtpDialog.tsx": {
+      "filePath": "packages/renderer/src/components/dialogs/FtpDialog.tsx",
+      "contentHash": "d8cf19d02641fd2b32f89f72ccb09fbfad46165b7ab71ab57bdddd9d1283e8e6",
+      "functions": [
+        {
+          "name": "FtpDialog",
+          "params": [
+            "{ isOpen, onClose }"
+          ],
+          "exported": true,
+          "lineCount": 401
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useState"
+          ]
+        },
+        {
+          "source": "@/stores/ftp",
+          "specifiers": [
+            "useFtpStore"
+          ]
+        }
+      ],
+      "exports": [
+        "FtpDialog"
+      ],
+      "totalLines": 414,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/dialogs/McpDialog.tsx": {
+      "filePath": "packages/renderer/src/components/dialogs/McpDialog.tsx",
+      "contentHash": "2b1a9a79930659443e15c20936c7e32bb096ad30fad3e6e39f592de4fc0f8992",
+      "functions": [
+        {
+          "name": "generateClientConfig",
+          "params": [
+            "client",
+            "ip",
+            "port",
+            "authPassword",
+            "pretty"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 16
+        },
+        {
+          "name": "McpDialog",
+          "params": [
+            "{ isOpen, onClose }"
+          ],
+          "exported": true,
+          "lineCount": 435
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useState"
+          ]
+        },
+        {
+          "source": "react-i18next",
+          "specifiers": [
+            "useTranslation"
+          ]
+        },
+        {
+          "source": "@/stores/mcp",
+          "specifiers": [
+            "useMcpStore"
+          ]
+        }
+      ],
+      "exports": [
+        "McpDialog"
+      ],
+      "totalLines": 586,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/dialogs/NfsDialog.tsx": {
+      "filePath": "packages/renderer/src/components/dialogs/NfsDialog.tsx",
+      "contentHash": "e1eceddcff8bb2c488105933f10d4549247b75c2ff4b57b103bd8147727b0701",
+      "functions": [
+        {
+          "name": "NfsDialog",
+          "params": [
+            "{ isOpen, onClose }"
+          ],
+          "exported": true,
+          "lineCount": 375
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useState"
+          ]
+        },
+        {
+          "source": "@/stores/nfs",
+          "specifiers": [
+            "useNfsStore"
+          ]
+        }
+      ],
+      "exports": [
+        "NfsDialog"
+      ],
+      "totalLines": 388,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/dialogs/PtyConnectDialog.tsx": {
+      "filePath": "packages/renderer/src/components/dialogs/PtyConnectDialog.tsx",
+      "contentHash": "194ea24e7fe50ab028723d6bca99f5a9be46a69326e51c1c7a3dbe851eba26da",
+      "functions": [
+        {
+          "name": "PtyConnectDialog",
+          "params": [
+            "{\r\n  isOpen,\r\n  onClose,\r\n  onConnect,\r\n  editSession,\r\n}"
+          ],
+          "exported": true,
+          "lineCount": 162
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "@/stores/sessions",
+          "specifiers": [
+            "SavedSession"
+          ]
+        }
+      ],
+      "exports": [
+        "PtyConnectDialog"
+      ],
+      "totalLines": 189,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/dialogs/SerialConnectDialog.tsx": {
+      "filePath": "packages/renderer/src/components/dialogs/SerialConnectDialog.tsx",
+      "contentHash": "9b888e49fa8803e926459edb9a3de22449dc7fbf955f4163c20b77ed37e56b4b",
+      "functions": [
+        {
+          "name": "SerialConnectDialog",
+          "params": [
+            "{\r\n  isOpen,\r\n  onClose,\r\n  onConnect,\r\n  editSession,\r\n}"
+          ],
+          "exported": true,
+          "lineCount": 266
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "SerialPortInfo"
+          ]
+        },
+        {
+          "source": "@/stores/sessions",
+          "specifiers": [
+            "SavedSession"
+          ]
+        }
+      ],
+      "exports": [
+        "SerialConnectDialog"
+      ],
+      "totalLines": 299,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/dialogs/SettingsDialog.tsx": {
+      "filePath": "packages/renderer/src/components/dialogs/SettingsDialog.tsx",
+      "contentHash": "b00a60b57f04845d92b4db5e2c73f3c61cff1f1a482d4e97ff40ce14e0bbbeea",
+      "functions": [
+        {
+          "name": "SettingsDialog",
+          "params": [
+            "{\r\n  isOpen,\r\n  onClose,\r\n}"
+          ],
+          "exported": true,
+          "lineCount": 376
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "@/stores/theme",
+          "specifiers": [
+            "useThemeStore"
+          ]
+        },
+        {
+          "source": "@/stores/config",
+          "specifiers": [
+            "useConfigStore"
+          ]
+        },
+        {
+          "source": "@/stores/sessions",
+          "specifiers": [
+            "useSavedSessionsStore",
+            "SavedSession"
+          ]
+        },
+        {
+          "source": "@/stores/quickButtons",
+          "specifiers": [
+            "useQuickButtonsStore"
+          ]
+        },
+        {
+          "source": "@/stores/tftp",
+          "specifiers": [
+            "useTftpStore"
+          ]
+        },
+        {
+          "source": "@/stores/nfs",
+          "specifiers": [
+            "useNfsStore"
+          ]
+        },
+        {
+          "source": "@/stores/ftp",
+          "specifiers": [
+            "useFtpStore"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "AppConfig",
+            "Theme"
+          ]
+        }
+      ],
+      "exports": [
+        "SettingsDialog"
+      ],
+      "totalLines": 417,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/dialogs/SshConnectDialog.tsx": {
+      "filePath": "packages/renderer/src/components/dialogs/SshConnectDialog.tsx",
+      "contentHash": "4d764a95fc88bc9a8e6e4c18441347329561ff1ffe410f19ebb262812cf32098",
+      "functions": [
+        {
+          "name": "SshConnectDialog",
+          "params": [
+            "{\r\n  isOpen,\r\n  onClose,\r\n  onConnect,\r\n  editSession,\r\n}"
+          ],
+          "exported": true,
+          "lineCount": 221
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "@/stores/sessions",
+          "specifiers": [
+            "SavedSession"
+          ]
+        }
+      ],
+      "exports": [
+        "SshConnectDialog"
+      ],
+      "totalLines": 245,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/dialogs/TelnetConnectDialog.tsx": {
+      "filePath": "packages/renderer/src/components/dialogs/TelnetConnectDialog.tsx",
+      "contentHash": "4b5c9a65bda3340011673637e8ff64f5eeebc7130960c292ec24baeb1c5d8342",
+      "functions": [
+        {
+          "name": "TelnetConnectDialog",
+          "params": [
+            "{\r\n  isOpen,\r\n  onClose,\r\n  onConnect,\r\n  editSession,\r\n}"
+          ],
+          "exported": true,
+          "lineCount": 137
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "@/stores/sessions",
+          "specifiers": [
+            "SavedSession"
+          ]
+        }
+      ],
+      "exports": [
+        "TelnetConnectDialog"
+      ],
+      "totalLines": 157,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/dialogs/TftpDialog.tsx": {
+      "filePath": "packages/renderer/src/components/dialogs/TftpDialog.tsx",
+      "contentHash": "94715d66eb363b8fcb997cf7b3a5c492b7a836df8ac0536e15b808992b76e59a",
+      "functions": [
+        {
+          "name": "TftpDialog",
+          "params": [
+            "{ isOpen, onClose }"
+          ],
+          "exported": true,
+          "lineCount": 312
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useState"
+          ]
+        },
+        {
+          "source": "@/stores/tftp",
+          "specifiers": [
+            "useTftpStore"
+          ]
+        }
+      ],
+      "exports": [
+        "TftpDialog"
+      ],
+      "totalLines": 325,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/layout/index.ts": {
+      "filePath": "packages/renderer/src/components/layout/index.ts",
+      "contentHash": "d4afc790221eb83d52071f18a69124c14c7494facb3ef255c3e5811511533340",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "Layout",
+        "TitleBar",
+        "Sidebar",
+        "MainContent",
+        "StatusBar"
+      ],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/layout/Layout.tsx": {
+      "filePath": "packages/renderer/src/components/layout/Layout.tsx",
+      "contentHash": "4e9881e08d88048fc20b737f0fad086259fa8d2f6d10fc736d0d0a98f8533369",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [],
+          "exported": true,
+          "lineCount": 65
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "./TitleBar",
+          "specifiers": [
+            "TitleBar"
+          ]
+        },
+        {
+          "source": "./Sidebar",
+          "specifiers": [
+            "Sidebar"
+          ]
+        },
+        {
+          "source": "./MainContent",
+          "specifiers": [
+            "MainContent"
+          ]
+        },
+        {
+          "source": "./StatusBar",
+          "specifiers": [
+            "StatusBar"
+          ]
+        },
+        {
+          "source": "../terminal/QuickButtonBar",
+          "specifiers": [
+            "QuickButtonBar"
+          ]
+        },
+        {
+          "source": "@/stores/quickButtons",
+          "specifiers": [
+            "useQuickButtonsStore"
+          ]
+        },
+        {
+          "source": "../../stores/theme",
+          "specifiers": [
+            "useThemeStore"
+          ]
+        },
+        {
+          "source": "../../stores/tftp",
+          "specifiers": [
+            "useTftpStore"
+          ]
+        },
+        {
+          "source": "../dialogs/SettingsDialog",
+          "specifiers": [
+            "SettingsDialog"
+          ]
+        },
+        {
+          "source": "../common/ErrorToast",
+          "specifiers": [
+            "ErrorToast",
+            "useGlobalError"
+          ]
+        },
+        {
+          "source": "../../hooks/useGlobalShortcuts",
+          "specifiers": [
+            "useGlobalShortcuts"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "TftpTransferEvent"
+          ]
+        }
+      ],
+      "exports": [
+        "Layout"
+      ],
+      "totalLines": 84,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/layout/MainContent.tsx": {
+      "filePath": "packages/renderer/src/components/layout/MainContent.tsx",
+      "contentHash": "af625daf2572d0aca47c165c557ce403200cfa8f2a8682bcb9f4611006a862b5",
+      "functions": [
+        {
+          "name": "MainContent",
+          "params": [],
+          "exported": true,
+          "lineCount": 105
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useMemo"
+          ]
+        },
+        {
+          "source": "@/stores/terminal",
+          "specifiers": [
+            "useTerminalStore"
+          ]
+        },
+        {
+          "source": "../terminal/TerminalPane",
+          "specifiers": [
+            "TerminalPane"
+          ]
+        },
+        {
+          "source": "../sftp",
+          "specifiers": [
+            "SftpPanel"
+          ]
+        },
+        {
+          "source": "@/stores/sftp",
+          "specifiers": [
+            "useSftpStore"
+          ]
+        }
+      ],
+      "exports": [
+        "MainContent"
+      ],
+      "totalLines": 112,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/layout/Sidebar.tsx": {
+      "filePath": "packages/renderer/src/components/layout/Sidebar.tsx",
+      "contentHash": "d00e863a7b0c975a0ae8717a4c2b2eca97d3b1ec38d4b1465dabaa07f154c7d8",
+      "functions": [
+        {
+          "name": "Sidebar",
+          "params": [],
+          "exported": true,
+          "lineCount": 434
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useCallback",
+            "useRef",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "react-i18next",
+          "specifiers": [
+            "useTranslation"
+          ]
+        },
+        {
+          "source": "@/stores/terminal",
+          "specifiers": [
+            "useTerminalStore",
+            "Session"
+          ]
+        },
+        {
+          "source": "@/stores/sessions",
+          "specifiers": [
+            "useSavedSessionsStore",
+            "SavedSession"
+          ]
+        },
+        {
+          "source": "@/stores/sidebarButtons",
+          "specifiers": [
+            "useSidebarButtonsStore",
+            "SidebarButtonType"
+          ]
+        },
+        {
+          "source": "@/stores/config",
+          "specifiers": [
+            "useConfigStore"
+          ]
+        },
+        {
+          "source": "@/stores/tftp",
+          "specifiers": [
+            "useTftpStore"
+          ]
+        },
+        {
+          "source": "@/stores/nfs",
+          "specifiers": [
+            "useNfsStore"
+          ]
+        },
+        {
+          "source": "@/stores/ftp",
+          "specifiers": [
+            "useFtpStore"
+          ]
+        },
+        {
+          "source": "@/stores/mcp",
+          "specifiers": [
+            "useMcpStore"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType",
+            "ConnectionState"
+          ]
+        },
+        {
+          "source": "../dialogs/SerialConnectDialog",
+          "specifiers": [
+            "SerialConnectDialog"
+          ]
+        },
+        {
+          "source": "../dialogs/SshConnectDialog",
+          "specifiers": [
+            "SshConnectDialog"
+          ]
+        },
+        {
+          "source": "../dialogs/TelnetConnectDialog",
+          "specifiers": [
+            "TelnetConnectDialog"
+          ]
+        },
+        {
+          "source": "../dialogs/TftpDialog",
+          "specifiers": [
+            "TftpDialog"
+          ]
+        },
+        {
+          "source": "../dialogs/NfsDialog",
+          "specifiers": [
+            "NfsDialog"
+          ]
+        },
+        {
+          "source": "../dialogs/FtpDialog",
+          "specifiers": [
+            "FtpDialog"
+          ]
+        },
+        {
+          "source": "../dialogs/PtyConnectDialog",
+          "specifiers": [
+            "PtyConnectDialog",
+            "PtyConnectOptions"
+          ]
+        },
+        {
+          "source": "../dialogs/McpDialog",
+          "specifiers": [
+            "McpDialog"
+          ]
+        },
+        {
+          "source": "../dialogs/ConnectionShareDialog",
+          "specifiers": [
+            "ConnectionShareDialog"
+          ]
+        },
+        {
+          "source": "../common/ErrorToast",
+          "specifiers": [
+            "globalError"
+          ]
+        }
+      ],
+      "exports": [
+        "Sidebar"
+      ],
+      "totalLines": 465,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/layout/StatusBar.tsx": {
+      "filePath": "packages/renderer/src/components/layout/StatusBar.tsx",
+      "contentHash": "820545e4c5db893372d330b58662dcd89b0610d91dc3441a037de30322908dda",
+      "functions": [
+        {
+          "name": "StatusBar",
+          "params": [],
+          "exported": true,
+          "lineCount": 200
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "react-i18next",
+          "specifiers": [
+            "useTranslation"
+          ]
+        },
+        {
+          "source": "@/stores/terminal",
+          "specifiers": [
+            "useTerminalStore"
+          ]
+        },
+        {
+          "source": "@/stores/tftp",
+          "specifiers": [
+            "useTftpStore"
+          ]
+        },
+        {
+          "source": "@/stores/nfs",
+          "specifiers": [
+            "useNfsStore"
+          ]
+        },
+        {
+          "source": "@/stores/ftp",
+          "specifiers": [
+            "useFtpStore"
+          ]
+        },
+        {
+          "source": "@/stores/mcp",
+          "specifiers": [
+            "useMcpStore"
+          ]
+        },
+        {
+          "source": "@/stores/sftp",
+          "specifiers": [
+            "useSftpStore"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "CONNECTION_STATE_NAMES",
+            "ConnectionType",
+            "ConnectionState"
+          ]
+        }
+      ],
+      "exports": [
+        "StatusBar"
+      ],
+      "totalLines": 215,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/layout/TitleBar.tsx": {
+      "filePath": "packages/renderer/src/components/layout/TitleBar.tsx",
+      "contentHash": "e93948c6e94f0ddcc00f0d4682cab273029f44205170b0346ff0c74d1cc9e9b9",
+      "functions": [
+        {
+          "name": "TitleBar",
+          "params": [],
+          "exported": true,
+          "lineCount": 133
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useRef",
+            "useEffect",
+            "useMemo"
+          ]
+        },
+        {
+          "source": "react-i18next",
+          "specifiers": [
+            "useTranslation"
+          ]
+        },
+        {
+          "source": "@/stores/terminal",
+          "specifiers": [
+            "useTerminalStore"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionState"
+          ]
+        },
+        {
+          "source": "../common/ContextMenu",
+          "specifiers": [
+            "ContextMenu"
+          ]
+        },
+        {
+          "source": "../common/QIcon",
+          "specifiers": [
+            "QIcon"
+          ]
+        }
+      ],
+      "exports": [
+        "TitleBar"
+      ],
+      "totalLines": 154,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/sftp/index.ts": {
+      "filePath": "packages/renderer/src/components/sftp/index.ts",
+      "contentHash": "8d2abd8e8ea687da40e47e445b572e4a30eddedb86ef82908b01e0d61c7d3d42",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "SftpPanel"
+      ],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/sftp/SftpPanel.tsx": {
+      "filePath": "packages/renderer/src/components/sftp/SftpPanel.tsx",
+      "contentHash": "5bedad8410ec119cb4f539dec45085f932dc8a079d5b9188658cf654c0dca593",
+      "functions": [
+        {
+          "name": "IconArrowLeft",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "IconArrowRight",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "IconRefresh",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "IconUpload",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "IconFolderPlus",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "IconDownload",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "IconRename",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "IconTrash",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "IconOpenFolder",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "IconFolder",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "IconFile",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "IconLink",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "IconChevronRight",
+          "params": [
+            "{ size = 10 }"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "IconX",
+          "params": [
+            "{ size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "IconSort",
+          "params": [
+            "{ size = 10, direction }"
+          ],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "formatSize",
+          "params": [
+            "bytes"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "formatTime",
+          "params": [
+            "timestamp"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "getFileIconColor",
+          "params": [
+            "name",
+            "type"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 32
+        },
+        {
+          "name": "ConfirmDialog",
+          "params": [
+            "{ isOpen, title, message, confirmLabel = '确认', danger, onConfirm, onCancel }"
+          ],
+          "exported": false,
+          "lineCount": 37
+        },
+        {
+          "name": "InputDialog",
+          "params": [
+            "{ isOpen, title, placeholder, defaultValue = '', onConfirm, onCancel }"
+          ],
+          "exported": false,
+          "lineCount": 54
+        },
+        {
+          "name": "FileIcon",
+          "params": [
+            "{ name, type, size = 14 }"
+          ],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "SftpPanel",
+          "params": [],
+          "exported": true,
+          "lineCount": 584
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useState",
+            "useCallback",
+            "useMemo"
+          ]
+        },
+        {
+          "source": "@/stores/sftp",
+          "specifiers": [
+            "useSftpStore"
+          ]
+        },
+        {
+          "source": "@/stores/terminal",
+          "specifiers": [
+            "useTerminalStore"
+          ]
+        }
+      ],
+      "exports": [
+        "SftpPanel"
+      ],
+      "totalLines": 862,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/tabs/index.ts": {
+      "filePath": "packages/renderer/src/components/tabs/index.ts",
+      "contentHash": "961050a1c665c7cbdb8b00001f7965c1999661a51813468382e1be58a514d291",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "TabBar"
+      ],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/tabs/TabBar.tsx": {
+      "filePath": "packages/renderer/src/components/tabs/TabBar.tsx",
+      "contentHash": "33b87f0698fafe3f7b2ec45dbfe3d36831293c3fe0651fa92d3de35e1da86607",
+      "functions": [
+        {
+          "name": "TabBar",
+          "params": [],
+          "exported": true,
+          "lineCount": 170
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useRef",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "@/stores/terminal",
+          "specifiers": [
+            "useTerminalStore"
+          ]
+        },
+        {
+          "source": "react-i18next",
+          "specifiers": [
+            "useTranslation"
+          ]
+        },
+        {
+          "source": "../common/ContextMenu",
+          "specifiers": [
+            "ContextMenu"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionState"
+          ]
+        }
+      ],
+      "exports": [
+        "TabBar"
+      ],
+      "totalLines": 187,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/terminal/index.ts": {
+      "filePath": "packages/renderer/src/components/terminal/index.ts",
+      "contentHash": "a1392190b08664cb8d0441b649cd537c8c5fcb6e29201fd93fecd2f0e0dd871b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "TerminalPane"
+      ],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/terminal/QuickButtonBar.tsx": {
+      "filePath": "packages/renderer/src/components/terminal/QuickButtonBar.tsx",
+      "contentHash": "0f43a3e1a73d09c9c219ede7a19372bea0f4c442adf4d3a1c000f867b0ac5797",
+      "functions": [
+        {
+          "name": "ButtonDialog",
+          "params": [
+            "{\r\n  isOpen,\r\n  onClose,\r\n  editingButton,\r\n  onSave,\r\n}"
+          ],
+          "exported": false,
+          "lineCount": 238
+        },
+        {
+          "name": "GroupDialog",
+          "params": [
+            "{ isOpen, onClose, editingGroup, onSave }"
+          ],
+          "exported": false,
+          "lineCount": 45
+        },
+        {
+          "name": "QuickButtonBar",
+          "params": [
+            "{ direction: directionProp }"
+          ],
+          "exported": true,
+          "lineCount": 562
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "react-i18next",
+          "specifiers": [
+            "useTranslation"
+          ]
+        },
+        {
+          "source": "@/stores/terminal",
+          "specifiers": [
+            "useTerminalStore"
+          ]
+        },
+        {
+          "source": "@/stores/quickButtons",
+          "specifiers": [
+            "useQuickButtonsStore",
+            "QuickButton",
+            "ButtonGroup",
+            "ButtonBarDirection",
+            "PRESET_COLORS"
+          ]
+        },
+        {
+          "source": "@/stores/terminalMacro",
+          "specifiers": [
+            "useTerminalMacroStore",
+            "SavedMacro"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionState"
+          ]
+        }
+      ],
+      "exports": [
+        "QuickButtonBar"
+      ],
+      "totalLines": 877,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/components/terminal/TerminalPane.tsx": {
+      "filePath": "packages/renderer/src/components/terminal/TerminalPane.tsx",
+      "contentHash": "d524957136f09d9ff1218c904acfc5839a29938a97552c38318c9ba0800af490",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useRef",
+            "useState",
+            "useCallback"
+          ]
+        },
+        {
+          "source": "xterm",
+          "specifiers": [
+            "XTerm"
+          ]
+        },
+        {
+          "source": "xterm-addon-fit",
+          "specifiers": [
+            "FitAddon"
+          ]
+        },
+        {
+          "source": "xterm-addon-search",
+          "specifiers": [
+            "SearchAddon"
+          ]
+        },
+        {
+          "source": "@/stores/terminal",
+          "specifiers": [
+            "useTerminalStore"
+          ]
+        },
+        {
+          "source": "@/stores/theme",
+          "specifiers": [
+            "useThemeStore"
+          ]
+        },
+        {
+          "source": "@/stores/terminalMacro",
+          "specifiers": [
+            "useTerminalMacroStore",
+            "PRESET_MACRO_COLORS"
+          ]
+        },
+        {
+          "source": "@/stores/quickButtons",
+          "specifiers": [
+            "useQuickButtonsStore"
+          ]
+        },
+        {
+          "source": "@/stores/config",
+          "specifiers": [
+            "useConfigStore"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "base64ToUint8Array",
+            "ConnectionType",
+            "ConnectionState"
+          ]
+        },
+        {
+          "source": "xterm/css/xterm.css",
+          "specifiers": []
+        },
+        {
+          "source": "../dialogs/ConnectionShareDialog",
+          "specifiers": [
+            "ConnectionShareDialog"
+          ]
+        },
+        {
+          "source": "../common/ErrorToast",
+          "specifiers": [
+            "globalError"
+          ]
+        }
+      ],
+      "exports": [
+        "TerminalPane"
+      ],
+      "totalLines": 949,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/hooks/useGlobalShortcuts.ts": {
+      "filePath": "packages/renderer/src/hooks/useGlobalShortcuts.ts",
+      "contentHash": "59f1d2ff7ce70953a5ba360aa309e5a61c27e552ea26067ce804b9cd188944d6",
+      "functions": [
+        {
+          "name": "dispatch",
+          "params": [
+            "event"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "useGlobalShortcuts",
+          "params": [],
+          "exported": true,
+          "lineCount": 164
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect"
+          ]
+        },
+        {
+          "source": "@/stores/terminal",
+          "specifiers": [
+            "useTerminalStore"
+          ]
+        },
+        {
+          "source": "@/stores/quickButtons",
+          "specifiers": [
+            "useQuickButtonsStore"
+          ]
+        },
+        {
+          "source": "@/stores/sftp",
+          "specifiers": [
+            "useSftpStore"
+          ]
+        },
+        {
+          "source": "@/stores/config",
+          "specifiers": [
+            "useConfigStore"
+          ]
+        }
+      ],
+      "exports": [
+        "useGlobalShortcuts"
+      ],
+      "totalLines": 179,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/i18n/index.ts": {
+      "filePath": "packages/renderer/src/i18n/index.ts",
+      "contentHash": "afb0659815013032e8b80b9b4f9a2652ece765a8190ae6448c4e114e910e8fe2",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "i18next",
+          "specifiers": [
+            "i18n"
+          ]
+        },
+        {
+          "source": "react-i18next",
+          "specifiers": [
+            "initReactI18next"
+          ]
+        },
+        {
+          "source": "./locales/zh-CN.json",
+          "specifiers": [
+            "zhCN"
+          ]
+        },
+        {
+          "source": "./locales/en-US.json",
+          "specifiers": [
+            "enUS"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/i18n/locales/en-US.json": {
+      "filePath": "packages/renderer/src/i18n/locales/en-US.json",
+      "contentHash": "c26dbd2f9169653840052b4366618777c8bbb4a040b420ab926a44bfd8da7302",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 186,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/i18n/locales/zh-CN.json": {
+      "filePath": "packages/renderer/src/i18n/locales/zh-CN.json",
+      "contentHash": "b31fc2b877f066277835541e8373a5daa8dda7449e3ad6822bf02e82e3eb1e49",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 186,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/index.tsx": {
+      "filePath": "packages/renderer/src/index.tsx",
+      "contentHash": "f2b7793f32c24cf9bca5f1bc26dc1893d5c5a798070a41f0dccedd6bc1db8f4a",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "react-dom/client",
+          "specifiers": [
+            "ReactDOM"
+          ]
+        },
+        {
+          "source": "./App",
+          "specifiers": [
+            "App"
+          ]
+        },
+        {
+          "source": "./i18n",
+          "specifiers": []
+        },
+        {
+          "source": "./styles/index.css",
+          "specifiers": []
+        }
+      ],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/config.ts": {
+      "filePath": "packages/renderer/src/stores/config.ts",
+      "contentHash": "4fd648c58eac5baa6faca9c2ad2229f7380baa4d23a118da57806f1f7c699a98",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "AppConfig"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "DEFAULT_CONFIG"
+          ]
+        }
+      ],
+      "exports": [
+        "useConfigStore"
+      ],
+      "totalLines": 54,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/ftp.ts": {
+      "filePath": "packages/renderer/src/stores/ftp.ts",
+      "contentHash": "79f24323e9c9314a50172945530fa4d152ea03b785e3f65b9d386ca6725d52ca",
+      "functions": [
+        {
+          "name": "initFtpListeners",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 22
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware",
+          "specifiers": [
+            "persist"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "FtpClientEvent"
+          ]
+        }
+      ],
+      "exports": [
+        "useFtpStore",
+        "initFtpListeners"
+      ],
+      "totalLines": 198,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/index.ts": {
+      "filePath": "packages/renderer/src/stores/index.ts",
+      "contentHash": "d2c909ceada87dcc0a6563bdc74b5b30b0f0d348ff3bbdeab9641dafb7acfa5c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "useTerminalStore",
+        "useConfigStore",
+        "useThemeStore",
+        "useSftpStore"
+      ],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/mcp.ts": {
+      "filePath": "packages/renderer/src/stores/mcp.ts",
+      "contentHash": "d2acd827002931d6c688f582442352fee51ed6be5d1c913a3e0cd53017c84982",
+      "functions": [
+        {
+          "name": "initMcpListeners",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 33
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware",
+          "specifiers": [
+            "persist"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "McpServerStatus"
+          ]
+        }
+      ],
+      "exports": [
+        "useMcpStore",
+        "initMcpListeners"
+      ],
+      "totalLines": 169,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/nfs.ts": {
+      "filePath": "packages/renderer/src/stores/nfs.ts",
+      "contentHash": "c09a75ae0044aaf18f0b7c1838acf82a65bb0efc369380c3ea4e845ec9de0d40",
+      "functions": [
+        {
+          "name": "initNfsListeners",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 31
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware",
+          "specifiers": [
+            "persist"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "NfsClientEvent"
+          ]
+        }
+      ],
+      "exports": [
+        "useNfsStore",
+        "initNfsListeners"
+      ],
+      "totalLines": 233,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/quickButtons.ts": {
+      "filePath": "packages/renderer/src/stores/quickButtons.ts",
+      "contentHash": "5591172e2d64c8e9d2a4ae5aca67edb7df196076341244cb6d14f93a96525e9b",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware",
+          "specifiers": [
+            "persist"
+          ]
+        }
+      ],
+      "exports": [
+        "useQuickButtonsStore",
+        "PRESET_COLORS"
+      ],
+      "totalLines": 177,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/sessions.ts": {
+      "filePath": "packages/renderer/src/stores/sessions.ts",
+      "contentHash": "534a19e5cba1a99e7bc02d4800dbd4137b531ba4f7f2ca7e213425f8e14d1020",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware",
+          "specifiers": [
+            "persist"
+          ]
+        }
+      ],
+      "exports": [
+        "useSavedSessionsStore"
+      ],
+      "totalLines": 200,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/sftp.ts": {
+      "filePath": "packages/renderer/src/stores/sftp.ts",
+      "contentHash": "4bb95f63bde4be2c8606dcf7ee67775eac3a07ad245a66d7e6e783ab6e246b22",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware/immer",
+          "specifiers": [
+            "immer"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "SftpFileInfo",
+            "SftpProgressEvent"
+          ]
+        }
+      ],
+      "exports": [
+        "useSftpStore"
+      ],
+      "totalLines": 360,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/sidebarButtons.ts": {
+      "filePath": "packages/renderer/src/stores/sidebarButtons.ts",
+      "contentHash": "4c13d98248872223477aee53b925bb63f1f362c6a1d773e701fa91fa55208c4d",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware",
+          "specifiers": [
+            "persist"
+          ]
+        }
+      ],
+      "exports": [
+        "useSidebarButtonsStore"
+      ],
+      "totalLines": 75,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/terminal.ts": {
+      "filePath": "packages/renderer/src/stores/terminal.ts",
+      "contentHash": "6fbf10be277917d0b82559cb7d3f500ae0058aafced4ed4a2144e52d511c7745",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware/immer",
+          "specifiers": [
+            "immer"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "ConnectionType",
+            "ConnectionState"
+          ]
+        },
+        {
+          "source": "./sftp",
+          "specifiers": [
+            "useSftpStore"
+          ]
+        }
+      ],
+      "exports": [
+        "useTerminalStore"
+      ],
+      "totalLines": 353,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/terminalMacro.ts": {
+      "filePath": "packages/renderer/src/stores/terminalMacro.ts",
+      "contentHash": "863b431177a2bae4fde4b3aecac44dbf034edd7a35331fc1d5f232faac569192",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware",
+          "specifiers": [
+            "persist"
+          ]
+        }
+      ],
+      "exports": [
+        "PRESET_MACRO_COLORS",
+        "useTerminalMacroStore"
+      ],
+      "totalLines": 239,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/tftp.ts": {
+      "filePath": "packages/renderer/src/stores/tftp.ts",
+      "contentHash": "b07428d05fd7b7075e6f4bcccd545adcdc1e6d785b34f191520a6a52a714e111",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware",
+          "specifiers": [
+            "persist"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "TftpTransferEvent"
+          ]
+        }
+      ],
+      "exports": [
+        "useTftpStore"
+      ],
+      "totalLines": 171,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/stores/theme.ts": {
+      "filePath": "packages/renderer/src/stores/theme.ts",
+      "contentHash": "144e84ed66248a8c25bf548d12ee5de90092cb49ddd16d5618732cac9c3b7209",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware",
+          "specifiers": [
+            "persist"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "Theme"
+          ]
+        },
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "PRESET_THEMES",
+            "GITHUB_DARK_THEME"
+          ]
+        }
+      ],
+      "exports": [
+        "useThemeStore"
+      ],
+      "totalLines": 76,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/src/styles/index.css": {
+      "filePath": "packages/renderer/src/styles/index.css",
+      "contentHash": "dfde8d8d027ab8f0fe9a19bc2b51692e4f73dc365c2d4d5e530d3d115b6e3b41",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 410,
+      "hasStructuralAnalysis": false
+    },
+    "packages/renderer/src/types/global.d.ts": {
+      "filePath": "packages/renderer/src/types/global.d.ts",
+      "contentHash": "4f5678c13edfe3f2a726771309f928923ee9c317ba8a43cfb6df9dad44fdb00a",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@qserial/shared",
+          "specifiers": [
+            "SerialPortInfo",
+            "ConnectionServerStatus",
+            "McpServerStatus",
+            "TftpTransferEvent",
+            "SftpFileInfo",
+            "SftpFileStat",
+            "SftpProgressEvent",
+            "NfsServerStatus",
+            "NfsMountHint",
+            "FtpServerStatus",
+            "FtpClientInfo",
+            "FtpClientEvent"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 142,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/tailwind.config.js": {
+      "filePath": "packages/renderer/tailwind.config.js",
+      "contentHash": "600b0d46fd20de5b8fd1b46b3ad399e583d40f7823b40629e77872f2f3732c57",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/tsconfig.json": {
+      "filePath": "packages/renderer/tsconfig.json",
+      "contentHash": "34c2f1a537bf4608fca677a91d4d6f3702823f8df93c309fffaa2ceb94820001",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/vite.config.mjs": {
+      "filePath": "packages/renderer/vite.config.mjs",
+      "contentHash": "9898a2c03b3c177d91683a6b9a4c503595cbed331c628eea507a2cb0d4639584",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vite",
+          "specifiers": [
+            "defineConfig"
+          ]
+        },
+        {
+          "source": "@vitejs/plugin-react",
+          "specifiers": [
+            "react"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "resolve",
+            "dirname"
+          ]
+        },
+        {
+          "source": "url",
+          "specifiers": [
+            "fileURLToPath"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "packages/renderer/vite.config.ts": {
+      "filePath": "packages/renderer/vite.config.ts",
+      "contentHash": "60c2e605c9dcc2246217c5cffeab4e6524cc2aac8991c6cdaa3e790936a1e9bb",
+      "functions": [
+        {
+          "name": "toSysPath",
+          "params": [
+            "p"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 5
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vite",
+          "specifiers": [
+            "defineConfig"
+          ]
+        },
+        {
+          "source": "@vitejs/plugin-react",
+          "specifiers": [
+            "react"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "resolve"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/__tests__/constants/connection.test.ts": {
+      "filePath": "packages/shared/__tests__/constants/connection.test.ts",
+      "contentHash": "4e7f01a750e8cd716d15152214aea6f8a30b3768cbac8a72e0d40f0e36c74d7e",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect"
+          ]
+        },
+        {
+          "source": "../../src/constants/connection.js",
+          "specifiers": [
+            "BAUD_RATES",
+            "DATA_BITS",
+            "STOP_BITS",
+            "PARITY_OPTIONS",
+            "FLOW_CONTROL_OPTIONS",
+            "DEFAULT_SHELLS",
+            "CONNECTION_TYPE_NAMES",
+            "CONNECTION_STATE_NAMES"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 87,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/__tests__/types/config.test.ts": {
+      "filePath": "packages/shared/__tests__/types/config.test.ts",
+      "contentHash": "71406ee2e5bbde482bdece87f95d2624fbc57fbaef98acc3dc05975c57317447",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect"
+          ]
+        },
+        {
+          "source": "../../src/types/config.js",
+          "specifiers": [
+            "DEFAULT_CONFIG"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/__tests__/types/connection.test.ts": {
+      "filePath": "packages/shared/__tests__/types/connection.test.ts",
+      "contentHash": "87540c7072902774da27a288c31c8997cbf60fab579ee98e80e3ef0e63e9b4aa",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect"
+          ]
+        },
+        {
+          "source": "../../src/types/connection.js",
+          "specifiers": [
+            "ConnectionType",
+            "ConnectionState"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/__tests__/types/ipc.test.ts": {
+      "filePath": "packages/shared/__tests__/types/ipc.test.ts",
+      "contentHash": "03c8abfbc7388c0db05fbeba6c10e4e37f5ae666f64cfaf69d4b2e7ec1cb71c1",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect"
+          ]
+        },
+        {
+          "source": "../../src/types/ipc.js",
+          "specifiers": [
+            "IPC_CHANNELS"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/__tests__/utils/utils.test.ts": {
+      "filePath": "packages/shared/__tests__/utils/utils.test.ts",
+      "contentHash": "6fe0718a8982f799f18271602ecbbdc6b607dff768162a3a740c089d6ba69fc1",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "it",
+            "expect"
+          ]
+        },
+        {
+          "source": "../../src/utils/encoding.js",
+          "specifiers": [
+            "bufferToBase64",
+            "base64ToBuffer",
+            "stringToHex",
+            "hexToString",
+            "formatHex",
+            "formatTimestamp"
+          ]
+        },
+        {
+          "source": "../../src/utils/uuid.js",
+          "specifiers": [
+            "uuid",
+            "shortId"
+          ]
+        },
+        {
+          "source": "../../src/utils/validation.js",
+          "specifiers": [
+            "isValidHost",
+            "isValidPort",
+            "isNonEmptyString",
+            "validateSerialOptions",
+            "validateSshOptions"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 231,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/package.json": {
+      "filePath": "packages/shared/package.json",
+      "contentHash": "75056839ad6c286eae6b1358b526d9df15843f5bd8e4b1ba49d53b1230845668",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 36,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/constants/connection.ts": {
+      "filePath": "packages/shared/src/constants/connection.ts",
+      "contentHash": "5dc32ff15f1b09a94ed7f1870b88e4116e935f69332af3212505206f42bfbf1c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "BAUD_RATES",
+        "DATA_BITS",
+        "STOP_BITS",
+        "PARITY_OPTIONS",
+        "FLOW_CONTROL_OPTIONS",
+        "DEFAULT_SHELLS",
+        "CONNECTION_TYPE_NAMES",
+        "CONNECTION_STATE_NAMES"
+      ],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/constants/index.ts": {
+      "filePath": "packages/shared/src/constants/index.ts",
+      "contentHash": "08ea06a93097e7e0c76ec284f3e8f2c5ac7f7693176638744fd27abb9ecba6f6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/constants/ipc.ts": {
+      "filePath": "packages/shared/src/constants/ipc.ts",
+      "contentHash": "8f58799574251fdcd8f5081853265bfee49ae1623b4886b1a8e7ef02f2759d6e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "IPC_CHANNELS"
+      ],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/index.ts": {
+      "filePath": "packages/shared/src/index.ts",
+      "contentHash": "5c927cfee83261c5295156ba060169aaf0dacd54d574d75fd51621c12472da4d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/types/config.ts": {
+      "filePath": "packages/shared/src/types/config.ts",
+      "contentHash": "9a59bc9692ddfc7d2fba70ae38f64307247c4c1c70438e5cf6d50cbea5c039e4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "DEFAULT_CONFIG"
+      ],
+      "totalLines": 177,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/types/connection.ts": {
+      "filePath": "packages/shared/src/types/connection.ts",
+      "contentHash": "20aec3b2d528f8dba5670cdcabc58bca951206cf648933d67db8b945b671afb7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 200,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/types/index.ts": {
+      "filePath": "packages/shared/src/types/index.ts",
+      "contentHash": "8e2d861432e0f7856a0c1e78d8a39124e0a330e9f0cdc56544860ed57b61137a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/types/ipc.ts": {
+      "filePath": "packages/shared/src/types/ipc.ts",
+      "contentHash": "a01aea332ccab903ccca12fde03758e7e3342e08ef0855d83e3bfe330f658d05",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./connection.js",
+          "specifiers": [
+            "ConnectionOptions",
+            "SerialPortInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "IPC_CHANNELS"
+      ],
+      "totalLines": 472,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/types/session.ts": {
+      "filePath": "packages/shared/src/types/session.ts",
+      "contentHash": "d49701430e81ae92f0fbfb6c1df0912e7e16e3c84fee0a9543bc823a4a237c9f",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./connection.js",
+          "specifiers": [
+            "ConnectionOptions",
+            "ConnectionType"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/types/theme.ts": {
+      "filePath": "packages/shared/src/types/theme.ts",
+      "contentHash": "463e75c4a7dc7a9a3901fb6bf4df9707bb2199e22c48c7d50b24d4711d82535f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "DEFAULT_DARK_THEME",
+        "DEFAULT_LIGHT_THEME",
+        "ONE_DARK_THEME",
+        "DRACULA_THEME",
+        "MONOKAI_THEME",
+        "NORD_THEME",
+        "SOLARIZED_DARK_THEME",
+        "PAPER_BOOK_THEME",
+        "GITHUB_DARK_THEME",
+        "PRESET_THEMES"
+      ],
+      "totalLines": 726,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/utils/encoding.ts": {
+      "filePath": "packages/shared/src/utils/encoding.ts",
+      "contentHash": "51e76f9ffb1b33e9ece39d3a7b3a65d738a74be0e64bfe739b27ae63a3b619fc",
+      "functions": [
+        {
+          "name": "bufferToBase64",
+          "params": [
+            "buffer"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "base64ToUint8Array",
+          "params": [
+            "base64"
+          ],
+          "returnType": "Uint8Array",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "base64ToBuffer",
+          "params": [
+            "base64"
+          ],
+          "returnType": "Buffer",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "stringToHex",
+          "params": [
+            "str"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "hexToString",
+          "params": [
+            "hex"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "formatHex",
+          "params": [
+            "data",
+            "bytesPerLine"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "formatTimestamp",
+          "params": [
+            "date"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "bufferToBase64",
+        "base64ToUint8Array",
+        "base64ToBuffer",
+        "stringToHex",
+        "hexToString",
+        "formatHex",
+        "formatTimestamp"
+      ],
+      "totalLines": 93,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/utils/index.ts": {
+      "filePath": "packages/shared/src/utils/index.ts",
+      "contentHash": "4db0e4a36526bad2baf1beabf3594595f7001e1835dcff2a35a1d71c85b749a6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/utils/uuid.ts": {
+      "filePath": "packages/shared/src/utils/uuid.ts",
+      "contentHash": "bcc0751c90471a28c9ddc27fb91c1fc4a1b6434eb8f48cbdba13b9249120b08b",
+      "functions": [
+        {
+          "name": "uuid",
+          "params": [],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "shortId",
+          "params": [
+            "length"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "uuid",
+        "shortId"
+      ],
+      "totalLines": 27,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/src/utils/validation.ts": {
+      "filePath": "packages/shared/src/utils/validation.ts",
+      "contentHash": "69d40bbf1c75ec5dcae5321636a0725c3856db8dcac1bf34aee12cb25aa7b3b7",
+      "functions": [
+        {
+          "name": "validateSerialOptions",
+          "params": [
+            "options"
+          ],
+          "returnType": "string[]",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "validateSshOptions",
+          "params": [
+            "options"
+          ],
+          "returnType": "string[]",
+          "exported": true,
+          "lineCount": 23
+        },
+        {
+          "name": "isValidHost",
+          "params": [
+            "host"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "isValidPort",
+          "params": [
+            "port"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "isNonEmptyString",
+          "params": [
+            "value"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../types/connection.js",
+          "specifiers": [
+            "SerialConnectionOptions",
+            "SshConnectionOptions"
+          ]
+        }
+      ],
+      "exports": [
+        "validateSerialOptions",
+        "validateSshOptions",
+        "isValidHost",
+        "isValidPort",
+        "isNonEmptyString"
+      ],
+      "totalLines": 99,
+      "hasStructuralAnalysis": true
+    },
+    "packages/shared/tsconfig.json": {
+      "filePath": "packages/shared/tsconfig.json",
+      "contentHash": "50f2a13fa6bda774f1828f897d0092feb47581ad1096c3e2835a2f6782bd40cb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "plugins/community-espat/.codex-plugin/plugin.json": {
+      "filePath": "plugins/community-espat/.codex-plugin/plugin.json",
+      "contentHash": "8de1c66b29b1690917bc83139f5ffbbd47d4dc5d8c9049ec3bdea91c4a2270ef",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "plugins/community-espat/prompts/espat-tcp.md": {
+      "filePath": "plugins/community-espat/prompts/espat-tcp.md",
+      "contentHash": "86de1627ff8dec951d97e6eceeef2212588625fed8a58aa659e10dd07af04a47",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "plugins/community-espat/prompts/espat-wifi.md": {
+      "filePath": "plugins/community-espat/prompts/espat-wifi.md",
+      "contentHash": "d368e8a0f1d05343174b4010bb691f8eea71bc1ea213a62f07ecd6da893f1bdb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "plugins/community-espat/resources/espat-commands.md": {
+      "filePath": "plugins/community-espat/resources/espat-commands.md",
+      "contentHash": "4997f68043d2b8bface7268c1a84b6bd39ff72760d524aba7aafb0a57b5574af",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 56,
+      "hasStructuralAnalysis": true
+    },
+    "plugins/models/devices.json": {
+      "filePath": "plugins/models/devices.json",
+      "contentHash": "10196edbaec33d84cb04a16befd43005eb35dbd89146b3f52732a45470ade66f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 103,
+      "hasStructuralAnalysis": true
+    },
+    "pnpm-workspace.yaml": {
+      "filePath": "pnpm-workspace.yaml",
+      "contentHash": "20e02fad0f7b0875c0205c8e0a9ed09a589a9c1f418f7bab25aec3137a965c94",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "fda080fb473a8193eb224ae2f8b4049106189906c111d86e8b8b1fc77141cb03",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 86,
+      "hasStructuralAnalysis": true
+    },
+    "resources/nfs/winnfsd.exe": {
+      "filePath": "resources/nfs/winnfsd.exe",
+      "contentHash": "0c53cc8a24491ae98f6d050032ad901e59219e5b8bb49c024e2272900a35d00d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 612,
+      "hasStructuralAnalysis": false
+    },
+    "scripts/build.js": {
+      "filePath": "scripts/build.js",
+      "contentHash": "416313956cab0a509b2a0c31f91d12f7922e0d0e11e79921593511d95059bb39",
+      "functions": [
+        {
+          "name": "waitForPort",
+          "params": [
+            "port"
+          ],
+          "exported": false,
+          "lineCount": 21
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "child_process",
+          "specifiers": [
+            "spawn"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "path"
+          ]
+        },
+        {
+          "source": "url",
+          "specifiers": [
+            "fileURLToPath"
+          ]
+        },
+        {
+          "source": "http",
+          "specifiers": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 110,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/deploy.cjs": {
+      "filePath": "scripts/deploy.cjs",
+      "contentHash": "9bf1f05ee49980ae0f6fcebb2eb649395293568f1add72aa5f65efe3b89c9ef1",
+      "functions": [
+        {
+          "name": "loadEnv",
+          "params": [],
+          "exported": false,
+          "lineCount": 17
+        },
+        {
+          "name": "scp",
+          "params": [
+            "src",
+            "dest"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "targetWebsite",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "targetRelease",
+          "params": [],
+          "exported": false,
+          "lineCount": 21
+        },
+        {
+          "name": "targetNginx",
+          "params": [],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "printUsage",
+          "params": [],
+          "exported": false,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 131,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/ensure-icons.cjs": {
+      "filePath": "scripts/ensure-icons.cjs",
+      "contentHash": "283de781fb360a7f94ef4a31324ac0bf5c8f114c98f1ad3474caf73cc7ca4a85",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/exclude.txt": {
+      "filePath": "scripts/exclude.txt",
+      "contentHash": "28b827c41a14cd46aa6b1618d32d6c7d65778afb81ed945f51f3a7fcc75dd709",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    },
+    "scripts/fix-node-pty-release.cjs": {
+      "filePath": "scripts/fix-node-pty-release.cjs",
+      "contentHash": "08bf087b5d87815bbc8eda16239ccf9d93416d111c4bf7f3d1aa5fbaad134ac1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 59,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/gen_icon_ico.py": {
+      "filePath": "scripts/gen_icon_ico.py",
+      "contentHash": "cd207908558dc73bc18f5cfb29cadc1c632ed0e255aa051c5fe955b9b0ac5924",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "PIL",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 19,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/gen-deps-mapping.cjs": {
+      "filePath": "scripts/gen-deps-mapping.cjs",
+      "contentHash": "3950e0868de303d14476efb3be4b2b3b9efe9f9b6b725dd1147c9a91c71f644e",
+      "functions": [
+        {
+          "name": "collectDeps",
+          "params": [
+            "pkgName"
+          ],
+          "exported": false,
+          "lineCount": 24
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 83,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/postinstall.js": {
+      "filePath": "scripts/postinstall.js",
+      "contentHash": "b852e33e593c27880ab0954ab10e14beb8806ad8fbee301c19c931efc98f3f8f",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "child_process",
+          "specifiers": [
+            "spawn"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "path"
+          ]
+        },
+        {
+          "source": "url",
+          "specifiers": [
+            "fileURLToPath"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/prepare-ftp-deps.cjs": {
+      "filePath": "scripts/prepare-ftp-deps.cjs",
+      "contentHash": "a6ebfe10ca5ba4a34d886accd376ecb5575ec07ed8582cc22327b9e68301f1a0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 76,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/set-icon.cjs": {
+      "filePath": "scripts/set-icon.cjs",
+      "contentHash": "7a508f450f7291ba362462127c5da3caacf3a51249c52aa0c527b65747ce6da6",
+      "functions": [
+        {
+          "name": "main",
+          "params": [],
+          "exported": false,
+          "lineCount": 43
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 65,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/sftp-upload.cjs": {
+      "filePath": "scripts/sftp-upload.cjs",
+      "contentHash": "41995db878405e406057d8eeb8fd82e7b7f8c9f730b1255c7d07258bf628cdf9",
+      "functions": [
+        {
+          "name": "loadEnv",
+          "params": [],
+          "exported": false,
+          "lineCount": 17
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/test-electron.js": {
+      "filePath": "scripts/test-electron.js",
+      "contentHash": "2f6f733f66c0d77b47337b9e2a2d70f63a390bd1c75ad58b8eba8725791edb3b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/test-electron.mjs": {
+      "filePath": "scripts/test-electron.mjs",
+      "contentHash": "ec8702c392b41cfcab1cf03fcd7be2d4669c0d722515e2325e4f866567552f56",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "electron",
+          "specifiers": [
+            "e"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/test2.mjs": {
+      "filePath": "scripts/test2.mjs",
+      "contentHash": "7f715dd24ad3c02037e9ede67972030886fabfbd19497b3d5a2bf844021aa7ac",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "electron",
+          "specifiers": [
+            "e"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/upload-exe.cjs": {
+      "filePath": "scripts/upload-exe.cjs",
+      "contentHash": "3a7f06c13b0cc6b0578bfceb5fdf236be8950be3f9fbc162f9653e5caba92ccf",
+      "functions": [
+        {
+          "name": "loadEnv",
+          "params": [],
+          "exported": false,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 75,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/zip-portable.cjs": {
+      "filePath": "scripts/zip-portable.cjs",
+      "contentHash": "d748dd891ef6dbcf56820d8714129e0ecde843b804e7ac03f125ee9d41d19e03",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": true
+    },
+    "tsconfig.base.json": {
+      "filePath": "tsconfig.base.json",
+      "contentHash": "838a7e07b33cc69300490493f7e44f89a106d23b2e1ff46c907b906276436e5a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "vitest.config.ts": {
+      "filePath": "vitest.config.ts",
+      "contentHash": "86f2ed197c41a6bed619d8caf49c5114d62e4b89ea2bd7f6449bb7bcd0f10621",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vitest/config",
+          "specifiers": [
+            "defineConfig"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "resolve"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

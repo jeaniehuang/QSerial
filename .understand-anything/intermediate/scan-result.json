@@ -1,0 +1,1380 @@
+{
+  "name": "QSerial",
+  "description": "基于 Electron + MCP（模型上下文协议）的 AI 驱动串口控制台与设备管理工具，支持串口、SSH、Telnet 和 PTY 连接的创建、数据收发、设备识别（21种类型）、文件传输（SFTP/XMODEM）与会话录制。提供 43 个 MCP 工具，可被 Claude、Copilot 等 AI 客户端直接调用。注意：该项目有超过 100 个源文件；建议使用子目录参数限定分析范围以获得更快的结果。",
+  "languages": [
+    "batch",
+    "config",
+    "css",
+    "exe",
+    "html",
+    "javascript",
+    "json",
+    "markdown",
+    "node",
+    "python",
+    "shell",
+    "txt",
+    "typescript",
+    "unknown",
+    "yaml"
+  ],
+  "frameworks": [
+    "Electron",
+    "React",
+    "TypeScript",
+    "Vite",
+    "Vitest",
+    "Tailwind CSS",
+    "Zustand",
+    "xterm.js",
+    "MCP",
+    "electron-builder",
+    "GitHub Actions",
+    "pnpm workspace"
+  ],
+  "files": [
+    {
+      "path": ".env.example",
+      "language": "config",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".gitattributes",
+      "language": "unknown",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".github/workflows/build.yml",
+      "language": "yaml",
+      "sizeLines": 163,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "language": "yaml",
+      "sizeLines": 63,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/hardware-ci.yml",
+      "language": "yaml",
+      "sizeLines": 54,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".mcp.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".npmrc",
+      "language": "unknown",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".obsidian/app.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".obsidian/appearance.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".obsidian/core-plugins.json",
+      "language": "json",
+      "sizeLines": 32,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".obsidian/graph.json",
+      "language": "json",
+      "sizeLines": 21,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".obsidian/workspace.json",
+      "language": "json",
+      "sizeLines": 191,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/config.json",
+      "language": "json",
+      "sizeLines": 1,
+      "fileCategory": "config"
+    },
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "sizeLines": 72,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "build-exe.bat",
+      "language": "batch",
+      "sizeLines": 227,
+      "fileCategory": "script"
+    },
+    {
+      "path": "build-win.sh",
+      "language": "shell",
+      "sizeLines": 161,
+      "fileCategory": "script"
+    },
+    {
+      "path": "ci/sample-test.json",
+      "language": "json",
+      "sizeLines": 27,
+      "fileCategory": "config"
+    },
+    {
+      "path": "dev.sh",
+      "language": "shell",
+      "sizeLines": 166,
+      "fileCategory": "script"
+    },
+    {
+      "path": "electron-builder.config.cjs",
+      "language": "javascript",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "node-compile-cache/v23.6.0-x64-73907098-0/29f018e1",
+      "language": "unknown",
+      "sizeLines": 4280,
+      "fileCategory": "code"
+    },
+    {
+      "path": "node.napi.node",
+      "language": "node",
+      "sizeLines": 603,
+      "fileCategory": "code"
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "sizeLines": 66,
+      "fileCategory": "config"
+    },
+    {
+      "path": "packages/main/__tests__/cli/reporter.test.ts",
+      "language": "typescript",
+      "sizeLines": 209,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/__tests__/connection/factory.test.ts",
+      "language": "typescript",
+      "sizeLines": 299,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/__tests__/mcp/tools.test.ts",
+      "language": "typescript",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/package.json",
+      "language": "json",
+      "sizeLines": 34,
+      "fileCategory": "config"
+    },
+    {
+      "path": "packages/main/src/cli/index.ts",
+      "language": "typescript",
+      "sizeLines": 151,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/cli/reporter.ts",
+      "language": "typescript",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/cli/test-runner.ts",
+      "language": "typescript",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/config/index.ts",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/config/manager.ts",
+      "language": "typescript",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/index.ts",
+      "language": "typescript",
+      "sizeLines": 367,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/ipc/handlers.ts",
+      "language": "typescript",
+      "sizeLines": 586,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/ipc/index.ts",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/native-dialog.ts",
+      "language": "typescript",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/preload.ts",
+      "language": "typescript",
+      "sizeLines": 244,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/connection/connectionServer.ts",
+      "language": "typescript",
+      "sizeLines": 476,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/connection/factory.ts",
+      "language": "typescript",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/connection/index.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/connection/native-patch.ts",
+      "language": "typescript",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/connection/pty-patch.ts",
+      "language": "typescript",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/connection/pty.ts",
+      "language": "typescript",
+      "sizeLines": 284,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/connection/serial.ts",
+      "language": "typescript",
+      "sizeLines": 302,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/connection/ssh.ts",
+      "language": "typescript",
+      "sizeLines": 503,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/connection/telnet-utils.ts",
+      "language": "typescript",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/connection/telnet.ts",
+      "language": "typescript",
+      "sizeLines": 265,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/ftp/manager.ts",
+      "language": "typescript",
+      "sizeLines": 336,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/ai-helpers.ts",
+      "language": "typescript",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/context.ts",
+      "language": "typescript",
+      "sizeLines": 317,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/index.ts",
+      "language": "typescript",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/manager.ts",
+      "language": "typescript",
+      "sizeLines": 947,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/notifications.ts",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/plugin-loader.ts",
+      "language": "typescript",
+      "sizeLines": 187,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/prompts.ts",
+      "language": "typescript",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/resources.ts",
+      "language": "typescript",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/sampling.ts",
+      "language": "typescript",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/tools/app.ts",
+      "language": "typescript",
+      "sizeLines": 264,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/tools/connection-advanced.ts",
+      "language": "typescript",
+      "sizeLines": 463,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/tools/connection-io.ts",
+      "language": "typescript",
+      "sizeLines": 395,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/tools/connection.ts",
+      "language": "typescript",
+      "sizeLines": 192,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/tools/device.ts",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/tools/session.ts",
+      "language": "typescript",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/tools/sftp.ts",
+      "language": "typescript",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/types.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/mcp/xmodem.ts",
+      "language": "typescript",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/nfs/manager.ts",
+      "language": "typescript",
+      "sizeLines": 745,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/screen-recorder.ts",
+      "language": "typescript",
+      "sizeLines": 182,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/sftp/manager.ts",
+      "language": "typescript",
+      "sizeLines": 606,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/services/tftp/manager.ts",
+      "language": "typescript",
+      "sizeLines": 290,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/types/tftp.d.ts",
+      "language": "typescript",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/src/utils/network.ts",
+      "language": "typescript",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/main/tsconfig.json",
+      "language": "json",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": "packages/renderer/__tests__/setup.ts",
+      "language": "typescript",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/__tests__/stores/config.test.ts",
+      "language": "typescript",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/__tests__/stores/sessions.test.ts",
+      "language": "typescript",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/__tests__/stores/terminal.test.ts",
+      "language": "typescript",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/__tests__/stores/theme.test.ts",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/index.html",
+      "language": "html",
+      "sizeLines": 13,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "packages/renderer/package.json",
+      "language": "json",
+      "sizeLines": 43,
+      "fileCategory": "config"
+    },
+    {
+      "path": "packages/renderer/postcss.config.js",
+      "language": "javascript",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/App.tsx",
+      "language": "typescript",
+      "sizeLines": 136,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/common/ContextMenu.tsx",
+      "language": "typescript",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/common/ErrorToast.tsx",
+      "language": "typescript",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/common/QIcon.tsx",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/dialogs/ConnectionShareDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 471,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/dialogs/FtpDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 413,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/dialogs/McpDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 585,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/dialogs/NfsDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 387,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/dialogs/PtyConnectDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 188,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/dialogs/SerialConnectDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 298,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/dialogs/SettingsDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 416,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/dialogs/SshConnectDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 244,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/dialogs/TelnetConnectDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 156,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/dialogs/TftpDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 324,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/layout/index.ts",
+      "language": "typescript",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/layout/Layout.tsx",
+      "language": "typescript",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/layout/MainContent.tsx",
+      "language": "typescript",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/layout/Sidebar.tsx",
+      "language": "typescript",
+      "sizeLines": 464,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/layout/StatusBar.tsx",
+      "language": "typescript",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/layout/TitleBar.tsx",
+      "language": "typescript",
+      "sizeLines": 153,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/sftp/index.ts",
+      "language": "typescript",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/sftp/SftpPanel.tsx",
+      "language": "typescript",
+      "sizeLines": 861,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/tabs/index.ts",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/tabs/TabBar.tsx",
+      "language": "typescript",
+      "sizeLines": 186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/terminal/index.ts",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/terminal/QuickButtonBar.tsx",
+      "language": "typescript",
+      "sizeLines": 876,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/components/terminal/TerminalPane.tsx",
+      "language": "typescript",
+      "sizeLines": 948,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/hooks/useGlobalShortcuts.ts",
+      "language": "typescript",
+      "sizeLines": 178,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/i18n/index.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/i18n/locales/en-US.json",
+      "language": "json",
+      "sizeLines": 185,
+      "fileCategory": "config"
+    },
+    {
+      "path": "packages/renderer/src/i18n/locales/zh-CN.json",
+      "language": "json",
+      "sizeLines": 185,
+      "fileCategory": "config"
+    },
+    {
+      "path": "packages/renderer/src/index.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/config.ts",
+      "language": "typescript",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/ftp.ts",
+      "language": "typescript",
+      "sizeLines": 197,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/index.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/mcp.ts",
+      "language": "typescript",
+      "sizeLines": 168,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/nfs.ts",
+      "language": "typescript",
+      "sizeLines": 232,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/quickButtons.ts",
+      "language": "typescript",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/sessions.ts",
+      "language": "typescript",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/sftp.ts",
+      "language": "typescript",
+      "sizeLines": 359,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/sidebarButtons.ts",
+      "language": "typescript",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/terminal.ts",
+      "language": "typescript",
+      "sizeLines": 352,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/terminalMacro.ts",
+      "language": "typescript",
+      "sizeLines": 238,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/tftp.ts",
+      "language": "typescript",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/stores/theme.ts",
+      "language": "typescript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/src/styles/index.css",
+      "language": "css",
+      "sizeLines": 409,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "packages/renderer/src/types/global.d.ts",
+      "language": "typescript",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/tailwind.config.js",
+      "language": "javascript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/tsconfig.json",
+      "language": "json",
+      "sizeLines": 12,
+      "fileCategory": "config"
+    },
+    {
+      "path": "packages/renderer/vite.config.mjs",
+      "language": "javascript",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/renderer/vite.config.ts",
+      "language": "typescript",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/__tests__/constants/connection.test.ts",
+      "language": "typescript",
+      "sizeLines": 86,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/__tests__/types/config.test.ts",
+      "language": "typescript",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/__tests__/types/connection.test.ts",
+      "language": "typescript",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/__tests__/types/ipc.test.ts",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/__tests__/utils/utils.test.ts",
+      "language": "typescript",
+      "sizeLines": 230,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/package.json",
+      "language": "json",
+      "sizeLines": 35,
+      "fileCategory": "config"
+    },
+    {
+      "path": "packages/shared/src/constants/connection.ts",
+      "language": "typescript",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/constants/index.ts",
+      "language": "typescript",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/constants/ipc.ts",
+      "language": "typescript",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/index.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/types/config.ts",
+      "language": "typescript",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/types/connection.ts",
+      "language": "typescript",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/types/index.ts",
+      "language": "typescript",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/types/ipc.ts",
+      "language": "typescript",
+      "sizeLines": 471,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/types/session.ts",
+      "language": "typescript",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/types/theme.ts",
+      "language": "typescript",
+      "sizeLines": 725,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/utils/encoding.ts",
+      "language": "typescript",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/utils/index.ts",
+      "language": "typescript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/utils/uuid.ts",
+      "language": "typescript",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/src/utils/validation.ts",
+      "language": "typescript",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "packages/shared/tsconfig.json",
+      "language": "json",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": "plugins/community-espat/.codex-plugin/plugin.json",
+      "language": "json",
+      "sizeLines": 33,
+      "fileCategory": "config"
+    },
+    {
+      "path": "plugins/community-espat/prompts/espat-tcp.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "plugins/community-espat/prompts/espat-wifi.md",
+      "language": "markdown",
+      "sizeLines": 15,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "plugins/community-espat/resources/espat-commands.md",
+      "language": "markdown",
+      "sizeLines": 55,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "plugins/models/devices.json",
+      "language": "json",
+      "sizeLines": 102,
+      "fileCategory": "config"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "language": "yaml",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 85,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "resources/nfs/winnfsd.exe",
+      "language": "exe",
+      "sizeLines": 611,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/build.js",
+      "language": "javascript",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/deploy.cjs",
+      "language": "javascript",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/ensure-icons.cjs",
+      "language": "javascript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/exclude.txt",
+      "language": "txt",
+      "sizeLines": 12,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "scripts/fix-node-pty-release.cjs",
+      "language": "javascript",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/gen_icon_ico.py",
+      "language": "python",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/gen-deps-mapping.cjs",
+      "language": "javascript",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/postinstall.js",
+      "language": "javascript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/prepare-ftp-deps.cjs",
+      "language": "javascript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/set-icon.cjs",
+      "language": "javascript",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/sftp-upload.cjs",
+      "language": "javascript",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/test-electron.js",
+      "language": "javascript",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/test-electron.mjs",
+      "language": "javascript",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/test2.mjs",
+      "language": "javascript",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/upload-exe.cjs",
+      "language": "javascript",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/zip-portable.cjs",
+      "language": "javascript",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tsconfig.base.json",
+      "language": "json",
+      "sizeLines": 38,
+      "fileCategory": "config"
+    },
+    {
+      "path": "vitest.config.ts",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 179,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "large",
+  "importMap": {
+    ".env.example": [],
+    ".gitattributes": [],
+    ".github/workflows/build.yml": [],
+    ".github/workflows/ci.yml": [],
+    ".github/workflows/hardware-ci.yml": [],
+    ".mcp.json": [],
+    ".npmrc": [],
+    ".obsidian/app.json": [],
+    ".obsidian/appearance.json": [],
+    ".obsidian/core-plugins.json": [],
+    ".obsidian/graph.json": [],
+    ".obsidian/workspace.json": [],
+    ".understand-anything/.understandignore": [],
+    ".understand-anything/config.json": [],
+    "AGENTS.md": [],
+    "build-exe.bat": [],
+    "build-win.sh": [],
+    "ci/sample-test.json": [],
+    "dev.sh": [],
+    "electron-builder.config.cjs": [
+      "package.json"
+    ],
+    "node-compile-cache/v23.6.0-x64-73907098-0/29f018e1": [],
+    "node.napi.node": [],
+    "package.json": [],
+    "packages/main/__tests__/cli/reporter.test.ts": [],
+    "packages/main/__tests__/connection/factory.test.ts": [
+      "packages/main/src/services/connection/factory.ts"
+    ],
+    "packages/main/__tests__/mcp/tools.test.ts": [
+      "packages/main/src/services/connection/factory.ts"
+    ],
+    "packages/main/package.json": [],
+    "packages/main/src/cli/index.ts": [],
+    "packages/main/src/cli/reporter.ts": [],
+    "packages/main/src/cli/test-runner.ts": [],
+    "packages/main/src/config/index.ts": [],
+    "packages/main/src/config/manager.ts": [],
+    "packages/main/src/index.ts": [],
+    "packages/main/src/ipc/handlers.ts": [],
+    "packages/main/src/ipc/index.ts": [],
+    "packages/main/src/native-dialog.ts": [],
+    "packages/main/src/preload.ts": [],
+    "packages/main/src/services/connection/connectionServer.ts": [],
+    "packages/main/src/services/connection/factory.ts": [],
+    "packages/main/src/services/connection/index.ts": [],
+    "packages/main/src/services/connection/native-patch.ts": [],
+    "packages/main/src/services/connection/pty-patch.ts": [],
+    "packages/main/src/services/connection/pty.ts": [],
+    "packages/main/src/services/connection/serial.ts": [],
+    "packages/main/src/services/connection/ssh.ts": [],
+    "packages/main/src/services/connection/telnet-utils.ts": [],
+    "packages/main/src/services/connection/telnet.ts": [],
+    "packages/main/src/services/ftp/manager.ts": [],
+    "packages/main/src/services/mcp/ai-helpers.ts": [],
+    "packages/main/src/services/mcp/context.ts": [],
+    "packages/main/src/services/mcp/index.ts": [],
+    "packages/main/src/services/mcp/manager.ts": [],
+    "packages/main/src/services/mcp/notifications.ts": [],
+    "packages/main/src/services/mcp/plugin-loader.ts": [],
+    "packages/main/src/services/mcp/prompts.ts": [],
+    "packages/main/src/services/mcp/resources.ts": [],
+    "packages/main/src/services/mcp/sampling.ts": [],
+    "packages/main/src/services/mcp/tools/app.ts": [
+      "packages/main/src/services/mcp/types.ts"
+    ],
+    "packages/main/src/services/mcp/tools/connection-advanced.ts": [
+      "packages/main/src/services/mcp/types.ts"
+    ],
+    "packages/main/src/services/mcp/tools/connection-io.ts": [
+      "packages/main/src/services/mcp/types.ts"
+    ],
+    "packages/main/src/services/mcp/tools/connection.ts": [
+      "packages/main/src/services/mcp/types.ts"
+    ],
+    "packages/main/src/services/mcp/tools/device.ts": [
+      "packages/main/src/services/mcp/types.ts"
+    ],
+    "packages/main/src/services/mcp/tools/session.ts": [
+      "packages/main/src/services/mcp/types.ts"
+    ],
+    "packages/main/src/services/mcp/tools/sftp.ts": [
+      "packages/main/src/services/mcp/types.ts"
+    ],
+    "packages/main/src/services/mcp/types.ts": [],
+    "packages/main/src/services/mcp/xmodem.ts": [],
+    "packages/main/src/services/nfs/manager.ts": [],
+    "packages/main/src/services/screen-recorder.ts": [],
+    "packages/main/src/services/sftp/manager.ts": [],
+    "packages/main/src/services/tftp/manager.ts": [],
+    "packages/main/src/types/tftp.d.ts": [],
+    "packages/main/src/utils/network.ts": [],
+    "packages/main/tsconfig.json": [],
+    "packages/renderer/__tests__/setup.ts": [],
+    "packages/renderer/__tests__/stores/config.test.ts": [
+      "packages/renderer/__tests__/setup.ts",
+      "packages/renderer/src/stores/config.ts"
+    ],
+    "packages/renderer/__tests__/stores/sessions.test.ts": [
+      "packages/renderer/__tests__/setup.ts",
+      "packages/renderer/src/stores/sessions.ts"
+    ],
+    "packages/renderer/__tests__/stores/terminal.test.ts": [
+      "packages/renderer/__tests__/setup.ts",
+      "packages/renderer/src/stores/terminal.ts"
+    ],
+    "packages/renderer/__tests__/stores/theme.test.ts": [
+      "packages/renderer/__tests__/setup.ts",
+      "packages/renderer/src/stores/theme.ts"
+    ],
+    "packages/renderer/index.html": [],
+    "packages/renderer/package.json": [],
+    "packages/renderer/postcss.config.js": [],
+    "packages/renderer/src/App.tsx": [
+      "packages/renderer/src/components/layout/Layout.tsx",
+      "packages/renderer/src/i18n/index.ts",
+      "packages/renderer/src/stores/config.ts",
+      "packages/renderer/src/stores/ftp.ts",
+      "packages/renderer/src/stores/mcp.ts",
+      "packages/renderer/src/stores/nfs.ts",
+      "packages/renderer/src/stores/tftp.ts",
+      "packages/renderer/src/stores/theme.ts"
+    ],
+    "packages/renderer/src/components/common/ContextMenu.tsx": [],
+    "packages/renderer/src/components/common/ErrorToast.tsx": [],
+    "packages/renderer/src/components/common/QIcon.tsx": [],
+    "packages/renderer/src/components/dialogs/ConnectionShareDialog.tsx": [],
+    "packages/renderer/src/components/dialogs/FtpDialog.tsx": [],
+    "packages/renderer/src/components/dialogs/McpDialog.tsx": [],
+    "packages/renderer/src/components/dialogs/NfsDialog.tsx": [],
+    "packages/renderer/src/components/dialogs/PtyConnectDialog.tsx": [],
+    "packages/renderer/src/components/dialogs/SerialConnectDialog.tsx": [],
+    "packages/renderer/src/components/dialogs/SettingsDialog.tsx": [],
+    "packages/renderer/src/components/dialogs/SshConnectDialog.tsx": [],
+    "packages/renderer/src/components/dialogs/TelnetConnectDialog.tsx": [],
+    "packages/renderer/src/components/dialogs/TftpDialog.tsx": [],
+    "packages/renderer/src/components/layout/index.ts": [],
+    "packages/renderer/src/components/layout/Layout.tsx": [
+      "packages/renderer/src/components/common/ErrorToast.tsx",
+      "packages/renderer/src/components/dialogs/SettingsDialog.tsx",
+      "packages/renderer/src/components/layout/MainContent.tsx",
+      "packages/renderer/src/components/layout/Sidebar.tsx",
+      "packages/renderer/src/components/layout/StatusBar.tsx",
+      "packages/renderer/src/components/layout/TitleBar.tsx",
+      "packages/renderer/src/components/terminal/QuickButtonBar.tsx",
+      "packages/renderer/src/hooks/useGlobalShortcuts.ts",
+      "packages/renderer/src/stores/tftp.ts",
+      "packages/renderer/src/stores/theme.ts"
+    ],
+    "packages/renderer/src/components/layout/MainContent.tsx": [
+      "packages/renderer/src/components/sftp/index.ts",
+      "packages/renderer/src/components/terminal/TerminalPane.tsx"
+    ],
+    "packages/renderer/src/components/layout/Sidebar.tsx": [
+      "packages/renderer/src/components/common/ErrorToast.tsx",
+      "packages/renderer/src/components/dialogs/ConnectionShareDialog.tsx",
+      "packages/renderer/src/components/dialogs/FtpDialog.tsx",
+      "packages/renderer/src/components/dialogs/McpDialog.tsx",
+      "packages/renderer/src/components/dialogs/NfsDialog.tsx",
+      "packages/renderer/src/components/dialogs/PtyConnectDialog.tsx",
+      "packages/renderer/src/components/dialogs/SerialConnectDialog.tsx",
+      "packages/renderer/src/components/dialogs/SshConnectDialog.tsx",
+      "packages/renderer/src/components/dialogs/TelnetConnectDialog.tsx",
+      "packages/renderer/src/components/dialogs/TftpDialog.tsx"
+    ],
+    "packages/renderer/src/components/layout/StatusBar.tsx": [],
+    "packages/renderer/src/components/layout/TitleBar.tsx": [
+      "packages/renderer/src/components/common/ContextMenu.tsx",
+      "packages/renderer/src/components/common/QIcon.tsx"
+    ],
+    "packages/renderer/src/components/sftp/index.ts": [],
+    "packages/renderer/src/components/sftp/SftpPanel.tsx": [],
+    "packages/renderer/src/components/tabs/index.ts": [],
+    "packages/renderer/src/components/tabs/TabBar.tsx": [
+      "packages/renderer/src/components/common/ContextMenu.tsx"
+    ],
+    "packages/renderer/src/components/terminal/index.ts": [],
+    "packages/renderer/src/components/terminal/QuickButtonBar.tsx": [],
+    "packages/renderer/src/components/terminal/TerminalPane.tsx": [
+      "packages/renderer/src/components/common/ErrorToast.tsx",
+      "packages/renderer/src/components/dialogs/ConnectionShareDialog.tsx"
+    ],
+    "packages/renderer/src/hooks/useGlobalShortcuts.ts": [],
+    "packages/renderer/src/i18n/index.ts": [
+      "packages/renderer/src/i18n/locales/en-US.json",
+      "packages/renderer/src/i18n/locales/zh-CN.json"
+    ],
+    "packages/renderer/src/i18n/locales/en-US.json": [],
+    "packages/renderer/src/i18n/locales/zh-CN.json": [],
+    "packages/renderer/src/index.tsx": [
+      "packages/renderer/src/App.tsx",
+      "packages/renderer/src/i18n/index.ts",
+      "packages/renderer/src/styles/index.css"
+    ],
+    "packages/renderer/src/stores/config.ts": [],
+    "packages/renderer/src/stores/ftp.ts": [],
+    "packages/renderer/src/stores/index.ts": [],
+    "packages/renderer/src/stores/mcp.ts": [],
+    "packages/renderer/src/stores/nfs.ts": [],
+    "packages/renderer/src/stores/quickButtons.ts": [],
+    "packages/renderer/src/stores/sessions.ts": [],
+    "packages/renderer/src/stores/sftp.ts": [],
+    "packages/renderer/src/stores/sidebarButtons.ts": [],
+    "packages/renderer/src/stores/terminal.ts": [
+      "packages/renderer/src/stores/sftp.ts"
+    ],
+    "packages/renderer/src/stores/terminalMacro.ts": [],
+    "packages/renderer/src/stores/tftp.ts": [],
+    "packages/renderer/src/stores/theme.ts": [],
+    "packages/renderer/src/styles/index.css": [],
+    "packages/renderer/src/types/global.d.ts": [],
+    "packages/renderer/tailwind.config.js": [],
+    "packages/renderer/tsconfig.json": [],
+    "packages/renderer/vite.config.mjs": [],
+    "packages/renderer/vite.config.ts": [],
+    "packages/shared/__tests__/constants/connection.test.ts": [],
+    "packages/shared/__tests__/types/config.test.ts": [],
+    "packages/shared/__tests__/types/connection.test.ts": [],
+    "packages/shared/__tests__/types/ipc.test.ts": [],
+    "packages/shared/__tests__/utils/utils.test.ts": [],
+    "packages/shared/package.json": [],
+    "packages/shared/src/constants/connection.ts": [],
+    "packages/shared/src/constants/index.ts": [],
+    "packages/shared/src/constants/ipc.ts": [],
+    "packages/shared/src/index.ts": [],
+    "packages/shared/src/types/config.ts": [],
+    "packages/shared/src/types/connection.ts": [],
+    "packages/shared/src/types/index.ts": [],
+    "packages/shared/src/types/ipc.ts": [],
+    "packages/shared/src/types/session.ts": [],
+    "packages/shared/src/types/theme.ts": [],
+    "packages/shared/src/utils/encoding.ts": [],
+    "packages/shared/src/utils/index.ts": [],
+    "packages/shared/src/utils/uuid.ts": [],
+    "packages/shared/src/utils/validation.ts": [],
+    "packages/shared/tsconfig.json": [],
+    "plugins/community-espat/.codex-plugin/plugin.json": [],
+    "plugins/community-espat/prompts/espat-tcp.md": [],
+    "plugins/community-espat/prompts/espat-wifi.md": [],
+    "plugins/community-espat/resources/espat-commands.md": [],
+    "plugins/models/devices.json": [],
+    "pnpm-workspace.yaml": [],
+    "README.md": [],
+    "resources/nfs/winnfsd.exe": [],
+    "scripts/build.js": [],
+    "scripts/deploy.cjs": [],
+    "scripts/ensure-icons.cjs": [],
+    "scripts/exclude.txt": [],
+    "scripts/fix-node-pty-release.cjs": [],
+    "scripts/gen_icon_ico.py": [],
+    "scripts/gen-deps-mapping.cjs": [],
+    "scripts/postinstall.js": [],
+    "scripts/prepare-ftp-deps.cjs": [],
+    "scripts/set-icon.cjs": [],
+    "scripts/sftp-upload.cjs": [],
+    "scripts/test-electron.js": [],
+    "scripts/test-electron.mjs": [],
+    "scripts/test2.mjs": [],
+    "scripts/upload-exe.cjs": [],
+    "scripts/zip-portable.cjs": [
+      "package.json"
+    ],
+    "tsconfig.base.json": [],
+    "vitest.config.ts": []
+  }
+}
