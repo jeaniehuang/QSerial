@@ -314,15 +314,62 @@ function setupFtpHandlers(): void {
 }
 
 /**
+ * 格式化时间戳: 年-月-日 时:分:秒:毫秒
+ */
+function formatLogTimestamp(): string {
+  const now = new Date();
+  const y = String(now.getFullYear());
+  const m = String(now.getMonth() + 1).padStart(2, '0');
+  const d = String(now.getDate()).padStart(2, '0');
+  const h = String(now.getHours()).padStart(2, '0');
+  const min = String(now.getMinutes()).padStart(2, '0');
+  const s = String(now.getSeconds()).padStart(2, '0');
+  const ms = String(now.getMilliseconds()).padStart(3, '0');
+  return `${y}-${m}-${d} ${h}:${min}:${s}:${ms}`;
+}
+
+/**
  * 日志保存相关处理器
  */
 function setupLogHandlers(): void {
   const logStreams = new Map<string, fs.WriteStream>();
+  // 行缓冲区: 用于跨 write 调用拼接不完整的行
+  const logBuffers = new Map<string, string>();
+
+  /** 将带时间戳的完整行写入日志流 */
+  function flushLogLines(sessionId: string, stream: fs.WriteStream, text: string): Promise<void> {
+    // 合并缓冲区中的残留内容
+    const pending = (logBuffers.get(sessionId) ?? '') + text;
+    // 统一处理 \r\n 和 \n
+    const lines = pending.split(/\r?\n/);
+    // 最后一段是不完整的行（不以换行结尾），留在缓冲区
+    const incomplete = lines.pop() ?? '';
+
+    // 写入所有完整行（每行独立时间戳）
+    const chunks: string[] = [];
+    for (const line of lines) {
+      chunks.push(`[${formatLogTimestamp()}] ${line}\n`);
+    }
+
+    if (chunks.length > 0) {
+      const output = chunks.join('');
+      if (!stream.write(output)) {
+        return new Promise<void>((resolve) => stream.once('drain', resolve));
+      }
+    }
+
+    logBuffers.set(sessionId, incomplete);
+    return Promise.resolve();
+  }
 
   ipcMain.handle(IPC_CHANNELS.LOG_PICK_FILE, async (_, { defaultName }) => {
     return pickSaveFile(
       '选择日志保存位置',
-      defaultName || `terminal-log-${new Date().toISOString().slice(0, 10)}.txt`,
+      defaultName || (() => {
+        const n = new Date();
+        const pad = (v: number) => String(v).padStart(2, '0');
+        return `terminal-log-${n.getFullYear()}-${pad(n.getMonth() + 1)}-${pad(n.getDate())}_${pad(n.getHours())}-${pad(n.getMinutes())}-${pad(n.getSeconds())}.txt`;
+      })(),
       [
         { name: '文本文件', extensions: ['txt'] },
         { name: '日志文件', extensions: ['log'] },
@@ -340,15 +387,24 @@ function setupLogHandlers(): void {
 
     const stream = fs.createWriteStream(filePath, { flags: 'a', encoding: 'utf-8' });
     logStreams.set(sessionId, stream);
+    logBuffers.delete(sessionId); // 清除旧缓冲区
 
-    const timestamp = new Date().toLocaleString();
+    const timestamp = formatLogTimestamp();
     stream.write(`\n========== 日志开始 [${timestamp}] ==========\n`);
   });
 
   ipcMain.handle(IPC_CHANNELS.LOG_STOP, async (_, { sessionId }) => {
     const stream = logStreams.get(sessionId);
     if (stream) {
-      const timestamp = new Date().toLocaleString();
+      // 刷新缓冲区中的残留内容
+      const pending = logBuffers.get(sessionId);
+      if (pending) {
+        const timestamp = formatLogTimestamp();
+        stream.write(`[${timestamp}] ${pending}\n`);
+        logBuffers.delete(sessionId);
+      }
+
+      const timestamp = formatLogTimestamp();
       stream.write(`\n========== 日志结束 [${timestamp}] ==========\n`);
       stream.end();
       logStreams.delete(sessionId);
@@ -358,20 +414,26 @@ function setupLogHandlers(): void {
   ipcMain.handle(IPC_CHANNELS.LOG_WRITE, async (_, { sessionId, data }) => {
     const stream = logStreams.get(sessionId);
     if (!stream || !stream.writable) return;
-    if (!stream.write(data)) {
-      await new Promise<void>((resolve) => stream.once('drain', resolve));
-    }
+    await flushLogLines(sessionId, stream, data);
   });
 
   app.on('before-quit', () => {
-    for (const [, stream] of logStreams) {
+    for (const [sessionId, stream] of logStreams) {
       try {
-        const timestamp = new Date().toLocaleString();
+        // 刷新缓冲区中的残留内容
+        const pending = logBuffers.get(sessionId);
+        if (pending) {
+          const timestamp = formatLogTimestamp();
+          stream.write(`[${timestamp}] ${pending}\n`);
+        }
+
+        const timestamp = formatLogTimestamp();
         stream.write(`\n========== 日志结束 [${timestamp}] ==========\n`);
         stream.end();
       } catch { /* ignore */ }
     }
     logStreams.clear();
+    logBuffers.clear();
   });
 }
 

@@ -637,9 +637,17 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
   const handleStartLog = async () => {
     setLogStarting(true);
     try {
+      // 生成时间戳: 年-月-日_时-分-秒
+      const now = new Date();
+      const ts = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}-${String(now.getMinutes()).padStart(2, '0')}-${String(now.getSeconds()).padStart(2, '0')}`;
+      // 取连接实际标识: 串口用路径(如COM6), SSH/Telnet用主机地址, 其他用名称
+      const connLabel = session
+        ? (session.serialPath || session.host || session.name)
+        : '';
+      const safeName = connLabel.replace(/[<>:"/\\|?*]/g, '_');
       const defaultName = session
-        ? `${session.connectionType}-log-${new Date().toISOString().slice(0, 10)}.txt`
-        : `terminal-log-${new Date().toISOString().slice(0, 10)}.txt`;
+        ? `session-${safeName}-log-${ts}.txt`
+        : `terminal-log-${ts}.txt`;
 
       const filePath = await window.qserial.log.pickFile(defaultName);
       if (!filePath) {
