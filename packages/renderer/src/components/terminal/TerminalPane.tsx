@@ -53,6 +53,7 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
   const compositionDataRef = useRef<string>('');
   const [logStarting, setLogStarting] = useState(false);
   const [reconnectLoading, setReconnectLoading] = useState(false);
+  const [disconnectLoading, setDisconnectLoading] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
   const [showMacroSave, setShowMacroSave] = useState(false);
   const [macroName, setMacroName] = useState('');
@@ -674,6 +675,20 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
     }
   };
 
+  // 手动断开
+  const handleDisconnect = useCallback(async () => {
+    if (disconnectLoading) return;
+    setDisconnectLoading(true);
+    try {
+      await window.qserial.connection.close(connectionId);
+    } catch (error) {
+      console.error('Failed to disconnect:', error);
+      globalError.show('断开连接失败: ' + (error as Error).message);
+    } finally {
+      setDisconnectLoading(false);
+    }
+  }, [connectionId, disconnectLoading]);
+
   // 手动重连
   const handleReconnect = useCallback(async () => {
     if (reconnectLoading) return;
@@ -873,26 +888,47 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
             )}
           </button>
 
-          {/* 重连按钮 - 手动重连（断开或出错时显示，服务端连接除外） */}
-          {(isDisconnected || isError) &&
-            session?.connectionType !== ConnectionType.CONNECTION_SERVER &&
+          {/* 断开 / 重连按钮（服务端连接除外） */}
+          {session?.connectionType !== ConnectionType.CONNECTION_SERVER &&
             session?.connectionType !== ConnectionType.SERIAL_SERVER && (
-            <button
-              onClick={handleReconnect}
-              disabled={reconnectLoading}
-              className={`px-2 py-1 border rounded text-xs transition-colors flex items-center gap-1.5 ${
-                reconnectLoading
-                  ? 'bg-surface/80 border-border opacity-50'
-                  : 'bg-blue-500/80 border-blue-400 text-white hover:bg-blue-600/80'
-              }`}
-              title="重新连接"
-            >
-              {reconnectLoading ? (
-                <><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" strokeWidth="1.2"/><path d="M6 3v3l2 1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>连接中...</>
-              ) : (
-                <><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 5A4 4 0 019 3.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/><path d="M9.5 7A4 4 0 013 8.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/><path d="M9 1.5l1.5 2-2 1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M3 10.5l-1.5-2 2-1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>重连</>
+            <>
+              {/* 已连接 → 显示断开连接 */}
+              {isConnected && (
+                <button
+                  onClick={handleDisconnect}
+                  disabled={disconnectLoading}
+                  className={`px-2 py-1 border rounded text-xs transition-colors flex items-center gap-1.5 ${
+                    disconnectLoading
+                      ? 'bg-surface/80 border-border opacity-50'
+                      : 'bg-yellow-500/80 border-yellow-400 text-white hover:bg-yellow-600/80'
+                  }`}
+                  title="断开连接"
+                >
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 3h6v6H3z" stroke="currentColor" strokeWidth="1.2"/><path d="M1 6h11" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>
+                  {disconnectLoading ? '断开中...' : '断开'}
+                </button>
               )}
-            </button>
+
+              {/* 断开 / 出错 → 显示重连 */}
+              {(isDisconnected || isError) && (
+                <button
+                  onClick={handleReconnect}
+                  disabled={reconnectLoading}
+                  className={`px-2 py-1 border rounded text-xs transition-colors flex items-center gap-1.5 ${
+                    reconnectLoading
+                      ? 'bg-surface/80 border-border opacity-50'
+                      : 'bg-blue-500/80 border-blue-400 text-white hover:bg-blue-600/80'
+                  }`}
+                  title="重新连接"
+                >
+                  {reconnectLoading ? (
+                    <><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" strokeWidth="1.2"/><path d="M6 3v3l2 1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>连接中...</>
+                  ) : (
+                    <><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 5A4 4 0 019 3.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/><path d="M9.5 7A4 4 0 013 8.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/><path d="M9 1.5l1.5 2-2 1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M3 10.5l-1.5-2 2-1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>重连</>
+                  )}
+                </button>
+              )}
+            </>
           )}
         </div>
       )}
