@@ -368,6 +368,20 @@ export const TerminalPane: React.FC<TerminalPaneProps> = React.memo(({
         console.log('[TerminalPane] onData blocked by composition');
         return;
       }
+
+      // 断连状态下敲回车 → 自动重连
+      if (data === '\r' || data === '\n') {
+        const currentSession = useTerminalStore.getState().sessions[sessionId];
+        const state = currentSession?.connectionState;
+        if (state === ConnectionState.DISCONNECTED || state === ConnectionState.ERROR) {
+          xterm.write('\r\n\x1b[33m--- 正在重连... ---\x1b[0m\r\n');
+          window.qserial.connection.open(connectionId).catch((err) => {
+            xterm.write(`\r\n\x1b[31m--- 重连失败: ${(err as Error).message} ---\x1b[0m\r\n`);
+          });
+          return;
+        }
+      }
+
       // 如果数据与 composition 结束时的数据相同，发送后清空标记
       if (data === compositionDataRef.current) {
         console.log('[TerminalPane] onData sending (composition end)');
